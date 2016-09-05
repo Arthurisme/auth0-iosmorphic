@@ -1,15 +1,10 @@
-package com.auth0.example.domain;
+package com.auth0.example.future.domain;
 
 import java.util.Date;
-import java.util.EnumSet;
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

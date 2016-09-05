@@ -46,11 +46,18 @@ public class ProfileController {
 
         }
         {
-//            test:
+//            test to add current user to profile:
+//            final Long userId = Long.parseLong(usernameService.getUserId());
+//            final String userId =  (usernameService.getUserId());
+//            logger.info("User id: " + userId + " creating new profile");
+
             final String username = usernameService.getUsername();
+            final String nameOfUser = usernameService.getNameOfUser();
+
             Profile currentProfile = new Profile();
+//            currentProfile.setId(userId);
             currentProfile.setEmail(username);
-            currentProfile.setName("testnameadded");
+            currentProfile.setName(nameOfUser);
             profileService.create(currentProfile);
             // log username of user requesting profile creation
             logger.info("User with email: " + username + " creating new profile");

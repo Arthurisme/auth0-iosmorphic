@@ -35,4 +35,20 @@ public class Auth0Client {
 
     }
 
+    public String getNameOfUser(Auth0JWTToken token) {
+        final Request<UserProfile> request = client.tokenInfo(token.getJwt());
+        final UserProfile profile = request.execute();
+        logger.debug("Test where is starter point 2 ");
+        return profile.getName();
+
+    }
+
+    public String getUserId(Auth0JWTToken token) {
+        final Request<UserProfile> request = client.tokenInfo(token.getJwt());
+        final UserProfile profile = request.execute();
+        logger.debug("Test where is starter point 3 ");
+        return profile.getId();
+
+    }
+
 }

@@ -17,10 +17,20 @@ export class PingComponent {
 
   public ping() {
     this.message = '';
+    console.log("start ping");
+
+
+
     this.http.get(`${this.API_URL}/ping`)
-      .map(res => res.json())
+      // .map(res => res.json())
       .subscribe(
-        data => this.message = data.text,
+        data => {
+
+          console.log(data);
+          // this.message = JSON.parse(JSON.parse(JSON.stringify(data))._body);
+          this.message =  data._body ;
+        },
+
         error => this.message = error._body
       );
   }
@@ -28,9 +38,14 @@ export class PingComponent {
   public securedPing() {
     this.message = '';
     this.authHttp.get(`${this.API_URL}/secured/ping`)
-      .map(res => res.json())
+      // .map(res => res.json())
       .subscribe(
-        data => this.message= data.text,
+          data => {
+            console.log(data);
+            // this.message = data.text;
+            this.message =  data._body ;
+
+          },
         error => this.message = error._body || error
       );
   }

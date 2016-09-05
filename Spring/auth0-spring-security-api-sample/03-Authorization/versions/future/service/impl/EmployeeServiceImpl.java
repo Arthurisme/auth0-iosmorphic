@@ -1,8 +1,8 @@
-package com.auth0.example.service.impl;
+package com.auth0.example.future.service.impl;
 
-import com.auth0.example.domain.Employee;
-import com.auth0.example.repository.EmployeeRepository;
-import com.auth0.example.service.EmployeeService;
+import com.auth0.example.future.domain.Employee;
+import com.auth0.example.future.repository.EmployeeRepository;
+import com.auth0.example.future.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

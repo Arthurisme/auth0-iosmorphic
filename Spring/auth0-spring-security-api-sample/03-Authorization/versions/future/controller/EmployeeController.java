@@ -1,7 +1,7 @@
-package com.auth0.example.controller;
+package com.auth0.example.future.controller;
 
-import com.auth0.example.domain.Employee;
-import com.auth0.example.service.EmployeeService;
+import com.auth0.example.future.domain.Employee;
+import com.auth0.example.future.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

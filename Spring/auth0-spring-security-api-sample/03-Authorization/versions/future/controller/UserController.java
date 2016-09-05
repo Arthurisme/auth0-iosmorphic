@@ -1,18 +1,11 @@
-package com.auth0.example.controller;
+package com.auth0.example.future.controller;
 
-import com.auth0.example.domain.User;
+import com.auth0.example.future.domain.User;
 
-import com.auth0.example.repository.UserRepository;
+import com.auth0.example.future.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController

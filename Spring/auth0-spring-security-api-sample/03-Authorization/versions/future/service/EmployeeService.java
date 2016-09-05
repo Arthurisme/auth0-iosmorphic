@@ -1,6 +1,6 @@
-package com.auth0.example.service;
+package com.auth0.example.future.service;
 
-import com.auth0.example.domain.Employee;
+import com.auth0.example.future.domain.Employee;
 
 import java.util.List;
 

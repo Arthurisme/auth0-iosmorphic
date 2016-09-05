@@ -55,7 +55,7 @@ public class AppConfig extends Auth0SecurityConfig {
 
 
            // To show h2 console for only test:
-           // http.csrf().disable();
+//            http.csrf().disable();
            // http.headers().frameOptions().disable();
     }
 

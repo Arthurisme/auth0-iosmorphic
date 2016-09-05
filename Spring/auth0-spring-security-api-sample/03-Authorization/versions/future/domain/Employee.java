@@ -1,4 +1,4 @@
-package com.auth0.example.domain;
+package com.auth0.example.future.domain;
 
 import org.hibernate.validator.constraints.NotBlank;
 
