@@ -43,6 +43,7 @@ public class ProfileController {
             final String username = usernameService.getUsername();
             // log username of user requesting profile creation
             logger.info("User with email: " + username + " creating new profile");
+
         }
         return profileService.create(profile);
     }

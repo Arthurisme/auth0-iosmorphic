@@ -1,0 +1,154 @@
+<div class="container">
+  <div class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li class="active" id="home"><a href="#">Home</a></li>
+        <li id="logout"><a href="#" ng-click="logout()">Logout</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">App.com</h3>
+  </div>
+  <div class="row">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading"
+           style="font-size:large">
+        {{ title }}
+      </div>
+
+      <div class="panel-body">
+        <table ng-if="listProfiles === true" class="table">
+          <thead>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="profile in profiles">
+            <td>{{profile.name}}</td>
+            <td>{{profile.email}}</td>
+            <td>
+              <button class="btn-sm btn-primary"
+                      style="width:80px;margin-right:10px"
+                      ng-click="editProfile(profile.id)">
+                Edit
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <form ng-if="listProfiles === false" class="form-horizontal" name="profileForm" novalidate>
+          <fieldset>
+            <legend>{{ profile.name }}</legend>
+            <div class="form-group"
+                 ng-class="{'has-error':profileForm.inputProfileName.$invalid &&
+                                    profileForm.inputProfileName.$dirty}">
+              <label class="col-md-2 control-label"
+                     for="inputProfileName">Name</label>
+
+              <div class="col-md-4">
+                <input class="form-control"
+                       id="inputProfileName"
+                       name="inputProfileName"
+                       type="text"
+                       placeholder="Name (required)"
+                       ng-model="profile.name"
+                       required
+                       ng-minlength="3"
+                       ng-maxlength="15"/>
+              </div>
+            <span class="help-block has-error">
+                <span ng-show="profileForm.inputProfileName.$error.required">
+                    Profile name is required.
+                </span>
+                <span ng-show="profileForm.inputProfileName.$error.minlength">
+                    Profile name must be at least 3 characters in length.
+                </span>
+                <span ng-show="profileForm.inputProfileName.$error.maxlength">
+                    Profile name cannot exceed 15 characters in length.
+                </span>
+            </span>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{'has-error':profileForm.inputProfileEmail.$invalid &&
+                                    profileForm.inputProfileEmail.$dirty}">
+              <label class="col-md-2 control-label" for="inputProfileEmail">Email</label>
+
+              <div class="col-md-4">
+                <input class="form-control"
+                       id="inputProfileEmail"
+                       name="inputProfileEmail"
+                       type="email"
+                       placeholder="Email(required)"
+                       ng-model="profile.email"
+                       required>
+              </div>
+            <span class="help-block has-error"
+                  ng-show="profileForm.inputProfileEmail.$invalid ">
+                Email is required
+            </span>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn-sm btn-primary"
+                            style="width:80px;margin-right:10px"
+                            ng-click="submit()"
+                            ng-disabled="profileForm.$invalid">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button class="btn-sm btn-default"
+                            style="width:70px"
+                            ng-click="cancel(profileForm)">
+                        Cancel
+                    </button>
+                </span>
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+
+
+    <div class="col-lg-6">
+      <h4>Subheading</h4>
+      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+      <h4>Subheading</h4>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
+        fermentum.</p>
+
+      <h4>Subheading</h4>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
+        fermentum.</p>
+    </div>
+
+    <div class="col-lg-6">
+      <h4>Subheading</h4>
+      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+      <h4>Subheading</h4>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
+        fermentum.</p>
+
+      <h4>Subheading</h4>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
+        fermentum.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p> &copy; 2016 Company Inc</p>
+  </footer>
+
+</div>
+
