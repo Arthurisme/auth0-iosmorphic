@@ -45,6 +45,16 @@ public class ProfileController {
             logger.info("User with email: " + username + " creating new profile");
 
         }
+        {
+//            test:
+            final String username = usernameService.getUsername();
+            Profile currentProfile = new Profile();
+            currentProfile.setEmail(username);
+            currentProfile.setName("testnameadded");
+            profileService.create(currentProfile);
+            // log username of user requesting profile creation
+            logger.info("User with email: " + username + " creating new profile");
+        }
         return profileService.create(profile);
     }
 

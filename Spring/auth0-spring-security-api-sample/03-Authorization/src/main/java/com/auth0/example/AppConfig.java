@@ -8,6 +8,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 
@@ -16,6 +17,13 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class AppConfig extends Auth0SecurityConfig {
+
+
+
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        web.ignoring().antMatchers("/console/**");
+//    }
 
     /**
      * Provides Auth0 API access
@@ -37,13 +45,18 @@ public class AppConfig extends Auth0SecurityConfig {
         // add others or remove as you choose, this is just a sample config to illustrate
         // most specific rules must come - order is important (see Spring Security docs)
         http.authorizeRequests()
-                .antMatchers("/ping", "/pong").permitAll()
+                .antMatchers(  "/", "/ping", "/pong", "/console/**", "/console").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/v1/profiles").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/v1/profiles/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/v1/profiles/**").hasAnyAuthority("ROLE_ADMIN")
                 .antMatchers(HttpMethod.PUT, "/api/v1/profiles/**").hasAnyAuthority("ROLE_ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/api/v1/profiles/**").hasAnyAuthority("ROLE_ADMIN")
                 .anyRequest().authenticated();
+
+
+           // To show h2 console for only test:
+           // http.csrf().disable();
+           // http.headers().frameOptions().disable();
     }
 
     /*

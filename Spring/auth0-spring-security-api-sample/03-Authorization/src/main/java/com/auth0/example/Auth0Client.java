@@ -5,10 +5,15 @@ import com.auth0.authentication.AuthenticationAPIClient;
 import com.auth0.authentication.result.UserProfile;
 import com.auth0.request.Request;
 import com.auth0.spring.security.api.Auth0JWTToken;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Auth0Client {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
     private final String clientid;
     private final String domain;
@@ -25,7 +30,9 @@ public class Auth0Client {
     public String getUsername(Auth0JWTToken token) {
         final Request<UserProfile> request = client.tokenInfo(token.getJwt());
         final UserProfile profile = request.execute();
+        logger.debug("Test where is starter point 1 ");
         return profile.getEmail();
+
     }
 
 }
