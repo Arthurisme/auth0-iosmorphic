@@ -10,6 +10,10 @@ import { GroceryListComponent } from "./grocery-list/grocery-list.component";
 import { GroceryService } from "./shared";
 import { LoginService, alert, setHintColor } from "../shared";
 
+ var auth0 = require("nativescript-auth0");
+var application = require("application");
+import * as appSettings from "application-settings";
+
 @Component({
   selector: "gr-groceries",
   templateUrl: "groceries/groceries.component.html",
@@ -142,4 +146,12 @@ export class GroceriesComponent implements OnInit {
   gotoAuth0testpage() {
     this.router.navigate(["/auth0testpage"]);
   }
+
+  doLogout() {
+    appSettings.remove("auth0Token");
+    // appSettings.remove("auth0UserData");
+    this.router.navigate(["/auth0testpage"]);
+  }
+
+
 }
