@@ -7,7 +7,7 @@ declare var Auth0Lock: any;
 @Injectable()
 export class Auth {
   // Configure Auth0
-  lock = new Auth0Lock('YOUR_CLIENT_ID', 'YOUR_DOMAIN', {
+  lock = new Auth0Lock('WIcfe2CWGUmcmJwYEfCk763nXyGLOFM6', 'arthurisme.auth0.com', {
     additionalSignUpFields: [{
       name: "address",                              // required
       placeholder: "enter your address",            // required

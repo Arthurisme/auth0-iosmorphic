@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Auth }      from './auth.service';
 import { AuthHttp }  from 'angular2-jwt';
-import { Http }      from '@angular/http';
+import { Http,Headers }      from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -18,6 +18,9 @@ export class PingComponent {
   public ping() {
     this.message = '';
     console.log("start ping");
+    let tokenAtLocal = localStorage.getItem('id_token');
+    console.log(tokenAtLocal);
+
 
 
 
@@ -27,26 +30,52 @@ export class PingComponent {
         data => {
 
           console.log(data);
-          // this.message = JSON.parse(JSON.parse(JSON.stringify(data))._body);
-          this.message =  data._body ;
+            // this.message = JSON.parse(JSON.parse(JSON.stringify(data))._body);
+            this.message =  (JSON.parse(JSON.stringify(data))._body);
+          // this.message =  data._body ;
         },
 
         error => this.message = error._body
       );
   }
-
   public securedPing() {
+    this.message = '';
+    let tokenAtLocal = localStorage.getItem('id_token');
+
+    let headers = new Headers({'Authorization': 'Bearer '+tokenAtLocal});
+
+    this.http.get(`${this.API_URL}/secured/ping`, {headers: headers})
+    // .map(res => res.json())
+        .subscribe(
+            data => {
+              console.log(data);
+              // this.message = JSON.parse(JSON.parse(JSON.stringify(data))._body);
+              this.message =  (JSON.parse(JSON.stringify(data))._body);
+              // this.message =  data._body ;
+
+            },
+            error => this.message = error._body || error
+        );
+  }
+
+
+  public securedPingorigin() {
     this.message = '';
     this.authHttp.get(`${this.API_URL}/secured/ping`)
       // .map(res => res.json())
       .subscribe(
           data => {
             console.log(data);
-            // this.message = data.text;
-            this.message =  data._body ;
+              // this.message = JSON.parse(JSON.parse(JSON.stringify(data))._body);
+              this.message =  (JSON.parse(JSON.stringify(data))._body);
+              // this.message =  data._body ;
 
           },
         error => this.message = error._body || error
       );
   }
+
+
+
+
 };

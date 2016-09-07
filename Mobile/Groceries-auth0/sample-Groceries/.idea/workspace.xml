@@ -178,8 +178,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1909" />
-    <option name="y" value="104" />
+    <option name="x" value="2017" />
+    <option name="y" value="159" />
     <option name="width" value="1449" />
     <option name="height" value="1009" />
   </component>
@@ -286,7 +286,7 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v5.8.0/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Angular/nativescript/Groceries-Official/sample-Groceries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Angular2/auth0-angularjs2-systemjs-sample/08-Calling-Api" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js.ns.project" value="true" />
@@ -358,15 +358,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473209489403</updated>
-      <workItem from="1473209490585" duration="17860000" />
+      <workItem from="1473209490585" duration="18276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17860000" />
+    <option name="totallyTimeSpent" value="18276000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1909" y="104" width="1449" height="1009" extended-state="0" />
+    <frame x="2017" y="159" width="1449" height="1009" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982747" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
