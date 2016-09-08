@@ -11,9 +11,16 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 import java.util.List;
 
+import com.auth0.example.service.UserService;
+import com.auth0.example.model.User;
+
+
 @RestController
 @RequestMapping("/api/v1/")
 public class ProfileController {
+
+    @Autowired
+    private UserService userService;
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -62,6 +69,15 @@ public class ProfileController {
             // log username of user requesting profile creation
             logger.info("User with email: " + username + " creating new profile");
         }
+        {
+//            test to add current user to profile and database:
+            // Test database crud for profile:
+            User d = new User(18L, "Eve5", "eve5@hacker.com");
+            userService.save(d);
+ //
+        }
+
+
         return profileService.create(profile);
     }
 
