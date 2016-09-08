@@ -142,7 +142,7 @@ public class Auth0SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
         // Disable CSRF for JWT usage
-//        http.csrf().disable();
+        http.csrf().disable();
         // Add Auth0 Authentication Filter
         http.addFilterAfter(auth0AuthenticationFilter(auth0AuthenticationEntryPoint()), SecurityContextPersistenceFilter.class)
                 .addFilterBefore(simpleCORSFilter(), Auth0AuthenticationFilter.class);

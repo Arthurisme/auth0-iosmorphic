@@ -9,10 +9,34 @@ export class Auth {
   // Configure Auth0
   lock = new Auth0Lock('WIcfe2CWGUmcmJwYEfCk763nXyGLOFM6', 'arthurisme.auth0.com', {});
 
+
+  //Store profile object in auth class
+  userProfile: any;
+
   constructor() {
+    // Set userProfile attribute if already saved profile
+    this.userProfile = JSON.parse(localStorage.getItem('profile'));
+
     // Add callback for lock `authenticated` event
     this.lock.on("authenticated", (authResult) => {
       localStorage.setItem('id_token', authResult.idToken);
+        console.log('id_token storged local by auth.service: \n', authResult.idToken)
+
+      // Fetch profile information
+      this.lock.getProfile(authResult.idToken, (error, profile) => {
+        if (error) {
+          // Handle error
+          alert(error);
+          return;
+        }
+
+        profile.user_metadata = profile.user_metadata || {};
+        localStorage.setItem('profile', JSON.stringify(profile));
+        this.userProfile = profile;
+      });
+
+
+
     });
   }
 
@@ -30,5 +54,7 @@ export class Auth {
   public logout() {
     // Remove token from localStorage
     localStorage.removeItem('id_token');
+    localStorage.removeItem('profile');
+    this.userProfile = undefined;
   };
 };

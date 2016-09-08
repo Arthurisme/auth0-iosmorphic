@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Auth }      from './auth.service';
+import { Auth }      from '../../auth.service';
 import { AuthHttp }  from 'angular2-jwt';
 import { Http,Headers }      from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'ping',
-  templateUrl: 'app/ping.template.html'
+  templateUrl: 'app/components/ping/ping.template.html'
 })
 
 export class PingComponent {
@@ -19,12 +19,10 @@ export class PingComponent {
     this.message = '';
     console.log("start ping");
     let tokenAtLocal = localStorage.getItem('id_token');
-    console.log(tokenAtLocal);
+      console.log("tokenAtLocal storaged already was: \n");
+      console.log(tokenAtLocal);
 
-
-
-
-    this.http.get(`${this.API_URL}/ping`)
+      this.http.get(`${this.API_URL}/ping`)
       // .map(res => res.json())
       .subscribe(
         data => {
@@ -40,8 +38,11 @@ export class PingComponent {
       );
   }
   public securedPing() {
-    this.message = '';
-    let tokenAtLocal = localStorage.getItem('id_token');
+      this.message = '';
+      console.log("start ping");
+      let tokenAtLocal = localStorage.getItem('id_token');
+      console.log("tokenAtLocal storaged already was: \n");
+      console.log(tokenAtLocal);
 
     let headers = new Headers({'Authorization': 'Bearer '+tokenAtLocal});
 
