@@ -27,25 +27,35 @@ export class Auth0testpageComponent   {
 
   constructor(private router: Router) {
 
-      //Check to see if the user is logged in
+      // Check to see if the user is logged in
       if(!appSettings.hasKey("auth0Token")){
-          console.log("no token stored");
+          console.log("no token stored.");
+          // this.router.navigate(["/ping"]);
 
           this.doLogin();
 
       }else{
           console.log("has token stored");
+          // this.gotonextpage();
+
 
           //Deserialzise the saved user
           var tokenData = JSON.parse(appSettings.getString("auth0Token"));
+          console.log("token begain: "+ appSettings.getString("auth0Token")+ " token end.");
+
 
           //Check if it's expired
-          if(auth0.isTokenExpired(tokenData.idToken)){
+          // if(auth0.isTokenExpired(tokenData.token.idToken)){
+              if(auth0.isTokenExpired(tokenData.idToken)){
               //Make them log in again
+              console.log("token expired, login again.");
+
               this.doLogin();
           }else{
               //All good, navigate to your start page
-              this.goToHome();
+              console.log("has token stored, go to next page");
+
+              this.gotonextpage();
           }
       }
 
@@ -61,16 +71,19 @@ export class Auth0testpageComponent   {
         auth0.show().then( (args) =>{
             console.log(args.profile);
             console.log(args.token);
+            // appSettings.setString("auth0Token", JSON.stringify(args));
 
-            console.log("login ok 1!");
+            this.router.navigate(["/ping"]);
+
+            console.log("login ok 1 !");
 
 
             // this.loginService.logoff();
-            this.router.navigate(["/groceries"]);
+            // this.router.navigate(["/groceries"]);
             // this.router.navigate(["/"]);
-            // this.gotonextpage();
 
-            appSettings.setString("UserData", JSON.stringify(args));
+
+            // this.gotonextpage();
         }, (error) => {
             alert(error);
         });
@@ -80,9 +93,15 @@ export class Auth0testpageComponent   {
 
 
     }
+    doLogout() {
+        appSettings.remove("auth0Token");
+        appSettings.remove("auth0UserData");
+        this.router.navigate(["/auth0testpage"]);
+    }
 
     gotonextpage() {
-    this.router.navigate(["/groceries"]);
+        this.router.navigate(["/ping"]);
+        // this.router.navigate(["/groceries"]);
     // this.router.navigate(["/"]);
 
   }

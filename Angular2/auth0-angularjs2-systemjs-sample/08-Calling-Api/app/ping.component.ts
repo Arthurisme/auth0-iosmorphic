@@ -29,7 +29,8 @@ export class PingComponent {
       .subscribe(
         data => {
 
-          console.log(data);
+            console.log( "data origin:");
+            console.log( data);
             // this.message = JSON.parse(JSON.parse(JSON.stringify(data))._body);
             this.message =  (JSON.parse(JSON.stringify(data))._body);
           // this.message =  data._body ;

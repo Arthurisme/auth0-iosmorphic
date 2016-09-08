@@ -9,6 +9,9 @@ import { setStatusBarColors, BackendService, LoginService } from "./shared";
 import { LoginModule } from "./login/login.module";
 import { GroceriesModule } from "./groceries/groceries.module";
 import { Auth0testpageModule } from "./auth0testpage/auth0testpage.module";
+import { PingModule } from "./ping/ping.module";
+
+
 
 setStatusBarColors();
 
@@ -17,6 +20,7 @@ setStatusBarColors();
     BackendService,
     LoginService,
     authProviders
+
   ],
   imports: [
     NativeScriptModule,
@@ -24,7 +28,8 @@ setStatusBarColors();
     NativeScriptRouterModule.forRoot(appRoutes),
     LoginModule,
     GroceriesModule,
-    Auth0testpageModule
+    Auth0testpageModule,
+    PingModule
   ],
   bootstrap: [AppComponent]
 })

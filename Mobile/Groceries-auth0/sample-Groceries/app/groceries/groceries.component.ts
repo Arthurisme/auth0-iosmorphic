@@ -149,7 +149,7 @@ export class GroceriesComponent implements OnInit {
 
   doLogout() {
     appSettings.remove("auth0Token");
-    // appSettings.remove("auth0UserData");
+    appSettings.remove("auth0UserData");
     this.router.navigate(["/auth0testpage"]);
   }
 
