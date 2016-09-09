@@ -110,7 +110,7 @@ public class ProfileController {
 
 
             //test roles a user have:
-            logger.info("authority");
+            logger.info("authority 12");
 
 
             logger.info(authority);

@@ -53,12 +53,41 @@ public class Auth0JWTToken extends AbstractAuthenticationToken {
 	@Override
     public Collection<GrantedAuthority> getAuthorities() {
 		logger.info("Test where is starter point 30 ");
+		logger.info(principal.getAuthorities().toString());
+
 
 		Collection<GrantedAuthority> clist = (Collection<GrantedAuthority>) principal.getAuthorities();
+		Collection<String> cslist = new ArrayList<String>()  ;
+
+
 
 		// Here I can add role to current user, but it is better to do in user service:
-		clist.add(new SimpleGrantedAuthority("ROLE_TESTER"));
 
+
+
+
+
+
+		{
+			//  get list string of roles:
+			for (final GrantedAuthority grantedAuthority : principal.getAuthorities()) {
+				final String authority = grantedAuthority.getAuthority();
+				//test roles a user have:
+				logger.info("authority 12 2");
+				logger.info(authority);
+				cslist.add(authority);
+			}
+		}
+		logger.info("Test where is starter point 30 2 ");
+		logger.info(cslist.toString());
+
+
+
+
+		if(!cslist.contains("ROLE_TESTER")) {
+
+			clist.add(new SimpleGrantedAuthority("ROLE_TESTER"));
+		}
 
 //		origin:
 //		return (Collection<GrantedAuthority>) principal.getAuthorities();

@@ -8,6 +8,7 @@ import org.hibernate.validator.constraints.Email;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Collection;
 
 
 @Entity(name = "USER")
@@ -29,6 +30,12 @@ public class User {
     @NotNull(message = "Email is required")
     @Email(message = "Must be valid email")
     private String email;
+
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Collection<Role> roles;
+
 
     public User() {}
 
@@ -69,6 +76,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Collection<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(final Collection<Role> roles) {
+        this.roles = roles;
     }
 
 }
