@@ -5,10 +5,7 @@ package com.auth0.example.model;
 
 import org.hibernate.validator.constraints.Email;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -21,13 +18,14 @@ public class User {
     @javax.persistence.Column(name="Id", nullable=false)
     private Long id;
 
-
+    @Column(unique = true)
     private String auth0UserId;
 
     @NotNull(message = "Name is required")
     @Size(min = 3, max = 99)
     private String name;
 
+    @Column(unique = true)
     @NotNull(message = "Email is required")
     @Email(message = "Must be valid email")
     private String email;

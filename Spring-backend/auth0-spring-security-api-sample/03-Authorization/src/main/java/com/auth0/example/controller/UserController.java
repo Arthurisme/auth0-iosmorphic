@@ -46,6 +46,9 @@ public class UserController {
      * Simple demonstration of how Principal can be injected
      * Here, as demonstration, we want to do audit as only ROLE_ADMIN can create user..
      */
+
+    
+    //To do: make user profile binding as a service.
     @RequestMapping(value ="user/binding", method = RequestMethod.GET)
     public String binding() {
         logger.info("binding invoked");
@@ -74,6 +77,7 @@ public class UserController {
             currentUser.setEmail(username);
             currentUser.setName(nameOfUser);
             currentUser.setAuth0UserId(auth0UserId);
+            //To do: if username(email) is not taken do save, if taken, not save.
             userService.save(currentUser);
             // log username of user requesting profile creation
             logger.info("User with email: " + username + " creating new user");
