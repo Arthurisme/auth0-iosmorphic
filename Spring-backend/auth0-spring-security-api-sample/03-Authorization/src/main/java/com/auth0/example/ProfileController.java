@@ -73,8 +73,8 @@ public class ProfileController {
         {
 //            test to add current user to profile and database:
             // Test database crud for profile:
-            User d = new User(18L, "auth0teststringasid", "Eve5", "eve5@hacker.com");
-            userService.save(d);
+//            User d = new User(18L, "auth0teststringasid", "Eve5", "eve5@hacker.com");
+//            userService.save(d);
             //
         }
 
@@ -106,6 +106,13 @@ public class ProfileController {
     private void printGrantedAuthorities(final Auth0JWTToken principal) {
         for (final GrantedAuthority grantedAuthority : principal.getAuthorities()) {
             final String authority = grantedAuthority.getAuthority();
+
+
+
+            //test roles a user have:
+            logger.info("authority");
+
+
             logger.info(authority);
         }
     }

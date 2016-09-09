@@ -52,6 +52,7 @@ public class UsernameService {
 //        final Auth0UserDetails principal = (Auth0UserDetails) authentication.getPrincipal();
 //        logger.info("Current user accessed Admin secured resource: " + principal.getUsername());
         // we already have the username.. but for this sample lets call Auth0 service anyway..
+
         return auth0Client.getUserId((Auth0JWTToken) authentication);
     }
 

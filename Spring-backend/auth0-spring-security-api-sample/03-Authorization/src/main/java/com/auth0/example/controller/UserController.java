@@ -47,7 +47,7 @@ public class UserController {
      * Here, as demonstration, we want to do audit as only ROLE_ADMIN can create user..
      */
 
-    
+
     //To do: make user profile binding as a service.
     @RequestMapping(value ="user/binding", method = RequestMethod.GET)
     public String binding() {

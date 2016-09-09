@@ -4,8 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Implements the org.springframework.security.core.Authentication interface.
@@ -49,7 +52,19 @@ public class Auth0JWTToken extends AbstractAuthenticationToken {
 	@SuppressWarnings("unchecked")
 	@Override
     public Collection<GrantedAuthority> getAuthorities() {
-		return (Collection<GrantedAuthority>) principal.getAuthorities();
+		logger.info("Test where is starter point 30 ");
+
+		Collection<GrantedAuthority> clist = (Collection<GrantedAuthority>) principal.getAuthorities();
+
+		// Here I can add role to current user, but it is better to do in user service:
+		clist.add(new SimpleGrantedAuthority("ROLE_TESTER"));
+
+
+//		origin:
+//		return (Collection<GrantedAuthority>) principal.getAuthorities();
+
+		return clist;
+
      }
 
 }
