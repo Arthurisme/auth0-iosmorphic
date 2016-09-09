@@ -18,11 +18,12 @@ import com.auth0.example.model.User;
 @RestController
 @RequestMapping("/api/v1/")
 public class ProfileController {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
     @Autowired
     private UserService userService;
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     protected AppConfig appConfig;
@@ -42,7 +43,7 @@ public class ProfileController {
      * Simple demonstration of how Principal can be injected
      * Here, as demonstration, we want to do audit as only ROLE_ADMIN can create user..
      */
-    @RequestMapping(value ="profiles", method = RequestMethod.POST)
+    @RequestMapping(value = "profiles", method = RequestMethod.POST)
     public Profile create(final @Validated @RequestBody Profile profile, final Principal principal) {
         logger.info("create invoked");
         printGrantedAuthorities((Auth0JWTToken) principal);
@@ -72,28 +73,28 @@ public class ProfileController {
         {
 //            test to add current user to profile and database:
             // Test database crud for profile:
-            User d = new User(18L, "Eve5", "eve5@hacker.com");
+            User d = new User(18L, "auth0teststringasid", "Eve5", "eve5@hacker.com");
             userService.save(d);
- //
+            //
         }
 
 
         return profileService.create(profile);
     }
 
-    @RequestMapping(value ="profiles/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "profiles/{id}", method = RequestMethod.GET)
     public Profile get(final @PathVariable Long id) {
         logger.info("get invoked");
         return profileService.get(id);
     }
 
-    @RequestMapping(value ="profiles/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "profiles/{id}", method = RequestMethod.PUT)
     public Profile update(final @PathVariable Long id, final @Validated @RequestBody Profile profile) {
         logger.info("update invoked");
         return profileService.update(id, profile);
     }
 
-    @RequestMapping(value ="profiles/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "profiles/{id}", method = RequestMethod.DELETE)
     public Profile delete(final @PathVariable Long id) {
         logger.info("delete invoked");
         return profileService.delete(id);
@@ -103,7 +104,7 @@ public class ProfileController {
      * Simple demonstration of how Principal info can be accessed
      */
     private void printGrantedAuthorities(final Auth0JWTToken principal) {
-        for(final GrantedAuthority grantedAuthority: principal.getAuthorities()) {
+        for (final GrantedAuthority grantedAuthority : principal.getAuthorities()) {
             final String authority = grantedAuthority.getAuthority();
             logger.info(authority);
         }

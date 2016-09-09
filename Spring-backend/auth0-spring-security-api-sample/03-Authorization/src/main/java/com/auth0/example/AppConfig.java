@@ -1,6 +1,8 @@
 package com.auth0.example;
 
 import com.auth0.spring.security.api.Auth0SecurityConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +20,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class AppConfig extends Auth0SecurityConfig {
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
 //    @Override
@@ -33,6 +36,7 @@ public class AppConfig extends Auth0SecurityConfig {
         return new Auth0Client(clientId, issuer);
     }
 
+
     /**
      *  Our API Configuration - for Profile CRUD operations
      *
@@ -41,6 +45,7 @@ public class AppConfig extends Auth0SecurityConfig {
      */
     @Override
     protected void authorizeRequests(final HttpSecurity http) throws Exception {
+
         // include some Spring Boot Actuator endpoints to check metrics
         // add others or remove as you choose, this is just a sample config to illustrate
         // most specific rules must come - order is important (see Spring Security docs)
@@ -53,8 +58,11 @@ public class AppConfig extends Auth0SecurityConfig {
                 .antMatchers(HttpMethod.DELETE, "/api/v1/profiles/**").hasAnyAuthority("ROLE_ADMIN")
                 .anyRequest().authenticated();
 
+        logger.debug("Test where is Authority starter point 2 ");
 
-           // To show h2 console for only test:
+
+
+        // To show h2 console for only test:
 //            http.csrf().disable();
            // http.headers().frameOptions().disable();
     }
@@ -63,7 +71,10 @@ public class AppConfig extends Auth0SecurityConfig {
      * Only required for sample purposes..
      */
     String getAuthorityStrategy() {
-       return super.authorityStrategy;
+
+        logger.debug("Test where is Authority starter point 1 ");
+
+        return super.authorityStrategy;
     }
 
 

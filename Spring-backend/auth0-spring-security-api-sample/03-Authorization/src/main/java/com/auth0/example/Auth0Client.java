@@ -25,6 +25,9 @@ public class Auth0Client {
         this.domain = domain;
         this.auth0 = new Auth0(clientid, domain);
         this.client = this.auth0.newAuthenticationAPIClient();
+
+        logger.debug("Test where is starter point 3 ");
+
     }
 
     public String getUsername(Auth0JWTToken token) {

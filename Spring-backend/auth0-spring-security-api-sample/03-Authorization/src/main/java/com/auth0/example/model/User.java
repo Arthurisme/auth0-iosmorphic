@@ -1,3 +1,6 @@
+//Here I copy a Profile model with name User. for user data , Profile will using only no database .
+
+
 package com.auth0.example.model;
 
 import org.hibernate.validator.constraints.Email;
@@ -18,8 +21,11 @@ public class User {
     @javax.persistence.Column(name="Id", nullable=false)
     private Long id;
 
+
+    private String auth0UserId;
+
     @NotNull(message = "Name is required")
-    @Size(min = 3, max = 15)
+    @Size(min = 3, max = 99)
     private String name;
 
     @NotNull(message = "Email is required")
@@ -28,8 +34,9 @@ public class User {
 
     public User() {}
 
-    public User(final Long id, final String name, final String email) {
+    public User(final Long id, final String auth0UserId,  final String name, final String email) {
         this.id = id;
+        this.auth0UserId=auth0UserId;
         this.name = name;
         this.email = email;
     }
@@ -40,6 +47,14 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getAuth0UserId() {
+        return auth0UserId;
+    }
+
+    public void setAuth0UserId(String auth0UserId) {
+        this.auth0UserId = auth0UserId;
     }
 
     public String getName() {

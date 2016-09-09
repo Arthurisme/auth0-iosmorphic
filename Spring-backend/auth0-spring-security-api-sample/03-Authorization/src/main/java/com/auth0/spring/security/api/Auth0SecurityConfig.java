@@ -2,6 +2,8 @@ package com.auth0.spring.security.api;
 
 import com.auth0.jwt.Algorithm;
 import com.auth0.spring.security.api.authority.AuthorityStrategy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -32,6 +34,8 @@ import org.springframework.security.web.context.SecurityContextPersistenceFilter
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 @ConditionalOnProperty(prefix = "auth0", name = "defaultAuth0ApiSecurityEnabled")
 public class Auth0SecurityConfig extends WebSecurityConfigurerAdapter {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
     @Value(value = "${auth0.domain}")
     protected String domain;
@@ -141,6 +145,8 @@ public class Auth0SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
+        logger.info("Test where is starter point 50 ");
+
         // Disable CSRF for JWT usage
         http.csrf().disable();
         // Add Auth0 Authentication Filter

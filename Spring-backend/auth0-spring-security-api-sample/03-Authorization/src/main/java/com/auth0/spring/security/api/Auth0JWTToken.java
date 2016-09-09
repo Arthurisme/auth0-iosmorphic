@@ -1,5 +1,7 @@
 package com.auth0.spring.security.api;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -10,6 +12,8 @@ import java.util.Collection;
  * The constructor is set with the Auth0 JWT
  */
 public class Auth0JWTToken extends AbstractAuthenticationToken {
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
 	private static final long serialVersionUID = 2371882820082543721L;
 
@@ -20,9 +24,13 @@ public class Auth0JWTToken extends AbstractAuthenticationToken {
 		super(null);
 		this.jwt = jwt;
 		setAuthenticated(false);
+		logger.info("Test where is starter point 30 ");
+
 	}
 
 	public String getJwt() {
+		logger.info("Test where is starter point 31 ");
+
 		return jwt;
 	}
 

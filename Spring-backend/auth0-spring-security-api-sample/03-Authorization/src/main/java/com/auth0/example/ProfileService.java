@@ -31,6 +31,8 @@ public class ProfileService {
     public ProfileService(final Auth0Client auth0Client, final ProfileRepositoryStub profileRepository) {
         this.auth0Client = auth0Client;
         this.profileRepository = profileRepository;
+        logger.info("Test where is starter point 6 ");
+
     }
 
     @PreAuthorize("hasAuthority('ROLE_USER') or hasAuthority('ROLE_ADMIN')")
