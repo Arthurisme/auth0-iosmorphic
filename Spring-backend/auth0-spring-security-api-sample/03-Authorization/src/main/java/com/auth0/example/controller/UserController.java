@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,24 +66,39 @@ public class UserController {
 //            final String userId =  (usernameService.getUserId());
 //            logger.info("User id: " + userId + " creating new profile");
 
-            final String username = usernameService.getUsername();
-            final String nameOfUser = usernameService.getNameOfUser();
-            final String auth0UserId = usernameService.getUserId();
-            logger.info("User with email: " + username + " creating new user");
-            logger.info("User with nameOfUser: " + nameOfUser + " creating new user");
-            logger.info("User with userId: " + auth0UserId + " creating new user");
+            {
+                final String currentUserEmail = usernameService.getProfileEmail();
+                final String currentUserName = usernameService.getProfileUsername();
+                final String currentUserId = usernameService.getProfileUserId();
 
-            User currentUser = new User();
-//            currentProfile.setId(userId);
-            currentUser.setEmail(username);
-            currentUser.setName(nameOfUser);
-            currentUser.setAuth0UserId(auth0UserId);
-            //To do: if username(email) is not taken do save, if taken, not save.
-            userService.save(currentUser);
-            // log username of user requesting profile creation
-            logger.info("User with email: " + username + " creating new user");
-            logger.info("User with nameOfUser: " + nameOfUser + " creating new user");
-            logger.info("User with userId: " + auth0UserId + " creating new user");
+
+                logger.info("currentUserEmail 10: " + currentUserEmail + " creating new user");
+
+
+
+
+                if(userService.findByEmail(currentUserEmail) == null) {
+
+                   User currentUser = new User();
+                   currentUser.setEmail(currentUserEmail);
+                   currentUser.setUsername(currentUserName);
+                   currentUser.setAuth0UserId(currentUserId);
+
+                   userService.save(currentUser);
+                   // log username of user requesting profile creation
+                   logger.info("User with email: " + currentUserEmail + " creating new user");
+                   logger.info("User with nameOfUser: " + currentUserName + " creating new user");
+                   logger.info("User with userId: " + currentUserId + " creating new user");
+
+               }
+
+            }
+
+            {
+                //test find:
+//                User currentUser2 = userService.findById(1L);
+//                logger.info("currentUser2 with email: " + currentUser2.getName() + " creating new user");
+            }
 
 
         }
@@ -98,10 +114,10 @@ public class UserController {
         return userService.findById(id);
     }
 
-    @RequestMapping(value ="user/{name}", method = RequestMethod.GET)
-    public User getUserByName(final @PathVariable String name) {
+    @RequestMapping(value ="user/{username}", method = RequestMethod.GET)
+    public User getUserByName(final @PathVariable String username) {
         logger.info("get invoked");
-        return userService.findByName(name);
+        return userService.findByUsername(username);
     }
 
     @RequestMapping(value = "/user/update", method = RequestMethod.POST)

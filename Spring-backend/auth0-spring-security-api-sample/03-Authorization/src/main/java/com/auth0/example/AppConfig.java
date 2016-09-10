@@ -1,8 +1,10 @@
 package com.auth0.example;
 
+import com.auth0.example.security.MyUserDetailsService;
 import com.auth0.spring.security.api.Auth0SecurityConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +23,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 public class AppConfig extends Auth0SecurityConfig {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+
 
 
 //    @Override
@@ -76,6 +80,7 @@ public class AppConfig extends Auth0SecurityConfig {
 
         return super.authorityStrategy;
     }
+
 
 
 

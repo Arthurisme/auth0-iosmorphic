@@ -1,13 +1,11 @@
 package com.auth0.example.dao;
 
 import com.auth0.example.model.User;
+import com.auth0.example.model.Role;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Repository
 public interface UserDao extends CrudRepository<User, Long>{
@@ -18,8 +16,12 @@ public interface UserDao extends CrudRepository<User, Long>{
 //
     User findById(Long Id);
 //
-    User findByName(String name);
-//
+    User findByUsername(String username);
+
+    User findByEmail(String email);
+
+
+    //
 //    User update(User user);
 //
 	void deleteById(Long Id);

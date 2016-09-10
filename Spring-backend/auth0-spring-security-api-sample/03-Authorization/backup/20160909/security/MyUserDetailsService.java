@@ -1,8 +1,3 @@
-
-//not use yet!
-
-
-
 package com.auth0.example.security;
 
 //import org.baeldung.persistence.dao.UserRepository;
@@ -58,8 +53,8 @@ public class MyUserDetailsService implements UserDetailsService {
 
 
         try {
-            final String username = usernameService.getProfileEmail();
-            final String nameOfUser = usernameService.getProfileUsername();
+            final String username = usernameService.getUsername();
+            final String nameOfUser = usernameService.getNameOfUser();
              if (username == null) {
                 throw new UsernameNotFoundException("No user found with username: " + email);
             }

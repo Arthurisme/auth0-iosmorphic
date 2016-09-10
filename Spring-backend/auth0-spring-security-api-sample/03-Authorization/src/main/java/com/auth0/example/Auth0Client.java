@@ -30,15 +30,32 @@ public class Auth0Client {
 
     }
 
-    public String getUsername(Auth0JWTToken token) {
+    public String getProfileUserId(Auth0JWTToken token) {
+        final Request<UserProfile> request = client.tokenInfo(token.getJwt());
+        final UserProfile profile = request.execute();
+        logger.debug("Test where is starter point 3 ");
+        return profile.getId();
+
+    }
+
+    public String getProfileEmail(Auth0JWTToken token) {
         final Request<UserProfile> request = client.tokenInfo(token.getJwt());
         final UserProfile profile = request.execute();
         logger.debug("Test where is starter point 1 ");
         return profile.getEmail();
-
     }
 
-    public String getNameOfUser(Auth0JWTToken token) {
+    //username of profile = email
+    public String getProfileUsername(Auth0JWTToken token) {
+        final Request<UserProfile> request = client.tokenInfo(token.getJwt());
+        final UserProfile profile = request.execute();
+        logger.debug("Test where is starter point 1 ");
+        return profile.getEmail();
+    }
+
+
+
+    public String getProfileName(Auth0JWTToken token) {
         final Request<UserProfile> request = client.tokenInfo(token.getJwt());
         final UserProfile profile = request.execute();
         logger.debug("Test where is starter point 2 ");
@@ -46,12 +63,13 @@ public class Auth0Client {
 
     }
 
-    public String getUserId(Auth0JWTToken token) {
+
+
+    public String getProfileNickname(Auth0JWTToken token) {
         final Request<UserProfile> request = client.tokenInfo(token.getJwt());
         final UserProfile profile = request.execute();
-        logger.debug("Test where is starter point 3 ");
-        return profile.getId();
-
+        logger.debug("Test where is starter point 1 ");
+        return profile.getNickname();
     }
 
 }

@@ -29,31 +29,54 @@ public class UsernameService {
     private Auth0Client auth0Client;
 
 //    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public String getUsername() {
+    public String getProfileUsername() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         final Auth0UserDetails principal = (Auth0UserDetails) authentication.getPrincipal();
         logger.info("Current user accessed Admin secured resource: " + principal.getUsername());
         // we already have the username.. but for this sample lets call Auth0 service anyway..
-        return auth0Client.getUsername((Auth0JWTToken) authentication);
-    }
-
-//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public String getNameOfUser() {
-        final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//        final Auth0UserDetails principal = (Auth0UserDetails) authentication.getPrincipal();
-//        logger.info("Current user accessed Admin secured resource: " + principal.getUsername());
-        // we already have the username.. but for this sample lets call Auth0 service anyway..
-        return auth0Client.getNameOfUser((Auth0JWTToken) authentication);
+        return auth0Client.getProfileUsername((Auth0JWTToken) authentication);
     }
 
     //    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public String getUserId() {
+    public String getProfileEmail() {
+        final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        final Auth0UserDetails principal = (Auth0UserDetails) authentication.getPrincipal();
+//        logger.info("Current user accessed Admin secured resource: " + principal.getUsername());
+        // we already have the username.. but for this sample lets call Auth0 service anyway..
+        return auth0Client.getProfileEmail((Auth0JWTToken) authentication);
+    }
+
+
+// also email?
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public String getProfileName() {
+        final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        final Auth0UserDetails principal = (Auth0UserDetails) authentication.getPrincipal();
+//        logger.info("Current user accessed Admin secured resource: " + principal.getUsername());
+        // we already have the username.. but for this sample lets call Auth0 service anyway..
+        return auth0Client.getProfileName((Auth0JWTToken) authentication);
+    }
+
+    //    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public String getProfileUserId() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 //        final Auth0UserDetails principal = (Auth0UserDetails) authentication.getPrincipal();
 //        logger.info("Current user accessed Admin secured resource: " + principal.getUsername());
         // we already have the username.. but for this sample lets call Auth0 service anyway..
 
-        return auth0Client.getUserId((Auth0JWTToken) authentication);
+        return auth0Client.getProfileUserId((Auth0JWTToken) authentication);
+    }
+
+
+    // full name?
+    //    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public String getProfileNickname() {
+        final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        final Auth0UserDetails principal = (Auth0UserDetails) authentication.getPrincipal();
+//        logger.info("Current user accessed Admin secured resource: " + principal.getUsername());
+        // we already have the username.. but for this sample lets call Auth0 service anyway..
+
+        return auth0Client.getProfileNickname((Auth0JWTToken) authentication);
     }
 
 }

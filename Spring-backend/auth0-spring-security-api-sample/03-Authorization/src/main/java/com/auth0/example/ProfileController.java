@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,7 +49,7 @@ public class ProfileController {
         logger.info("create invoked");
         printGrantedAuthorities((Auth0JWTToken) principal);
         if ("ROLES".equals(appConfig.getAuthorityStrategy())) {
-            final String username = usernameService.getUsername();
+            final String username = usernameService.getProfileUsername();
             // log username of user requesting profile creation
             logger.info("User with email: " + username + " creating new profile");
 
@@ -59,16 +60,16 @@ public class ProfileController {
 //            final String userId =  (usernameService.getUserId());
 //            logger.info("User id: " + userId + " creating new profile");
 
-            final String username = usernameService.getUsername();
-            final String nameOfUser = usernameService.getNameOfUser();
+            final String userName = usernameService.getProfileUsername() ;
+            final String userEmail = usernameService.getProfileEmail();
 
             Profile currentProfile = new Profile();
 //            currentProfile.setId(userId);
-            currentProfile.setEmail(username);
-            currentProfile.setName(nameOfUser);
+            currentProfile.setEmail(userEmail);
+            currentProfile.setName(userName);
             profileService.create(currentProfile);
             // log username of user requesting profile creation
-            logger.info("User with email: " + username + " creating new profile");
+            logger.info("User with email: " + userEmail + " creating new profile");
         }
         {
 //            test to add current user to profile and database:
@@ -76,6 +77,26 @@ public class ProfileController {
 //            User d = new User(18L, "auth0teststringasid", "Eve5", "eve5@hacker.com");
 //            userService.save(d);
             //
+        }
+
+        {
+            //test get roles:
+            String testRoles = SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString();
+            SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString();
+            logger.info("Userroles: " + testRoles + " creating new user");
+            logger.info("test 102: " );
+        }
+
+        {
+            final String ProfileName = usernameService.getProfileName() ;
+            logger.info("ProfileName: " + ProfileName + "  ");
+
+            final String  ProfileNickname = usernameService.getProfileNickname() ;
+            logger.info("getProfileNickname: " +  ProfileNickname + "  ");
+
+
+
+
         }
 
 

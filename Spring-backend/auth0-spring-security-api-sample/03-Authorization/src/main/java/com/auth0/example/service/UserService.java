@@ -20,8 +20,11 @@ public interface UserService {
 //
     User findById(Long Id);
 //
-    User findByName(String name);
-//
+    User findByUsername(String username);
+
+    User findByEmail(String email);
+
+    //
 //    User update(User user);
 //
     void deleteById(Long Id);
