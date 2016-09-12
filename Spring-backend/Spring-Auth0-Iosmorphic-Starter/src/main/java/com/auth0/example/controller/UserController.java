@@ -111,7 +111,7 @@ public class UserController {
     @RequestMapping(value ="user/{id}", method = RequestMethod.GET)
     public User getUserById(final @PathVariable Long id) {
         logger.info("get invoked");
-        return userService.findById(id);
+        return userService.findByUserId(id);
     }
 
     @RequestMapping(value ="user/{username}", method = RequestMethod.GET)
@@ -138,7 +138,7 @@ public class UserController {
     @RequestMapping(value ="user/{id}", method = RequestMethod.DELETE)
     public void deleteUserById(final @PathVariable Long id) {
         logger.info("delete invoked");
-        userService.deleteById(id);
+        userService.deleteByUserId(id);
     }
 
     /**

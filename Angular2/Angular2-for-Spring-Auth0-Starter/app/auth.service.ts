@@ -7,7 +7,14 @@ declare var Auth0Lock: any;
 @Injectable()
 export class Auth {
   // Configure Auth0
-  lock = new Auth0Lock('WIcfe2CWGUmcmJwYEfCk763nXyGLOFM6', 'arthurisme.auth0.com', {});
+  lock = new Auth0Lock('WIcfe2CWGUmcmJwYEfCk763nXyGLOFM6', 'arthurisme.auth0.com', {
+    auth: {
+      redirect: false,
+      params: {
+        scope: 'openid email user_metadata app_metadata picture offline_access',
+      }
+    }
+  });
 
 
   //Store profile object in auth class
@@ -19,8 +26,14 @@ export class Auth {
 
     // Add callback for lock `authenticated` event
     this.lock.on("authenticated", (authResult) => {
+      console.log('authResult storged local by auth.service: \n', authResult)
+
       localStorage.setItem('id_token', authResult.idToken);
         console.log('id_token storged local by auth.service: \n', authResult.idToken)
+      localStorage.setItem("currentUserName","arthur.zhixin.liu@gmail.com");
+
+
+
 
       // Fetch profile information
       this.lock.getProfile(authResult.idToken, (error, profile) => {
@@ -34,6 +47,9 @@ export class Auth {
         localStorage.setItem('profile', JSON.stringify(profile));
         this.userProfile = profile;
       });
+
+
+
 
 
 

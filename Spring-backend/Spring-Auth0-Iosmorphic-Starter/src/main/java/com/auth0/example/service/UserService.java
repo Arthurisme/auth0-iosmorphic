@@ -18,7 +18,7 @@ public interface UserService {
 
     User save(User user);
 //
-    User findById(Long Id);
+    User findByUserId(Long Id);
 //
     User findByUsername(String username);
 
@@ -27,7 +27,7 @@ public interface UserService {
     //
 //    User update(User user);
 //
-    void deleteById(Long Id);
+    void deleteByUserId(Long Id);
 
 
 

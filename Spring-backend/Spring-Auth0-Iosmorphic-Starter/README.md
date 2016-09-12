@@ -1,5 +1,9 @@
 # Starter Seed
 
+The project based on official auth0 spring api sample:
+
+The spring backend must be start before the frondend (or/and mobile side).
+
 This example shows how to secure your Java Spring Security API endpoints using Auth0-issued JSON Web Tokens.
 
 You can read a quickstart for this sample [here](https://auth0.com/docs/quickstart/backend/java-spring-security).

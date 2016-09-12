@@ -33,9 +33,9 @@ public class UserServiceImpl implements UserService {
 	}
 //
 ////	or maybe: Profile findById(Long Id);
-	public  User findById(Long Id)
+	public  User findByUserId(Long Id)
 	{
-		return userDao.findById(Id);
+		return userDao.findByUserId(Id);
 	}
 //
 //
@@ -53,8 +53,8 @@ public class UserServiceImpl implements UserService {
 //		return  userDao.update(user);
 //	}
 //
-	public void deleteById(Long Id){
-		userDao.deleteById(Id);
+	public void deleteByUserId(Long Id){
+		userDao.deleteByUserId(Id);
 	}
 
 

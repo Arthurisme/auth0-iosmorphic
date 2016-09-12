@@ -4,8 +4,10 @@
 
 package com.auth0.example.model;
 
+import com.auth0.example.model.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,16 +16,19 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Collection;
+import java.util.Date;
+import java.util.List;
 
 
 @Entity
+@javax.persistence.Table(name="\"User\"")
 public class User implements UserDetails {
 
 
     public User() {}
 
     public User(final Long id, final String auth0UserId,  final String username, final String email) {
-        this.id = id;
+        this.userId = userId;
         this.auth0UserId=auth0UserId;
         this.username = username;
         this.email = email;
@@ -32,8 +37,8 @@ public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @javax.persistence.Column(name="Id", nullable=false)
-    private Long id;
+    @javax.persistence.Column(name="userId", nullable=false)
+    private Long userId;
 
     @Column(unique = true)
     private String auth0UserId;
@@ -56,7 +61,7 @@ public class User implements UserDetails {
 
     private String lastName;
 
-    @NotNull
+    //@NotNull ---- password is not required because here use auth0 as gateway.
     @Size(min = 4, max = 100)
     private String password;
 
@@ -65,7 +70,7 @@ public class User implements UserDetails {
 
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_userId", referencedColumnName = "UserId"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles;
 
 
@@ -85,6 +90,17 @@ public class User implements UserDetails {
 
     @NotNull
     private boolean accountEnabled;
+
+
+    //for Photo component:
+    @CreationTimestamp
+    private Date created;
+
+    @javax.persistence.Transient
+    private List< Photo> photoList;
+
+    @javax.persistence.Transient
+    private List< Photo> likedPhotoList;
 
 
 
@@ -221,12 +237,12 @@ public class User implements UserDetails {
         this.accountEnabled = accountEnabled;
     }
 
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserId(Long id) {
+        this.userId = userId;
     }
 
     public String getAuth0UserId() {
@@ -255,6 +271,30 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public List< Photo> getPhotoList() {
+        return photoList;
+    }
+
+    public void setPhotoList(List< Photo> photoList) {
+        this.photoList = photoList;
+    }
+
+    public List< Photo> getLikedPhotoList() {
+        return likedPhotoList;
+    }
+
+    public void setLikedPhotoList(List< Photo> likedPhotoList) {
+        this.likedPhotoList = likedPhotoList;
+    }
 
 
 

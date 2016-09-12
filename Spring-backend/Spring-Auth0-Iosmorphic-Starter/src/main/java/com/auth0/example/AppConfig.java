@@ -54,12 +54,19 @@ public class AppConfig extends Auth0SecurityConfig {
         // add others or remove as you choose, this is just a sample config to illustrate
         // most specific rules must come - order is important (see Spring Security docs)
         http.authorizeRequests()
-                .antMatchers(  "/", "/ping", "/pong", "/console/**", "/console").permitAll()
+                .antMatchers(  "/", "/ping", "/pong", "/console/**", "/console",  "/photo/**",  "/photo").permitAll()
+
                 .antMatchers(HttpMethod.GET, "/api/v1/profiles").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/v1/profiles/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/v1/profiles/**").hasAnyAuthority("ROLE_ADMIN")
                 .antMatchers(HttpMethod.PUT, "/api/v1/profiles/**").hasAnyAuthority("ROLE_ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/api/v1/profiles/**").hasAnyAuthority("ROLE_ADMIN")
+
+                .antMatchers(HttpMethod.GET,    "/rest").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                .antMatchers(HttpMethod.GET,    "/rest/**").hasAnyAuthority("ROLE_USER")
+                .antMatchers(HttpMethod.POST,   "/rest/**").hasAnyAuthority("ROLE_USER")
+                .antMatchers(HttpMethod.PUT,    "/rest/**").hasAnyAuthority("ROLE_USER")
+                .antMatchers(HttpMethod.DELETE, "/rest/**").hasAnyAuthority("ROLE_USER")
                 .anyRequest().authenticated();
 
         logger.debug("Test where is Authority starter point 2 ");

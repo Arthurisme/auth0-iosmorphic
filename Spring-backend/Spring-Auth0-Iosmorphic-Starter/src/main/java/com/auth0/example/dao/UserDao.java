@@ -14,7 +14,7 @@ public interface UserDao extends CrudRepository<User, Long>{
 
 	User save(User user);
 //
-    User findById(Long Id);
+    User findByUserId(Long Id);
 //
     User findByUsername(String username);
 
@@ -24,7 +24,7 @@ public interface UserDao extends CrudRepository<User, Long>{
     //
 //    User update(User user);
 //
-	void deleteById(Long Id);
+	void deleteByUserId(Long Id);
 //	Long deleteByLastname(String lastname);
 //	List<User> removeByLastname(String lastname);
 

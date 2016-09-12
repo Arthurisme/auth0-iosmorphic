@@ -103,11 +103,13 @@ public class Auth0JWTToken extends AbstractAuthenticationToken {
 
 
 
-		//add roles:
-//		if(!rolesInToken.contains("ROLE_TESTER")) {
-//
-//			clist.add(new SimpleGrantedAuthority("ROLE_TESTER"));
-//		}
+//		add roles:
+		if(!rolesInToken.contains("ROLE_USER")) {
+
+			clist.add(new SimpleGrantedAuthority("ROLE_USER"));
+			logger.info("Test where is starter point 30 3 ");
+			logger.info(principal.getAuthorities().toString());
+		}
 
 //		origin:
 //		return (Collection<GrantedAuthority>) principal.getAuthorities();
