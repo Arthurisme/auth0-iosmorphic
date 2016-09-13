@@ -6,7 +6,6 @@
         <button class="btn btn-primary btn-margin" [routerLink]="['/ping']">Ping</button>
       <button class="btn btn-primary btn-margin" [routerLink]="['/profile']">Profile</button>
       <button class="btn btn-primary btn-margin" [routerLink]="['/my-album']">my-album</button>
-      <button class="btn btn-primary btn-margin" [routerLink]="['/image-detail']">image-detail</button>
       <button class="btn btn-primary btn-margin" [routerLink]="['/add-photo']">add-photo</button>
       <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
       <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>

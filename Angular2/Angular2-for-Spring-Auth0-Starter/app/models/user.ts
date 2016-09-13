@@ -4,6 +4,9 @@ export class User{
 
 
     public userId: number;
+    public auth0UserId: string;
+    public email: string ;
+
     public firstName:string;
     public lastName:string;
     public userName:string;

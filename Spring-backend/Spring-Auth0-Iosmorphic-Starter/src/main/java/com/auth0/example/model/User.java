@@ -31,6 +31,14 @@ public class User {
     @GeneratedValue(strategy=GenerationType.AUTO)
     @javax.persistence.Column(name="userId", nullable=false)
     private Long userId;
+
+
+    private String auth0UserId;
+
+
+//    @Column(unique = true)
+    private String email;
+
     private String firstName;
     private String lastName;
     private String userName;
@@ -51,6 +59,22 @@ public class User {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getAuth0UserId() {
+        return auth0UserId;
+    }
+
+    public void setAuth0UserId(String auth0UserId) {
+        this.auth0UserId = auth0UserId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getFirstName() {

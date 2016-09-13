@@ -31,7 +31,7 @@ export class MyAlbum {
         // console.log(currentUserNameAtLocal);
 
 
-        this.userService.getUserByName('arthur.zhixin.liu@gmail.com').subscribe(
+        this.userService.getUserByName( localStorage.getItem("currentUserName")).subscribe(
 
             user => {
                 this.user =  JSON.parse(JSON.parse(JSON.stringify(user))._body);
@@ -41,7 +41,7 @@ export class MyAlbum {
 
 
                 // this.photoService.getPhotosByUser(this.user).subscribe(
-                    this.photoService.getPhotosByUsername("arthur.zhixin.liu@gmail.com").subscribe(
+                    this.photoService.getPhotosByUsername( localStorage.getItem("currentUserName")).subscribe(
                     photos => {
                         this.photos =  JSON.parse(JSON.parse(JSON.stringify(photos))._body) ;
 
