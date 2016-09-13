@@ -24,8 +24,8 @@ export class AddPhoto {
     ) {}
 
     onSubmit() {
-        // this.userService.getUserByName(localStorage.getItem("currentUserName")).subscribe(
-            this.userService.getUserByName("arthur.zhixin.liu@gmail.com").subscribe(
+        this.userService.getUserByName(localStorage.getItem("currentUserName")).subscribe(
+        //     this.userService.getUserByName("arthur.zhixin.liu@gmail.com").subscribe(
             user => {
                 this.user = JSON.parse(JSON.parse(JSON.stringify(user))._body);
                 console.log("test user in add photo:"+this.user);

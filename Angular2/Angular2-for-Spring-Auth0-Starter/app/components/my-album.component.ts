@@ -30,10 +30,17 @@ export class MyAlbum {
         console.log("tokenAtLocal storaged already was: \n");
         // console.log(currentUserNameAtLocal);
 
+        console.log("current username storaged already was: \n");
+        console.log(localStorage.getItem("currentUserName"));
+
 
         this.userService.getUserByName( localStorage.getItem("currentUserName")).subscribe(
+        //     this.userService.getUserByName( "arthur.zhixin.liu@gmail.com").subscribe(
 
             user => {
+                console.log("user from my-album:");
+                console.log(user);
+
                 this.user =  JSON.parse(JSON.parse(JSON.stringify(user))._body);
                 // this.user =      (user) ._body ;
                 // console.log("test user list : "+ (user) ._body);

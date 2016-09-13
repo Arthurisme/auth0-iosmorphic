@@ -22,7 +22,10 @@ export class PingComponent {
       console.log("tokenAtLocal storaged already was: \n");
       console.log(tokenAtLocal);
 
-      this.http.get(`${this.API_URL}/ping`)
+      let headers = new Headers({'Authorization': 'Bearer '+tokenAtLocal});
+
+
+      this.http.get(`${this.API_URL}/ping`,{headers: headers})
       // .map(res => res.json())
       .subscribe(
         data => {

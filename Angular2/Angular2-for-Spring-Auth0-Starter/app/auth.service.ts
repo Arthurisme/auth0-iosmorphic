@@ -1,5 +1,6 @@
 import { Injectable }      from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
+import {UserService} from "./services/user.service";
 
 // Avoid name not found warnings
 declare var Auth0Lock: any;
@@ -20,18 +21,20 @@ export class Auth {
   //Store profile object in auth class
   userProfile: any;
 
-  constructor() {
+  constructor( private userService:UserService) {
     // Set userProfile attribute if already saved profile
     this.userProfile = JSON.parse(localStorage.getItem('profile'));
 
     // Add callback for lock `authenticated` event
     this.lock.on("authenticated", (authResult) => {
+
       console.log('authResult storged local by auth.service: \n', authResult)
 
       localStorage.setItem('id_token', authResult.idToken);
-        console.log('id_token storged local by auth.service: \n', authResult.idToken)
-      localStorage.setItem("currentUserName","arthur.zhixin.liu@gmail.com");
-      console.log('currentUserName: \n', localStorage.getItem("currentUserName"))
+      //binding user to spring boot:
+      this.userService.bindingUserToSpring().subscribe();
+      console.log('id_token storged local by auth.service: \n', authResult.idToken)
+
 
 
 
@@ -47,6 +50,10 @@ export class Auth {
         profile.user_metadata = profile.user_metadata || {};
         localStorage.setItem('profile', JSON.stringify(profile));
         this.userProfile = profile;
+        console.log('profile from login: \n', this.userProfile);
+        localStorage.setItem("currentUserName", (profile.email));
+        console.log('currentUserName from profile from login: \n', localStorage.getItem("currentUserName"))
+
       });
 
 

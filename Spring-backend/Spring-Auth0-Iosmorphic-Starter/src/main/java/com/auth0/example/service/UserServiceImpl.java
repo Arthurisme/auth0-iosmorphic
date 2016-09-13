@@ -44,10 +44,10 @@ public class UserServiceImpl implements UserService {
 
 	}
 
-//	public User findByEmail( String email){
-//		return userDao.findByEmail(email);
-//
-//	}
+	public User findByEmail( String email){
+		return userDao.findByEmail(email);
+
+	}
 //
 //	public User update(User user){
 //		return  userDao.update(user);

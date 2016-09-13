@@ -8,13 +8,13 @@ import {MyAlbum} from "./components/my-album.component";
 
 export const routes: RouterConfig = [
   { path: '', component: HomeComponent},
+  { path: 'ping', component: PingComponent},
 
   {path:'my-album' ,component:MyAlbum},
   {path:'image-detail/:id' , component: ImageDetail},
   {path:'add-photo', component:AddPhoto},
 
 
-  { path: 'ping', component: PingComponent},
   ...ProfileRoutes,
   { path: '**', redirectTo: '' }
 ];

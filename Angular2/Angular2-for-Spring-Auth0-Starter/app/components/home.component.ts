@@ -4,6 +4,7 @@ import {SidePanel} from './side-panel.component';
 import {flattenStyles} from "@angular/compiler/core_private";
 import {ApiTestService} from "../services/apitest.service";
 import {Router} from '@angular/router-deprecated';
+import {UserService} from "../services/user.service";
 
 
 
@@ -16,7 +17,8 @@ export class HomeComponent {
 
     hasThisRole:boolean;
 
-    constructor(private apiTestService: ApiTestService,private router: Router){}
+    constructor(private apiTestService: ApiTestService,private router: Router, private userService:UserService
+    ){}
 
     onClick(){
 
@@ -31,5 +33,9 @@ export class HomeComponent {
             error => console.log(error)
         );
 
+    }
+
+    binding(){
+        this.userService.bindingUserToSpring();
     }
 }

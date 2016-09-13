@@ -1,5 +1,6 @@
 //Here I copy a Profile model with name User. for user data , Profile will using only no database .
 //There are no "name" , only nick name, username, and first name, secondname...
+//username = emal;
 
 
 package com.auth0.example.model;

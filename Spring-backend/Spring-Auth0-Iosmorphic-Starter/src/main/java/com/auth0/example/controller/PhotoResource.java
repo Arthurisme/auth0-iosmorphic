@@ -1,5 +1,6 @@
 package com.auth0.example.controller;
 
+import com.auth0.example.UsernameService;
 import com.auth0.example.model.Photo;
 import com.auth0.example.model.User;
 import com.auth0.example.service.PhotoService;
@@ -26,6 +27,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/rest")
 public class PhotoResource {
+
+
 	
 	private String imageName;
 
@@ -35,6 +38,9 @@ public class PhotoResource {
 
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	protected UsernameService usernameService;
 	
 	@RequestMapping(value="/photo/upload", method= RequestMethod.POST)
 	public String upload(HttpServletResponse response, HttpServletRequest request){
@@ -64,7 +70,9 @@ public class PhotoResource {
 	@RequestMapping(value="/photo/add", method= RequestMethod.POST)
 	public Photo addPhoto(@RequestBody Photo photo){
 		photo.setImageName(imageName);
-		photo.setUser(userService.findByUserName("arthur.zhixin.liu@gmail.com"));
+		final String currentUserEmail = usernameService.getProfileEmail();
+
+		photo.setUser(userService.findByUserName(currentUserEmail));
 		return	photoService.save(photo);
 		}
 	
