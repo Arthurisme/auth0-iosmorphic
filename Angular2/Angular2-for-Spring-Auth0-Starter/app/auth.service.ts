@@ -9,9 +9,9 @@ export class Auth {
   // Configure Auth0
   lock = new Auth0Lock('WIcfe2CWGUmcmJwYEfCk763nXyGLOFM6', 'arthurisme.auth0.com', {
     auth: {
-      redirect: false,
+      // redirect: false,
       params: {
-        scope: 'openid email user_metadata app_metadata picture offline_access',
+        scope: 'openid email roles user_metadata app_metadata picture offline_access',
       }
     }
   });
@@ -31,6 +31,7 @@ export class Auth {
       localStorage.setItem('id_token', authResult.idToken);
         console.log('id_token storged local by auth.service: \n', authResult.idToken)
       localStorage.setItem("currentUserName","arthur.zhixin.liu@gmail.com");
+      console.log('currentUserName: \n', localStorage.getItem("currentUserName"))
 
 
 

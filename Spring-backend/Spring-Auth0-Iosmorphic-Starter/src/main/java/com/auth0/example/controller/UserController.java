@@ -77,12 +77,15 @@ public class UserController {
 
 
 
-                if(userService.findByEmail(currentUserEmail) == null) {
+                if(userService.findByUserName(currentUserName) == null) {
 
                    User currentUser = new User();
-                   currentUser.setEmail(currentUserEmail);
-                   currentUser.setUsername(currentUserName);
-                   currentUser.setAuth0UserId(currentUserId);
+//                    currentUser.setEmail(currentUserEmail);
+//                    currentUser.setUsername(currentUserName);
+//                    currentUser.setAuth0UserId(currentUserId);
+                    currentUser.setUserName(currentUserName);
+//                    currentUser.setUsername(currentUserName);
+//                    currentUser.setAuth0UserId(currentUserId);
 
                    userService.save(currentUser);
                    // log username of user requesting profile creation
@@ -117,7 +120,7 @@ public class UserController {
     @RequestMapping(value ="user/{username}", method = RequestMethod.GET)
     public User getUserByName(final @PathVariable String username) {
         logger.info("get invoked");
-        return userService.findByUsername(username);
+        return userService.findByUserName(username);
     }
 
     @RequestMapping(value = "/user/update", method = RequestMethod.POST)

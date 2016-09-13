@@ -20,9 +20,9 @@ public interface UserService {
 //
     User findByUserId(Long Id);
 //
-    User findByUsername(String username);
+    User findByUserName(String username);
 
-    User findByEmail(String email);
+//    User findByEmail(String email);
 
     //
 //    User update(User user);

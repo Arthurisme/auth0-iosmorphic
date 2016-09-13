@@ -1,7 +1,7 @@
 package com.auth0.spring.security.api;
 
 import com.auth0.example.Auth0Client;
-import com.auth0.example.model.Role;
+//import com.auth0.example.model.Role;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -104,12 +104,12 @@ public class Auth0JWTToken extends AbstractAuthenticationToken {
 
 
 //		add roles:
-		if(!rolesInToken.contains("ROLE_USER")) {
-
-			clist.add(new SimpleGrantedAuthority("ROLE_USER"));
-			logger.info("Test where is starter point 30 3 ");
-			logger.info(principal.getAuthorities().toString());
-		}
+//		if(!rolesInToken.contains("ROLE_USER")) {
+//
+//			clist.add(new SimpleGrantedAuthority("ROLE_USER"));
+//			logger.info("Test where is starter point 30 3 ");
+//			logger.info(principal.getAuthorities().toString());
+//		}
 
 //		origin:
 //		return (Collection<GrantedAuthority>) principal.getAuthorities();

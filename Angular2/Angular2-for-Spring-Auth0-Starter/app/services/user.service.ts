@@ -14,7 +14,7 @@ export  class UserService{
         console.log(" id_token already was: \n");
         console.log(localStorage.getItem("id_token"));
 
-        let url = "http://localhost:3001/rest/user/userName";
+        let url = "http://localhost:3001/rest/user/username";
         let header = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("id_token")});
 
         return this.http.post(url, username, {headers:header} );

@@ -33,18 +33,24 @@ export class MyAlbum {
 
         this.userService.getUserByName('arthur.zhixin.liu@gmail.com').subscribe(
 
-            // user => {
-            //     this.user =  JSON.parse(JSON.parse(JSON.stringify(user))._body);
-            //
-            //     this.photoService.getPhotosByUser(this.user).subscribe(
-            //         photos => {
-            //             this.photos =  JSON.parse(JSON.parse(JSON.stringify(photos))._body) ;
-            //
-            //             console.log("test photos list in front end: "+ this.photos);
-            //         }
-            //     ),
-            //         error => console.log(error)
-            // }
+            user => {
+                this.user =  JSON.parse(JSON.parse(JSON.stringify(user))._body);
+                // this.user =      (user) ._body ;
+                // console.log("test user list : "+ (user) ._body);
+                console.log(  this.user);
+
+
+                // this.photoService.getPhotosByUser(this.user).subscribe(
+                    this.photoService.getPhotosByUsername("arthur.zhixin.liu@gmail.com").subscribe(
+                    photos => {
+                        this.photos =  JSON.parse(JSON.parse(JSON.stringify(photos))._body) ;
+
+                        console.log("test photos list in front end: " );
+                        console.log(  this.photos);
+                    }
+                ),
+                    error => console.log(error)
+            }
         ),
             error => console.log(error)
 
@@ -53,8 +59,14 @@ export class MyAlbum {
 
     onSelect(photo:Photo){
         this.selectedPhoto = photo;
-        this.router.navigate(['ImageDetail',{id:this.selectedPhoto.photoId}]);
+        console.log("test photo : " );
+        console.log(  this.selectedPhoto);
+        //rc4:
+        // this.router.navigate(['ImageDetail',{id:this.selectedPhoto.photoId}]);
 
+        //rc6:
+        let link = ['/image-detail', this.selectedPhoto.photoId];
+        this.router.navigate(link);
     }
 
 }

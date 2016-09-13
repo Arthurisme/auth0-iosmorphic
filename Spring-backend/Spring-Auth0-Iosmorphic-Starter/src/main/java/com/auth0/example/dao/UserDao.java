@@ -1,7 +1,7 @@
 package com.auth0.example.dao;
 
 import com.auth0.example.model.User;
-import com.auth0.example.model.Role;
+//import com.auth0.example.model.Role;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,9 +16,10 @@ public interface UserDao extends CrudRepository<User, Long>{
 //
     User findByUserId(Long Id);
 //
-    User findByUsername(String username);
+//User findByUsername(String username);
+    User findByUserName(String username);
 
-    User findByEmail(String email);
+//    User findByEmail(String email);
 
 
     //

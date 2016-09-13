@@ -12,7 +12,22 @@ export  class PhotoService{
         let url="http://localhost:3001/rest/photo/user";
         let header = new Headers ({'Content-Type' : 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("id_token")});
 
-        return this.http.post(url, JSON.stringify(user), {headers: header});
+        return this.http.post(url,  user, {headers: header});
+    }
+
+    getPhotosByUsername( username: string) {
+        let url="http://localhost:3001/rest/photo/username";
+        let header = new Headers ({'Content-Type' : 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("id_token")});
+
+        return this.http.post(url, username, {headers: header});
+    }
+
+    //fake, not work: test only:
+    getPhotosByUserId( userId: string) {
+        let url="http://localhost:3001/rest/photo/userId";
+        let header = new Headers ({'Content-Type' : 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("id_token")});
+
+        return this.http.post(url, userId, {headers: header});
     }
 
     getPhotoById(photoId: number) {

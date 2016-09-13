@@ -146,7 +146,13 @@ public class Auth0SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers(HttpMethod.OPTIONS, "/**");
+        web.ignoring()
+                .antMatchers(HttpMethod.OPTIONS, "/**")
+                .antMatchers("/images", "/images/", "/images/**", "/images/*" )
+                .antMatchers(  "/images/*.png" , "/images/*.jpg" , "/images/*.*" , "/images/*"  )
+                .antMatchers(  "  *.png" , "*.jpg"    )
+
+        ;
     }
 
     @Override
@@ -177,6 +183,9 @@ public class Auth0SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     protected void authorizeRequests(final HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers(   "/images" ,"/images/" , "/images/**").permitAll()
+                .antMatchers(  "/images/*.png" , "/images/*.jpg" , "/images/*.*" , "/images/*"  ).permitAll()
+                .antMatchers(  "  *.png" , "*.jpg"    ).permitAll()
                 .antMatchers(securedRoute).authenticated()
                 .antMatchers("/**").permitAll();
     }

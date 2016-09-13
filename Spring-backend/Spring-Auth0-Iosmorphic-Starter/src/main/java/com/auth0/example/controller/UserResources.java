@@ -25,11 +25,10 @@ public class UserResources {
 	
 	
 
-	@RequestMapping(value="/user/userName", method= RequestMethod.POST)
-	public String findByUserName(@RequestBody String userName){
+	@RequestMapping(value="/user/username", method= RequestMethod.POST)
+	public User findByUserName(@RequestBody String username){
 		//if userName is not null:
-		return  "yes";
-//		return userService.findByUsername(userName);
+		return userService.findByUserName(username);
    }
 	
 
