@@ -69,7 +69,9 @@ public class PhotoResource {
 
 		
 		String fileName = multipartFile.getOriginalFilename();
-		imageName = currentTimeString +"_"+fileName;
+
+		String currentUserEmail = usernameService.getProfileEmail();
+		imageName = currentUserEmail+"_"+currentTimeString +"_"+fileName;
 		
 		String path = new File("src/main/resources/static/images").getAbsolutePath()+"/"+imageName;
 	    System.out.println("test path before uploaded: "+path);
@@ -90,7 +92,7 @@ public class PhotoResource {
 	@RequestMapping(value="/photo/add", method= RequestMethod.POST)
 	public Photo addPhoto(@RequestBody Photo photo){
 		photo.setImageName(imageName);
-		final String currentUserEmail = usernameService.getProfileEmail();
+		  String currentUserEmail = usernameService.getProfileEmail();
 
 		photo.setUser(userService.findByUserName(currentUserEmail));
 		return	photoService.save(photo);
