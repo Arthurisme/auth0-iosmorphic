@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/shopping-list/index.ts"],"names":[],"mappings":";AAAA,wCAAsC,2BAA2B,CAAC;AAAzD,gFAAyD;AAClE,sCAAoC,yBAAyB,CAAC;AAArD,0EAAqD","sourcesContent":["export { ShoppingListComponent } from './shopping-list.component';\nexport { ShoppingListService } from './shopping-list.service';\n"]}

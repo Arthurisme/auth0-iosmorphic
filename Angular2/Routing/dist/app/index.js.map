@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/app/index.ts"],"names":[],"mappings":";AAAA,4BAA0B,eAAe,CAAC;AAAlC,gDAAkC;AAC1C,sCAAqC,yBAAyB,CAAC;AAAvD,gFAAuD","sourcesContent":["export {environment} from './environment';\nexport {RecipeBookAppComponent} from './recipe-book.component';\n"]}
