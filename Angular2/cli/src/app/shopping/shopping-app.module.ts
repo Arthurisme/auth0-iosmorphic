@@ -39,6 +39,6 @@ import { shoppingAppRouting } from "./shopping-app.routing";
     shoppingAppRouting,
   ],
   providers: [ShoppingListService, RecipeService],
-  // bootstrap: [RecipeBookAppComponent]
+  bootstrap: [RecipesComponent]
 })
 export class ShoppingAppModule {}
