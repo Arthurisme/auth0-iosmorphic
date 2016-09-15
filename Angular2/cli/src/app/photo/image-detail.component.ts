@@ -18,7 +18,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'image-detail',
-    templateUrl: `image-detail.component.html`,
+    templateUrl: './image-detail.component.html',
     // directives:[ImageComments]
 })
 export class ImageDetail implements OnInit{

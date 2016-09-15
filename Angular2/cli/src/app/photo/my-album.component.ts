@@ -12,7 +12,7 @@ import {Photo} from '../models/Photo';
 @Component({
     // directives:[ROUTER_DIRECTIVES],
     selector: 'my-album',
-    templateUrl: `my-album.component.html`
+    templateUrl: './my-album.component.html'
 })
 export class MyAlbum {
     private photos: Photo[];

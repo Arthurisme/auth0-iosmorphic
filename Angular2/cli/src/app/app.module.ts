@@ -12,18 +12,21 @@ import {Auth}              from './auth.service';
 import {HomeComponent} from './components/home/home.component';
 import {PingComponent} from './components/ping/ping.component';
 
- 
 
-import {NavBar} from './photo/nav-bar.component';
-import {MyAlbum} from './photo/my-album.component';
+
+// import {NavBar} from './photo/nav-bar.component';
+// import {MyAlbum} from './photo/my-album.component';
+// import {AddPhoto} from './photo/add-photo.component';
+// import {ImageDetail} from './photo/image-detail.component';
+//
 // import {ImageComments} from "./photo/image-comments.component";
 
 
-import {UserService} from "./services/user.service";
-import {PhotoService} from "./services/photo.service";
-import {AddPhotoService} from "./services/add-photo.service";
-import {UploadPhotoService} from "./services/upload-photo.service";
-import {ApiTestService} from "./services/apitest.service";
+// import {UserService} from "./services/user.service";
+// import {PhotoService} from "./services/photo.service";
+// import {AddPhotoService} from "./services/add-photo.service";
+// import {UploadPhotoService} from "./services/upload-photo.service";
+// import {ApiTestService} from "./services/apitest.service";
 
 
 import {HeaderComponent} from "./components/header/header.component";
@@ -33,8 +36,8 @@ import {appRootRouting} from "./app.routing";
 
 // import { HeroesAppModule } from "./heroes/heroes-app.module";
 import {ShoppingAppModule} from "./modules/shopping/shopping-app.module";
-
 import {ProfileAppModule} from "./modules/profile/profile-app.module";
+import {PhotoAppModule} from "./photo/photo-app.module";
 
 
 import {AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
@@ -53,8 +56,10 @@ import {MomentModule} from 'angular2-moment';
         PingComponent,
 
 
-        NavBar,
-        MyAlbum,
+        // NavBar,
+        // MyAlbum,
+        // // AddPhoto,
+        // ImageDetail,
         // ImageComments,
 
     ],
@@ -67,7 +72,8 @@ import {MomentModule} from 'angular2-moment';
 
         // HeroesAppModule,
         ShoppingAppModule,
-        ProfileAppModule
+        ProfileAppModule,
+        PhotoAppModule
 
         // When FromsModule here instead of profile, there are error, why?
         // FormsModule,
@@ -86,11 +92,11 @@ import {MomentModule} from 'angular2-moment';
         }),
 
 
-        UserService,
-        PhotoService,
-        AddPhotoService,
-        UploadPhotoService,
-        ApiTestService
+        // UserService,
+        // PhotoService,
+        // AddPhotoService,
+        // UploadPhotoService,
+        // ApiTestService
 
 
     ],
