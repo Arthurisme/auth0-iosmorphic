@@ -2,14 +2,16 @@ import {Component} from '@angular/core';
 // import {ROUTER_DIRECTIVES} from "@angular/router";
 import { Router }   from '@angular/router';
 
-import {LoginService} from "../services/login.service";
+import {LoginService} from "../../services/login.service";
 
 
 
 @Component({
     selector: 'nav-bar',
     // directives:[ROUTER_DIRECTIVES],
-    templateUrl: `nav-bar.component.html`
+    templateUrl: `nav-bar.component.html`,
+    styleUrls: [ '../../../resources/css/semantic.css' ],
+
 })
 export class NavBar {
 

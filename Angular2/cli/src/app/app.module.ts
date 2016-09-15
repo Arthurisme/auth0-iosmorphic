@@ -39,7 +39,7 @@ import {appRootRouting} from "./app.routing";
 // import { HeroesAppModule } from "./heroes/heroes-app.module";
 import {ShoppingAppModule} from "./modules/shopping/shopping-app.module";
 import {ProfileAppModule} from "./modules/profile/profile-app.module";
-import {PhotoAppModule} from "./photo/photo-app.module";
+import {PhotoAppModule} from "./modules/photo/photo-app.module";
 
 
 import {AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';

@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './components/home/home.component'
 import {PingComponent} from './components/ping/ping.component'
 
-import {AddPhoto} from "./photo/add-photo.component";
-import {ImageDetail} from "./photo/image-detail.component";
-import {MyAlbum} from "./photo/my-album.component";
+import {AddPhoto} from "./modules/photo/add-photo.component";
+import {ImageDetail} from "./modules/photo/image-detail.component";
+import {MyAlbum} from "./modules/photo/my-album.component";
 
 const appRootRoutes: Routes = [
   {path: '', redirectTo: '/recipes', pathMatch: 'full'},

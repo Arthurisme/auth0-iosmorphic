@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {User} from '../models/user';
-import {Comment} from '../models/comment';
-import {Photo} from '../models/photo';
-import {UserService} from "../services/user.service";
-import {PhotoService} from "../services/photo.service";
-import {CommentService} from "../services/comment.service";
+import {User} from '../../models/user';
+import {Comment} from '../../models/comment';
+import {Photo} from '../../models/photo';
+import {UserService} from "../../services/user.service";
+import {PhotoService} from "../../services/photo.service";
+import {CommentService} from "../../services/comment.service";
 // import {Router} from '@angular/router-deprecated';
 import { ActivatedRoute, Params } from '@angular/router';
 // import {ROUTER_DIRECTIVES} from '@angular/router';
@@ -15,7 +15,9 @@ import { Router }   from '@angular/router';
 @Component({
     selector: 'image-comments',
     // providers: [CommentService],
-    templateUrl: 'image-comments.component.html'
+    templateUrl: 'image-comments.component.html',
+    styleUrls: [ '../../../resources/css/semantic.css' ],
+
 })
 export class ImageComments   {
     @Input('photo') photo:Photo;

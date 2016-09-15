@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {LoginService} from "../services/login.service";
+import {LoginService} from "../../services/login.service";
 import {Router} from '@angular/router';
 
 

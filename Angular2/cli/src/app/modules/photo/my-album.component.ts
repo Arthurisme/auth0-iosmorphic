@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {UserService} from "../services/user.service";
-import {PhotoService} from "../services/photo.service";
-import {User} from '../models/user';
-import {Photo} from '../models/photo';
+import {UserService} from "../../services/user.service";
+import {PhotoService} from "../../services/photo.service";
+import {User} from '../../models/user';
+import {Photo} from '../../models/photo';
  import { Router }   from '@angular/router';
 
 // import {ROUTER_DIRECTIVES} from '@angular/router';
@@ -12,7 +12,9 @@ import {Photo} from '../models/photo';
 @Component({
     // directives:[ROUTER_DIRECTIVES],
     selector: 'my-album',
-    templateUrl: './my-album.component.html'
+    templateUrl: './my-album.component.html',
+    styleUrls: [ '../../../resources/css/semantic.css' ],
+
 })
 export class MyAlbum {
     private photos: Photo[];

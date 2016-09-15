@@ -1,7 +1,7 @@
- import {User} from '../models/user';
-import {Photo} from '../models/photo';
-import {UserService} from "../services/user.service";
-import {PhotoService} from "../services/photo.service";
+ import {User} from '../../models/user';
+import {Photo} from '../../models/photo';
+import {UserService} from "../../services/user.service";
+import {PhotoService} from "../../services/photo.service";
 // import {Router} from '@angular/router-deprecated';
 // import {RouteP} from '@angular/router';
 // import {ROUTER_DIRECTIVES} from '@angular/router';
@@ -19,6 +19,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
     selector: 'image-detail',
     templateUrl: './image-detail.component.html',
+    styleUrls: [ '../../../resources/css/semantic.css' ],
+
     // directives:[ImageComments]
 })
 export class ImageDetail implements OnInit{

@@ -1,16 +1,18 @@
 import {Component} from '@angular/core';
-import {UserService} from "../services/user.service";
-import {AddPhotoService} from "../services/add-photo.service";
-import {UploadPhotoService} from "../services/upload-photo.service";
-import {User} from '../models/user';
-import {Photo} from '../models/photo';
+import {UserService} from "../../services/user.service";
+import {AddPhotoService} from "../../services/add-photo.service";
+import {UploadPhotoService} from "../../services/upload-photo.service";
+import {User} from '../../models/user';
+import {Photo} from '../../models/photo';
 
 
 
 @Component({
     selector: 'add-photo',
     providers: [UploadPhotoService, AddPhotoService],
-    templateUrl: 'add-photo.component.html'
+    templateUrl: 'add-photo.component.html',
+    styleUrls: [ '../../../resources/css/semantic.css' ],
+
 })
 export class AddPhoto {
     newPhoto: Photo = new Photo();

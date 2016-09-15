@@ -19,7 +19,7 @@
                     <span class="author">{{comment.userName}}</span>
                 </div>
                 <div class="fourteen wide column">
-                    <div class="ui blue message">
+                    <div class="ui blue  ">
                         <div class="content">
                             <div class="text">
                                 {{comment.content}}
@@ -40,10 +40,10 @@
 
 
                 <form class="ui form" (ngSubmit)="onSubmit()" #commentForm="ngForm">
-                    <div class="form-group">
+                    <div class="field container">
 
                         <!--<label for="name">comment</label>-->
-                        <input type="text" class="form-control" [(ngModel)]="newComment.content" name="comment" placeholder="Enter Comment">
+                        <input rows="3" size="36" type="text" class="" [(ngModel)]="newComment.content" name="comment" placeholder="Enter Comment">
 
                         <!--<textarea     placeholder="Add a comment"  class="form-control"  >[(ngModel)]="newComment.content"</textarea>-->
                     </div>

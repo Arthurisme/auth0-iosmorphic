@@ -2,9 +2,9 @@ import {Component} from '@angular/core';
 import {PhotoList} from './photo-list.component';
 import {SidePanel} from './side-panel.component';
 import {flattenStyles} from "@angular/compiler/core_private";
-import {ApiTestService} from "../services/apitest.service";
+import {ApiTestService} from "../../services/apitest.service";
 import {Router} from '@angular/router-deprecated';
-import {UserService} from "../services/user.service";
+import {UserService} from "../../services/user.service";
 
 
 
