@@ -7,17 +7,17 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'ping',
   templateUrl: 'ping.template.html',
-    providers: [
-        AuthHttp,
-        provideAuth({
-            headerName: 'Authorization',
-            headerPrefix: 'bearer',
-            tokenName: 'token',
-            tokenGetter: (() => localStorage.getItem('id_token')),
-            globalHeaders: [{ 'Content-Type': 'application/json' }],
-            noJwtError: true
-        })
-    ],
+    // providers: [
+    //     AuthHttp,
+    //     provideAuth({
+    //         headerName: 'Authorization',
+    //         headerPrefix: 'bearer',
+    //         tokenName: 'token',
+    //         tokenGetter: (() => localStorage.getItem('id_token')),
+    //         globalHeaders: [{ 'Content-Type': 'application/json' }],
+    //         noJwtError: true
+    //     })
+    // ],
 })
 
 export class PingComponent {

@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import { FormsModule } from '@angular/forms';
+
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from "./app.component";
 
 import { Auth }              from './auth.service';
 
-import { AuthHttp  }  from 'angular2-jwt';
 
-import {HomeComponent} from './components/home/home.component'
-import {PingComponent} from './components/ping/ping.component'
+import {HomeComponent} from './components/home/home.component';
+import {PingComponent} from './components/ping/ping.component';
+
 // import {ProfileRoutes} from "./components/profile/profile.routes";
-import {ProfileComponent} from "./components/profile/profile.component";
-import {ProfileShow} from "./components/profile/profile_show.component";
-import {ProfileEdit} from "./components/profile/profile_edit.component";
+// import {ProfileComponent} from "./components/profile/profile.component";
+// import {ProfileShow} from "./components/profile/profile_show.component";
+// import {ProfileEdit} from "./components/profile/profile_edit.component";
 
 import {NavBar} from './photo/nav-bar.component';
 import {MyAlbum} from './photo/my-album.component';
@@ -36,8 +38,14 @@ import { routing } from "./app.routing";
 // import { HeroesAppModule } from "./heroes/heroes-app.module";
 import { ShoppingAppModule } from "./shopping/shopping-app.module";
 
+import { ProfileAppModule } from "./components/profile/profile-app.module";
 
+
+import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt';
 import 'rxjs/add/operator/map';
+
+import {MomentModule} from 'angular2-moment';
+
 
 
 
@@ -50,6 +58,7 @@ import 'rxjs/add/operator/map';
 
     HomeComponent,
     PingComponent,
+
     // ProfileRoutes,
     // ProfileComponent,
     // ProfileShow,
@@ -63,6 +72,9 @@ import 'rxjs/add/operator/map';
   imports: [
     BrowserModule,
     HttpModule,
+    // FormsModule,
+    MomentModule,
+
     routing,
 
 
@@ -70,11 +82,22 @@ import 'rxjs/add/operator/map';
 
 
     // HeroesAppModule,
-    ShoppingAppModule
+    ShoppingAppModule,
+
+    ProfileAppModule
   ],
   providers: [
       Auth,
     AuthHttp,
+
+    provideAuth({
+      headerName: 'Authorization',
+      headerPrefix: 'bearer',
+      tokenName: 'token',
+      tokenGetter: (() => localStorage.getItem('id_token')),
+      globalHeaders: [{ 'Content-Type': 'application/json' }],
+      noJwtError: true
+    }),
 
 
     UserService,
