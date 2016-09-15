@@ -24,11 +24,12 @@ import {ImageDetail} from './image-detail.component';
 import {ImageComments} from "./image-comments.component";
 
 
-// import {UserService} from "./services/user.service";
-// import {PhotoService} from "./services/photo.service";
-// import {AddPhotoService} from "./services/add-photo.service";
-// import {UploadPhotoService} from "./services/upload-photo.service";
-// import {ApiTestService} from "./services/apitest.service";
+import {UserService} from "../services/user.service";
+import {PhotoService} from "../services/photo.service";
+import {AddPhotoService} from "../services/add-photo.service";
+import {UploadPhotoService} from "../services/upload-photo.service";
+import {ApiTestService} from "../services/apitest.service";
+import {CommentService} from "../services/comment.service";
 
 
 
@@ -49,11 +50,12 @@ import {ImageComments} from "./image-comments.component";
     photoAppRouting,
   ],
   providers: [
-    // UserService,
-    // PhotoService,
-    // AddPhotoService,
-    // UploadPhotoService,
-    // ApiTestService
+    UserService,
+    PhotoService,
+    AddPhotoService,
+    UploadPhotoService,
+    ApiTestService,
+      CommentService
   ],
   bootstrap: [ ]
 })

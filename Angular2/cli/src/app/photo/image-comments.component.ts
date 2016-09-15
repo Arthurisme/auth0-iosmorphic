@@ -14,7 +14,7 @@ import { Router }   from '@angular/router';
 
 @Component({
     selector: 'image-comments',
-    providers: [CommentService],
+    // providers: [CommentService],
     templateUrl: 'image-comments.component.html'
 })
 export class ImageComments   {
@@ -63,10 +63,6 @@ export class ImageComments   {
         //     )
 
 
-    }
-
-    onSubmit() {
-
         //router get params:
         this.route.params.forEach((params: Params) => {
             if (params['id'] !== undefined) {
@@ -111,12 +107,23 @@ export class ImageComments   {
             }
         });
 
+    }
+
+    onSubmit() {
+
+
+
 
 
 
         this.newComment.photo = this.photo;
         this.newComment.userName = this.user.userName;
         this.newComment.photoId = this.photo.photoId;
+        // this.newComment.content = "test2";
+
+        console.log("newComment of image-comments  is: \n");
+        console.log(this.newComment);
+        console.log(this.newComment.content);
 
         // way 1 to show comments: no comments get from server------------:
         // this.commentService.addComment(this.newComment)
@@ -129,17 +136,41 @@ export class ImageComments   {
 
 
         // Another way to show comments: data comments get from server----------------:
+        // this.commentService.addComment(this.newComment)
+        //     .subscribe(
+        //         photo => this.commentService.getCommentsByPhotoId(this.photoId)
+        //             .subscribe(
+        //                 comments => {
+        //
+        //
+        //                     this.comments = JSON.parse(JSON.parse(JSON.stringify(comments))._body);
+        //                 },
+        //                 error => console.log(error)
+        //             )
+        //     );
+
+
+        // test way to show comments: data comments get from server----------------:
         this.commentService.addComment(this.newComment)
             .subscribe(
-                photo => this.commentService.getCommentsByPhotoId(this.photoId)
-                    .subscribe(
-                        comments => {
+                photo => {
+                    this.commentService.getCommentsByPhotoId(this.photoId)
+                        .subscribe(
+                            comments => {
+                                console.log("comments of image-comments  is: \n");
+                                console.log(comments);
 
-                            this.comments = JSON.parse(JSON.parse(JSON.stringify(comments))._body);
-                        },
-                        error => console.log(error)
-                    )
+
+                                this.comments = JSON.parse(JSON.parse(JSON.stringify(comments))._body);
+                            },
+                            error => console.log(error)
+                        )
+                },
+                error => console.log(error)
             );
+
+
+
 
 
         this.newComment = new Comment();

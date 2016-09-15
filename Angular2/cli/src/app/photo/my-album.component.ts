@@ -74,6 +74,10 @@ export class MyAlbum {
         //rc6:
         let link = ['/image-detail', this.selectedPhoto.photoId];
         this.router.navigate(link);
+
+        // //Test for router rc7 function:
+        // this.router.navigate(['image-detail/1']);
+
     }
 
 }

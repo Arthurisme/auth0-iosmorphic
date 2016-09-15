@@ -5,7 +5,7 @@ import {Photo} from './photo'
 export class Comment{
 
     public commentId:number;
-    public comment:string;
+    public content:string;
 
     public photo:Photo;
     public photoId:number;
