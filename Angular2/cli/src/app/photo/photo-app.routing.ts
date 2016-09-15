@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {ModuleWithProviders} from "@angular/core";
 import {ImageDetail} from "./image-detail.component";
 import {MyAlbum} from "./my-album.component";
+import {AddPhoto} from "./add-photo.component";
 
 const photoAppRoutes: Routes = [
   // {path: '', redirectTo: '/recipes', pathMatch: 'full'},
@@ -14,7 +15,7 @@ const photoAppRoutes: Routes = [
 
   {path:'my-album' ,component:MyAlbum},
   {path:'image-detail/:id' , component: ImageDetail},
-  // {path:'add-photo', component:AddPhoto},
+  {path:'add-photo', component:AddPhoto},
 ];
 
 export const photoAppRouting:ModuleWithProviders  = RouterModule.forChild(photoAppRoutes);

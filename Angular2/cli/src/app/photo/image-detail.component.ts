@@ -1,5 +1,5 @@
- import {User} from '../models/User';
-import {Photo} from '../models/Photo';
+ import {User} from '../models/user';
+import {Photo} from '../models/photo';
 import {UserService} from "../services/user.service";
 import {PhotoService} from "../services/photo.service";
 // import {Router} from '@angular/router-deprecated';

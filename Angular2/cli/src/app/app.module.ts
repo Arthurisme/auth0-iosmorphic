@@ -22,11 +22,11 @@ import {PingComponent} from './components/ping/ping.component';
 // import {ImageComments} from "./photo/image-comments.component";
 
 
-// import {UserService} from "./services/user.service";
-// import {PhotoService} from "./services/photo.service";
-// import {AddPhotoService} from "./services/add-photo.service";
-// import {UploadPhotoService} from "./services/upload-photo.service";
-// import {ApiTestService} from "./services/apitest.service";
+import {UserService} from "./services/user.service";
+import {PhotoService} from "./services/photo.service";
+import {AddPhotoService} from "./services/add-photo.service";
+import {UploadPhotoService} from "./services/upload-photo.service";
+import {ApiTestService} from "./services/apitest.service";
 
 
 import {HeaderComponent} from "./components/header/header.component";
@@ -92,11 +92,11 @@ import {MomentModule} from 'angular2-moment';
         }),
 
 
-        // UserService,
-        // PhotoService,
-        // AddPhotoService,
-        // UploadPhotoService,
-        // ApiTestService
+        UserService,
+        PhotoService,
+        AddPhotoService,
+        UploadPhotoService,
+        ApiTestService
 
 
     ],

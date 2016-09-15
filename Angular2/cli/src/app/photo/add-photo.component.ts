@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import {UserService} from "../services/user.service";
 import {AddPhotoService} from "../services/add-photo.service";
 import {UploadPhotoService} from "../services/upload-photo.service";
-import {User} from '../models/User';
-import {Photo} from '../models/Photo';
+import {User} from '../models/user';
+import {Photo} from '../models/photo';
 
 
 
