@@ -11,7 +11,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import './rxjs-extensions';
 import { HeroesAppComponent } from './heroes-app.component';
-import { heroesappRouting, routedComponents } from './heroes-app.routing';
+import { heroesAppRouting, routedComponents } from './heroes-app.routing';
 import { HeroService } from './hero.service';
 import { HeroSearchComponent } from './hero-search.component';
 
@@ -19,7 +19,7 @@ import { HeroSearchComponent } from './hero-search.component';
   imports: [
     BrowserModule,
     FormsModule,
-    heroesappRouting,
+    heroesAppRouting,
     HttpModule
   ],
   declarations: [

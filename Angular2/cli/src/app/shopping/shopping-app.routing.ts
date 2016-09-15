@@ -5,10 +5,10 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { RECIPE_ROUTES } from "./recipes/recipes.routes";
 import {ModuleWithProviders} from "@angular/core";
 
-const SHOPPING_ROUTES: Routes = [
+const shoppingAppRoutes: Routes = [
   // {path: '', redirectTo: '/recipes', pathMatch: 'full'},
   {path: 'recipes', component: RecipesComponent, children: RECIPE_ROUTES},
   {path: 'shopping-list', component: ShoppingListComponent}
 ];
 
-export const shoppingRouting:ModuleWithProviders  = RouterModule.forChild(SHOPPING_ROUTES);
+export const shoppingAppRouting:ModuleWithProviders  = RouterModule.forChild(shoppingAppRoutes);

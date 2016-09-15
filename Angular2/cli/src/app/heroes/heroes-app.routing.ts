@@ -5,7 +5,7 @@ import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import {ModuleWithProviders} from "@angular/core";
 
-const heroesappRoutes: Routes = [
+const heroesAppRoutes: Routes = [
   {
     path: 'heroesdb',
     redirectTo: '/dashboard',
@@ -25,6 +25,6 @@ const heroesappRoutes: Routes = [
   }
 ];
 
-export const heroesappRouting:ModuleWithProviders = RouterModule.forChild(heroesappRoutes);
+export const heroesAppRouting:ModuleWithProviders = RouterModule.forChild(heroesAppRoutes);
 
 export const routedComponents = [DashboardComponent, HeroesComponent, HeroDetailComponent];

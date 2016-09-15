@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 // import { RecipeBookAppComponent } from "./recipe-book.component";
-import { HeaderComponent } from "./header.component";
-import { DropdownDirective } from "./dropdown.directive";
+// import { HeaderComponent } from "./header.component";
+// import { DropdownDirective } from "./dropdown.directive";
 import { ShoppingListAddComponent } from "./shopping-list/shopping-list-add.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { RecipesComponent } from "./recipes/recipes.component";
@@ -14,7 +14,7 @@ import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item.component
 import { RecipeStartComponent } from "./recipes/recipe-start.component";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { RecipeService } from "./recipes/recipe.service";
-import { shoppingRouting } from "./shopping.routing";
+import { shoppingAppRouting } from "./shopping-app.routing";
 
 // import { HeroesappModule } from "./heroes/heroesapp.module";
 
@@ -23,8 +23,8 @@ import { shoppingRouting } from "./shopping.routing";
 @NgModule({
   declarations: [
     // RecipeBookAppComponent,
-    HeaderComponent,
-    DropdownDirective,
+    // HeaderComponent,
+    // DropdownDirective,
     ShoppingListAddComponent,
     ShoppingListComponent,
     RecipesComponent,
@@ -36,7 +36,7 @@ import { shoppingRouting } from "./shopping.routing";
   ],
   imports: [
     BrowserModule,
-    shoppingRouting,
+    shoppingAppRouting,
   ],
   providers: [ShoppingListService, RecipeService],
   // bootstrap: [RecipeBookAppComponent]
