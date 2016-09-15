@@ -10,8 +10,16 @@
       <ul class="nav navbar-nav">
         <li routerLinkActive="active"><a [routerLink]="['/recipes']">Recipes</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/shopping-list']">Shopping List</a></li>
-        <li routerLinkActive="active"><a [routerLink]="['/heroesdashboard']">Heroes</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/heroesdashboard']">HeroesDB</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/heroes']">Heroes</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/ping']">Ping</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/profile']">Profile</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/my-album']">my-album</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/add-photo']">add-photo</a></li>
+
+        <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+        <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" rbDropdown>

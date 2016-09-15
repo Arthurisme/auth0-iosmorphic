@@ -29,3 +29,21 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+##
+###Auth0 - Clients - Allowed Callback URLs:
+http://arthurisme.auth0.com/mobile,
+http://localhost:3000/,
+http://localhost:3000/ping,
+http://localhost:3000/profile,
+http://localhost:3000/my-album,
+http://localhost:3001/,
+http://localhost:4200/,
+http://localhost:4200/recipes,
+http://localhost:4200/ping,
+http://localhost:4200/profile,
+http://localhost:4200/my-album,
+http://localhost:8081/,
+http://testarthur007o.com:3000/,
+http://testarthur007o.com:3001/,
+http://testarthur007o.com:4200/

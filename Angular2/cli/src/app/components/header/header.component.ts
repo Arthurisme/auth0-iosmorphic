@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Auth} from "../../auth.service";
+
 
 @Component({
     // moduleId: module.id,
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() {}
+  constructor(private auth: Auth) {}
 
   ngOnInit() {
   }
