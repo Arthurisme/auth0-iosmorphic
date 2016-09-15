@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var auth_service_1 = require('../../auth.service');
+var auth_service_1 = require('../../auth.service.ts');
 var angular2_jwt_1 = require('angular2-jwt');
 var router_1 = require('@angular/router');
 require('rxjs/add/operator/map');
@@ -45,7 +45,7 @@ var ProfileEdit = (function () {
     ProfileEdit = __decorate([
         core_1.Component({
             selector: 'profile',
-            templateUrl: 'app/components/profile/profile_edit.template.html'
+            templateUrl: '/profile_edit.template.html'
         }), 
         __metadata('design:paramtypes', [auth_service_1.Auth, angular2_jwt_1.AuthHttp, router_1.Router])
     ], ProfileEdit);

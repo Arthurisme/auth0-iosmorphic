@@ -1,7 +1,7 @@
 "use strict";
-var profile_edit_component_1 = require('./profile_edit.component');
-var profile_show_component_1 = require('./profile_show.component');
-var profile_component_1 = require('./profile.component');
+var profile_edit_component_1 = require('./profile_edit.component.ts');
+var profile_show_component_1 = require('./profile_show.component.ts');
+var profile_component_1 = require('./profile.component.ts');
 exports.ProfileRoutes = [
     {
         path: 'profile',

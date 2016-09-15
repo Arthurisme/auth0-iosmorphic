@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {HomeComponent} from './components/home/home.component'
 import {PingComponent} from './components/ping/ping.component'
-import {ProfileRoutes} from "./components/profile/profile.routes";
+// import {ProfileRoutes} from "./modules/profile/profile.routes";
 // import {ProfileComponent} from "./components/profile/profile.component";
 // import {ProfileShow} from "./components/profile/profile_show.component";
 // import {AddPhoto} from "./photo/add-photo.component";
 // import {ImageDetail} from "./photo/image-detail.component";
 // import {MyAlbum} from "./photo/my-album.component";
 
-const APP_ROUTES: Routes = [
+const appRootRoutes: Routes = [
   {path: '', redirectTo: '/recipes', pathMatch: 'full'},
   // {path: 'recipes', component: RecipesComponent, children: RECIPE_ROUTES},
 
@@ -31,4 +31,4 @@ const APP_ROUTES: Routes = [
 
 ];
 
-export const routing = RouterModule.forRoot(APP_ROUTES);
+export const appRootRouting = RouterModule.forRoot(appRootRoutes);
