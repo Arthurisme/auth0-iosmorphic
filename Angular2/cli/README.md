@@ -1,6 +1,6 @@
 # Cli
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.9-4.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.14.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -29,21 +29,3 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-##
-###Auth0 - Clients - Allowed Callback URLs:
-http://arthurisme.auth0.com/mobile,
-http://localhost:3000/,
-http://localhost:3000/ping,
-http://localhost:3000/profile,
-http://localhost:3000/my-album,
-http://localhost:3001/,
-http://localhost:4200/,
-http://localhost:4200/recipes,
-http://localhost:4200/ping,
-http://localhost:4200/profile,
-http://localhost:4200/my-album,
-http://localhost:8081/,
-http://testarthur007o.com:3000/,
-http://testarthur007o.com:3001/,
-http://testarthur007o.com:4200/

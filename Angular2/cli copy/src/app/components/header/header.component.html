@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/']">Recipe Book</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
+
+        <li routerLinkActive="active"><a [routerLink]="['/ping']">Ping</a></li>
+
+        <li routerLinkActive="active"><a [routerLink]="['/profile']">Profile</a></li>
+
+        <li routerLinkActive="active"><a [routerLink]="['/photos-home']">Photos</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/my-album']">My-album</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/add-photo']">Add-photo</a></li>
+
+        <li routerLinkActive="active"><a [routerLink]="['/recipes']">Recipes</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/shopping-list']">Shopping List</a></li>
+
+        <li routerLinkActive="active"><a [routerLink]="['/heroesdashboard']">HeroesDB</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/heroes']">Heroes</a></li>
+
+        <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+        <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" rbDropdown>
+          <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Welcome: {{auth.userProfile.email}}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"  (click)="auth.login()" *ngIf="!auth.authenticated()">Login</a></li>
+            <li><a href="#">Other...</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#" (click)="auth.logout()" *ngIf="auth.authenticated()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
