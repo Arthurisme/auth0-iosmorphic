@@ -46,7 +46,9 @@ export  class PhotoService{
 
     getPhotos() {
         let url="http://localhost:3001/photo/allPhotos";
-        return this.http.get(url);
+        let header = new Headers ({'Content-Type' : 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("id_token")});
+
+        return this.http.get(url,{headers: header});
     }
 
 }

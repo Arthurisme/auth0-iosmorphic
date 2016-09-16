@@ -1,5 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+// import { NgSemanticModule } from 'ng-semantic';
+
 // import { FormsModule } from '@angular/forms';
 
 import {HttpModule} from '@angular/http';
@@ -32,6 +34,8 @@ import {PingComponent} from './components/ping/ping.component';
 
 
 import {HeaderComponent} from "./components/header/header.component";
+import {ErrorComponent} from "./components/error/error.component";
+
 import {DropdownDirective} from "./util/dropdown.directive";
 
 import {appRootRouting} from "./app.routing";
@@ -52,6 +56,7 @@ import {MomentModule} from 'angular2-moment';
     declarations: [
         AppComponent,
         HeaderComponent,
+        ErrorComponent,
         DropdownDirective,
 
         HomeComponent,
@@ -67,6 +72,7 @@ import {MomentModule} from 'angular2-moment';
     ],
     imports: [
         BrowserModule,
+        // NgSemanticModule,
         HttpModule,
         MomentModule,
         appRootRouting,
