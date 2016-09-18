@@ -7,7 +7,7 @@ var app_routing_1 = require("./app.routing");
 var shared_1 = require("./shared");
 var login_module_1 = require("./login/login.module");
 var groceries_module_1 = require("./groceries/groceries.module");
-var auth0testpage_module_1 = require("./auth0testpage/auth0testpage.module");
+var auth0_login_module_1 = require("./auth0-login/auth0-login.module");
 var ping_module_1 = require("./ping/ping.module");
 var Auth0_login_service_1 = require("./shared/Auth0-login.service");
 shared_1.setStatusBarColors();
@@ -29,7 +29,7 @@ var AppModule = (function () {
                 router_1.NativeScriptRouterModule.forRoot(app_routing_1.appRoutes),
                 login_module_1.LoginModule,
                 groceries_module_1.GroceriesModule,
-                auth0testpage_module_1.Auth0testpageModule,
+                auth0_login_module_1.Auth0LoginModule,
                 ping_module_1.PingModule
             ],
             bootstrap: [app_component_1.AppComponent]

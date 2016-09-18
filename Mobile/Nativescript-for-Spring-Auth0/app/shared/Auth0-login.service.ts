@@ -22,7 +22,7 @@ export class Auth0LoginService {
   get isLoggedIn(): boolean {
 
     // Check to see if the user is logged in
-    if(!appSettings.hasKey("auth0Token")){
+    if(!appSettings.hasKey(tokenKey)){
       console.log("no token stored.");
 
       //if no token stored: go to login:
@@ -34,8 +34,8 @@ export class Auth0LoginService {
 
 
       //Deserialzise the saved user
-      var tokenData = JSON.parse(appSettings.getString("auth0Token"));
-      console.log("token begain: "+ appSettings.getString("auth0Token")+ " token end.");
+      var tokenData = JSON.parse(appSettings.getString(tokenKey));
+      console.log("token begain: "+ appSettings.getString(tokenKey)+ " token end.");
 
 
       //Check if it's expired : go to login:
@@ -78,8 +78,7 @@ export class Auth0LoginService {
   }
 
 
-  //This is for standard login, which lead a navigater to afterLoginPageUri ---format as "/ping"
-
+  //This is for standard login, which lead a navigater to "/ping"
   login() {
     console.log("Starting processing of login...");
 
@@ -93,13 +92,6 @@ export class Auth0LoginService {
 
       console.log("login ok point 1 !");
 
-
-      // this.loginService.logoff();
-      // this.router.navigate(["/groceries"]);
-      // this.router.navigate(["/"]);
-
-
-      // this.gotonextpage();
     }, (error) => {
       alert(error);
     });
@@ -108,11 +100,49 @@ export class Auth0LoginService {
     // this.gotonextpage();
   }
 
+  //custom login, which lead a navigater to afterLoginPageUri ---format as "/ping"
+  loginAndTo(afterLoginPageUri: string ) {
+    console.log("Starting processing of login...");
+
+    auth0.show().then( (args) =>{
+      console.log(args.profile);
+      console.log(args.token);
+      //This will done by plugin: not here.
+      // appSettings.setString("auth0Token", JSON.stringify(args));
+
+      // let afterLoginPageUri = "/ping";
+      this.router.navigate([afterLoginPageUri]);
+
+      console.log("login ok point 1 !");
+
+
+    }, (error) => {
+      alert(error);
+    });
+
+    console.log("login ok point 2 !");
+    // this.gotonextpage();
+  }
+
+
+  //This is for standard login, which lead a navigater to   "/ping"
   logoff() {
     appSettings.remove("auth0Token");
     appSettings.remove("auth0UserData");
-    this.router.navigate(["/auth0testpage"]);
+
+    let afterLogoffPageUri = "/ping";
+    this.router.navigate([afterLogoffPageUri]);
   }
+
+  //custom logoff, which lead a navigater to afterLoginPageUri ---format as "/ping"
+  logoffAndTo(afterLogoffPageUri: string) {
+    appSettings.remove("auth0Token");
+    appSettings.remove("auth0UserData");
+
+    // let afterLogoffPageUri = "/ping";
+    this.router.navigate([afterLogoffPageUri]);
+  }
+
 
   // resetPassword(email) {
   //

@@ -143,8 +143,8 @@ export class GroceriesComponent implements OnInit {
   }
 
 
-  gotoAuth0testpage() {
-    this.router.navigate(["/auth0testpage"]);
+  gotoAuth0Login() {
+    this.router.navigate(["/auth0login"]);
   }
 
   doLogout() {

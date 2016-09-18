@@ -116,8 +116,8 @@ var GroceriesComponent = (function () {
         this.loginService.logoff();
         this.router.navigate(["/login"]);
     };
-    GroceriesComponent.prototype.gotoAuth0testpage = function () {
-        this.router.navigate(["/auth0testpage"]);
+    GroceriesComponent.prototype.gotoAuth0Login = function () {
+        this.router.navigate(["/auth0login"]);
     };
     GroceriesComponent.prototype.doLogout = function () {
         appSettings.remove("auth0Token");

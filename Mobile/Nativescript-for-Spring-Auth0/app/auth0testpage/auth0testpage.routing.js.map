@@ -1,1 +1,0 @@
-{"version":3,"file":"auth0testpage.routing.js","sourceRoot":"","sources":["auth0testpage.routing.ts"],"names":[],"mappings":";AACA,uBAAqC,iBAAiB,CAAC,CAAA;AAEvD,wCAAuC,2BAA2B,CAAC,CAAA;AAGnE,IAAM,mBAAmB,GAAW;IAClC,2FAA2F;IAC3F,EAAE,IAAI,EAAE,eAAe,EAAE,SAAS,EAAE,gDAAsB,EAAE;CAC7D,CAAC;AACW,4BAAoB,GAAwB,qBAAY,CAAC,QAAQ,CAAC,mBAAmB,CAAC,CAAC"}

@@ -5,6 +5,6 @@ exports.authProviders = [
 ];
 exports.appRoutes = [
     // { path: "", redirectTo: "/groceries", pathMatch: "full" }
-    { path: "", redirectTo: "/auth0testpage", pathMatch: "full" }
+    { path: "", redirectTo: "/auth0login", pathMatch: "full" }
 ];
 //# sourceMappingURL=app.routing.js.map

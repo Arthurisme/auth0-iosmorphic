@@ -2,17 +2,17 @@ import { NativeScriptModule } from "nativescript-angular/platform";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NgModule } from "@angular/core";
 
-import { auth0testpageRouting } from "./auth0testpage.routing";
-import { Auth0testpageComponent } from "./auth0testpage.component";
+import { auth0LoginRouting } from "./auth0-login.routing";
+import { Auth0LoginComponent } from "./auth0-login.component";
 
 @NgModule({
   imports: [
     NativeScriptModule,
     NativeScriptFormsModule,
-    auth0testpageRouting
+    auth0LoginRouting
   ],
   declarations: [
-    Auth0testpageComponent
+    Auth0LoginComponent
   ]
 })
-export class Auth0testpageModule { }
+export class Auth0LoginModule { }

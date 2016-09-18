@@ -2,14 +2,17 @@
 
 
 
-<GridLayout columns="*" rows="*,*,*,*,*,*" width="300" height="300" backgroundColor="lightgray" >
+<GridLayout columns="*" rows="*,*2,*,*,*,*,*,*" width="300" height="400" backgroundColor="lightgray" >
 
-    <Label col="0" row="0"  text="Ping page"     backgroundColor="red"></Label>
-    <Label col="0" row="1"  text="ping"          backgroundColor="blue"  (tap)="ping()"></Label>
-    <Label col="0" row="2"  [text]="message"     ></Label>
-    <Label col="0" row="3"  text="Security ping" backgroundColor="green" (tap)="securedPing()"></Label>
-    <Label col="0" row="4"  [text]="messages"    ></Label>
-    <Label col="0" row="5"  [text]="messageORs"    ></Label>
+    <TextView  col="0" row="0"   text=" You are success login via Auth0 if you see this page.  " ></TextView>
+    <TextView  col="0" row="1"   text=" The flowing ping test only work if you started backend server.   If you don't need backend server, just ignorant ping test below." ></TextView>
 
+
+    <Label col="0" row="2"  text="Ping page"     backgroundColor="red"></Label>
+    <Label col="0" row="3"  text="ping"          backgroundColor="blue"  (tap)="ping()"></Label>
+    <Label col="0" row="4"  [text]="message"     ></Label>
+    <Label col="0" row="5"  text="Security ping" backgroundColor="green" (tap)="securedPing()"></Label>
+    <Label col="0" row="6"  [text]="messages"    ></Label>
+    <Label col="0" row="7"  [text]="messageORs"    ></Label>
 
 </GridLayout>

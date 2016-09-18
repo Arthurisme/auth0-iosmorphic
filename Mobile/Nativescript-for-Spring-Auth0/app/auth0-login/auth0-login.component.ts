@@ -15,11 +15,11 @@ import {Auth0LoginService} from "../shared/Auth0-login.service";
 
 
 @Component({
-  selector: "gr-auth0testpage",
-  templateUrl: "auth0testpage/auth0testpage.component.html",
-  styleUrls: ["auth0testpage/auth0testpage-common.css", "auth0testpage/auth0testpage.component.css"],
+  selector: "my-auth0-login",
+  templateUrl: "auth0-login/auth0-login.component.html",
+  styleUrls: ["auth0-login/auth0-login-common.css", "auth0-login/auth0-login.component.css"],
 })
-export class Auth0testpageComponent   {
+export class Auth0LoginComponent   {
 
 
 
@@ -29,37 +29,11 @@ export class Auth0testpageComponent   {
   constructor(private router: Router, private auth0LoginService:Auth0LoginService) {
 
 
-
-      // Check to see if the user is logged in
-      if(!appSettings.hasKey("auth0Token")){
-          console.log("no token stored.");
-          // this.router.navigate(["/ping"]);
-
-          this.doLogin();
-
-      }else{
-          console.log("has token stored");
-          // this.gotonextpage();
-
-
-          //Deserialzise the saved user
-          var tokenData = JSON.parse(appSettings.getString("auth0Token"));
-          console.log("token begain: "+ appSettings.getString("auth0Token")+ " token end.");
-
-
-          //Check if it's expired
-          // if(auth0.isTokenExpired(tokenData.token.idToken)){
-          if(auth0.isTokenExpired(tokenData.idToken)){
-              //Make them log in again
-              console.log("token expired, login again.");
-
-              this.doLogin();
-          }else{
-              //All good, navigate to your start page
-              console.log("has token stored, go to next page");
-
-              this.gotonextpage();
-          }
+      if(!this.auth0LoginService.isLoggedIn){
+          this.doLogin() ;
+      }
+      else{
+          this.gotonextpage()
       }
 
 
@@ -128,7 +102,7 @@ export class Auth0testpageComponent   {
             }, (error) => {
                 alert(error);
             });
-            
+
         }
 
 
