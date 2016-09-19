@@ -4,9 +4,22 @@
 
 
 
-<GridLayout columns="*" rows="*,*,*,*" width="300" height="300" backgroundColor="lightgray" >
-    <Label  col="0" row="0" backgroundColor="red" text="Login vai auth0 test" (tap)="doLogin()"></Label>
-    <Label  col="1" row="1" backgroundColor="green"  text="Log out vai auth0 test" (tap)="doLogout()"></Label>
+<GridLayout columns="*" rows="*,*,*,*5" width="300" height="400" backgroundColor="lightgray" >
+    <!--<Label  col="0" row="0" backgroundColor="red" text="Login vai auth0 test" (tap)="doLogin()"></Label>-->
+    <Button   col="0" row="0"  text="Login vai auth0 test" class="submit-button" (tap)="doLogin()"></Button>
+
+    <Button   col="0" row="1"  text="Login out auth0 test" class="submit-button" (tap)="doLogout()"></Button>
+
+    <Button   col="0" row="2"  text="Click show token" class="submit-button" (tap)="showToken()"></Button>
+
+    <TextView  col="0" row="3"   [text]="currentToken" ></TextView>
+
+
+
+    <!--<Label  col="1" row="1" backgroundColor="green"  text="Log out vai auth0 test" (tap)="doLogout()"></Label>-->
+
+
+    <!--<Button   col="0" row="0"  text="Login vai auth0 test" class="submit-button" (tap)="doLogin()"></Button>-->
 
 
 

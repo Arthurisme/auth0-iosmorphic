@@ -80,48 +80,77 @@ export class Auth0LoginService {
 
   //This is for standard login, which lead a navigater to "/ping"
   login() {
-    console.log("Starting processing of login...");
+    let afterLoginPageUri = "/ping";
 
-    auth0.show().then( (args) =>{
-      console.log(args.profile);
-      console.log(args.token);
-      // appSettings.setString("auth0Token", JSON.stringify(args));
-
-      let afterLoginPageUri = "/ping";
+    if(this.isLoggedIn){
       this.router.navigate([afterLoginPageUri]);
+    }
+    else {
 
-      console.log("login ok point 1 !");
+      console.log("Starting processing of login...");
 
-    }, (error) => {
-      alert(error);
-    });
+      auth0.show().then((args) => {
+        console.log(args.profile);
+        console.log(args.token);
+        // appSettings.setString("auth0Token", JSON.stringify(args));
 
-    console.log("login ok point 2 !");
-    // this.gotonextpage();
+        let afterLoginPageUri = "/ping";
+        this.router.navigate([afterLoginPageUri]);
+
+        console.log("login ok point 1 !");
+
+      }, (error) => {
+        alert(error);
+      });
+
+      console.log("login ok point 2 !");
+      // this.gotonextpage();
+    }
   }
 
   //custom login, which lead a navigater to afterLoginPageUri ---format as "/ping"
   loginAndTo(afterLoginPageUri: string ) {
-    console.log("Starting processing of login...");
 
-    auth0.show().then( (args) =>{
-      console.log(args.profile);
-      console.log(args.token);
-      //This will done by plugin: not here.
-      // appSettings.setString("auth0Token", JSON.stringify(args));
 
-      // let afterLoginPageUri = "/ping";
+    if(this.isLoggedIn){
       this.router.navigate([afterLoginPageUri]);
+    }
+    else {
 
-      console.log("login ok point 1 !");
+      console.log("Starting processing of login...");
+
+      auth0.show({
+        Params: {
+          scope: 'openid email roles user_metadata app_metadata picture offline_access',
+          // device: 'Mobile device'
+        },
+        // auth: {
+        //   // redirect: false,
+        //   params: {
+        //     scope: 'openid email roles user_metadata app_metadata picture offline_access',
+        //   }
+        // },
+        rememberLastLogin: true,//!prompt, rememberLastLogin function still not support.
+      })
+          .then((args) => {
+        console.log(args.profile);
+        console.log(args.token);
+        //This will done by plugin: not here.
+        // appSettings.setString("auth0Token", JSON.stringify(args));
+
+        // let afterLoginPageUri = "/ping";
+        this.router.navigate([afterLoginPageUri]);
+
+        console.log("login ok point 1 !");
 
 
-    }, (error) => {
-      alert(error);
-    });
+      }, (error) => {
+        alert(error);
+      });
 
-    console.log("login ok point 2 !");
-    // this.gotonextpage();
+      console.log("login ok point 2 !");
+      // this.gotonextpage();
+    }
   }
 
 

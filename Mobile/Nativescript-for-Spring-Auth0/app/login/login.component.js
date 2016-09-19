@@ -7,10 +7,12 @@ var animation_1 = require("ui/animation");
 var dialogs_1 = require("ui/dialogs");
 var page_1 = require("ui/page");
 var shared_1 = require("../shared");
+var Auth0_login_service_1 = require("../shared/Auth0-login.service");
 var LoginComponent = (function () {
-    function LoginComponent(router, userService, page) {
+    function LoginComponent(router, userService, auth0LoginService, page) {
         this.router = router;
         this.userService = userService;
+        this.auth0LoginService = auth0LoginService;
         this.page = page;
         this.isLoggingIn = true;
         this.isAuthenticating = false;
@@ -182,7 +184,7 @@ var LoginComponent = (function () {
             templateUrl: "login/login.component.html",
             styleUrls: ["login/login-common.css", "login/login.component.css"],
         }), 
-        __metadata('design:paramtypes', [router_1.Router, shared_1.LoginService, page_1.Page])
+        __metadata('design:paramtypes', [router_1.Router, shared_1.LoginService, Auth0_login_service_1.Auth0LoginService, page_1.Page])
     ], LoginComponent);
     return LoginComponent;
 }());

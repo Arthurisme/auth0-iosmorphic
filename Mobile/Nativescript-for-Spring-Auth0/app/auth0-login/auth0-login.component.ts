@@ -21,12 +21,16 @@ import {Auth0LoginService} from "../shared/Auth0-login.service";
 })
 export class Auth0LoginComponent   {
 
+    currentToken:string;
 
 
 
 
 
-  constructor(private router: Router, private auth0LoginService:Auth0LoginService) {
+  constructor(
+      private router: Router,
+      private auth0LoginService:Auth0LoginService
+  ) {
 
 
       if(!this.auth0LoginService.isLoggedIn){
@@ -76,39 +80,45 @@ export class Auth0LoginComponent   {
 
 
     public doLogin() {
-        console.log("doLoging start...");
 
-        if(this.auth0LoginService.isLoggedIn){
-            this.router.navigate(["/ping"]);
-        }
-        else {
-
-            auth0.show().then( (args) =>{
-                console.log(args.profile);
-                console.log(args.token);
-                // appSettings.setString("auth0Token", JSON.stringify(args));
-
-                this.router.navigate(["/ping"]);
-
-                console.log("login ok 1 !");
+        //login with service.
+        this.auth0LoginService.loginAndTo("/ping");
 
 
-                // this.loginService.logoff();
-                // this.router.navigate(["/groceries"]);
-                // this.router.navigate(["/"]);
-
-
-                // this.gotonextpage();
-            }, (error) => {
-                alert(error);
-            });
-
-        }
-
-
-
-        console.log("login ok 2!");
-        // this.gotonextpage();
+        //login by using plugin directly.
+        // console.log("doLoging start...");
+        //
+        // if(this.auth0LoginService.isLoggedIn){
+        //     this.router.navigate(["/ping"]);
+        // }
+        // else {
+        //
+        //     auth0.show().then( (args) =>{
+        //         console.log(args.profile);
+        //         console.log(args.token);
+        //         // appSettings.setString("auth0Token", JSON.stringify(args));
+        //
+        //         this.router.navigate(["/ping"]);
+        //
+        //         console.log("login ok 1 !");
+        //
+        //
+        //         // this.loginService.logoff();
+        //         // this.router.navigate(["/groceries"]);
+        //         // this.router.navigate(["/"]);
+        //
+        //
+        //         // this.gotonextpage();
+        //     }, (error) => {
+        //         alert(error);
+        //     });
+        //
+        // }
+        //
+        //
+        //
+        // console.log("login ok 2!");
+        // // this.gotonextpage();
 
 
     }
@@ -128,6 +138,10 @@ export class Auth0LoginComponent   {
     goToHome(){
         this.router.navigate(["/"]);
 
+    }
+
+    public showToken(){
+        this.currentToken =   appSettings.getString("auth0Token");
     }
 
   test1(){

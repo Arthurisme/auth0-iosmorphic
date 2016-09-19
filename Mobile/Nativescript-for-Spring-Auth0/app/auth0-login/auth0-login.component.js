@@ -1,7 +1,6 @@
 "use strict";
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var shared_1 = require("../shared");
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 var appSettings = require("application-settings");
@@ -49,28 +48,42 @@ var Auth0LoginComponent = (function () {
         // }
     }
     Auth0LoginComponent.prototype.doLogin = function () {
-        var _this = this;
-        console.log("doLoging start...");
-        if (this.auth0LoginService.isLoggedIn) {
-            this.router.navigate(["/ping"]);
-        }
-        else {
-            auth0.show().then(function (args) {
-                console.log(args.profile);
-                console.log(args.token);
-                // appSettings.setString("auth0Token", JSON.stringify(args));
-                _this.router.navigate(["/ping"]);
-                console.log("login ok 1 !");
-                // this.loginService.logoff();
-                // this.router.navigate(["/groceries"]);
-                // this.router.navigate(["/"]);
-                // this.gotonextpage();
-            }, function (error) {
-                shared_1.alert(error);
-            });
-        }
-        console.log("login ok 2!");
-        // this.gotonextpage();
+        //login with service.
+        this.auth0LoginService.loginAndTo("/ping");
+        //login by using plugin directly.
+        // console.log("doLoging start...");
+        //
+        // if(this.auth0LoginService.isLoggedIn){
+        //     this.router.navigate(["/ping"]);
+        // }
+        // else {
+        //
+        //     auth0.show().then( (args) =>{
+        //         console.log(args.profile);
+        //         console.log(args.token);
+        //         // appSettings.setString("auth0Token", JSON.stringify(args));
+        //
+        //         this.router.navigate(["/ping"]);
+        //
+        //         console.log("login ok 1 !");
+        //
+        //
+        //         // this.loginService.logoff();
+        //         // this.router.navigate(["/groceries"]);
+        //         // this.router.navigate(["/"]);
+        //
+        //
+        //         // this.gotonextpage();
+        //     }, (error) => {
+        //         alert(error);
+        //     });
+        //
+        // }
+        //
+        //
+        //
+        // console.log("login ok 2!");
+        // // this.gotonextpage();
     };
     Auth0LoginComponent.prototype.doLogout = function () {
         appSettings.remove("auth0Token");
@@ -84,6 +97,9 @@ var Auth0LoginComponent = (function () {
     };
     Auth0LoginComponent.prototype.goToHome = function () {
         this.router.navigate(["/"]);
+    };
+    Auth0LoginComponent.prototype.showToken = function () {
+        this.currentToken = appSettings.getString("auth0Token");
     };
     Auth0LoginComponent.prototype.test1 = function () {
     };

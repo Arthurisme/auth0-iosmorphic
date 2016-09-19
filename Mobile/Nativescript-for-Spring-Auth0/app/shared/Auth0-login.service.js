@@ -66,37 +66,58 @@ var Auth0LoginService = (function () {
     //This is for standard login, which lead a navigater to "/ping"
     Auth0LoginService.prototype.login = function () {
         var _this = this;
-        console.log("Starting processing of login...");
-        auth0.show().then(function (args) {
-            console.log(args.profile);
-            console.log(args.token);
-            // appSettings.setString("auth0Token", JSON.stringify(args));
-            var afterLoginPageUri = "/ping";
-            _this.router.navigate([afterLoginPageUri]);
-            console.log("login ok point 1 !");
-        }, function (error) {
-            shared_1.alert(error);
-        });
-        console.log("login ok point 2 !");
-        // this.gotonextpage();
+        var afterLoginPageUri = "/ping";
+        if (this.isLoggedIn) {
+            this.router.navigate([afterLoginPageUri]);
+        }
+        else {
+            console.log("Starting processing of login...");
+            auth0.show().then(function (args) {
+                console.log(args.profile);
+                console.log(args.token);
+                // appSettings.setString("auth0Token", JSON.stringify(args));
+                var afterLoginPageUri = "/ping";
+                _this.router.navigate([afterLoginPageUri]);
+                console.log("login ok point 1 !");
+            }, function (error) {
+                shared_1.alert(error);
+            });
+            console.log("login ok point 2 !");
+        }
     };
     //custom login, which lead a navigater to afterLoginPageUri ---format as "/ping"
     Auth0LoginService.prototype.loginAndTo = function (afterLoginPageUri) {
         var _this = this;
-        console.log("Starting processing of login...");
-        auth0.show().then(function (args) {
-            console.log(args.profile);
-            console.log(args.token);
-            //This will done by plugin: not here.
-            // appSettings.setString("auth0Token", JSON.stringify(args));
-            // let afterLoginPageUri = "/ping";
-            _this.router.navigate([afterLoginPageUri]);
-            console.log("login ok point 1 !");
-        }, function (error) {
-            shared_1.alert(error);
-        });
-        console.log("login ok point 2 !");
-        // this.gotonextpage();
+        if (this.isLoggedIn) {
+            this.router.navigate([afterLoginPageUri]);
+        }
+        else {
+            console.log("Starting processing of login...");
+            auth0.show({
+                Params: {
+                    scope: 'openid email roles user_metadata app_metadata picture offline_access',
+                },
+                // auth: {
+                //   // redirect: false,
+                //   params: {
+                //     scope: 'openid email roles user_metadata app_metadata picture offline_access',
+                //   }
+                // },
+                rememberLastLogin: true,
+            })
+                .then(function (args) {
+                console.log(args.profile);
+                console.log(args.token);
+                //This will done by plugin: not here.
+                // appSettings.setString("auth0Token", JSON.stringify(args));
+                // let afterLoginPageUri = "/ping";
+                _this.router.navigate([afterLoginPageUri]);
+                console.log("login ok point 1 !");
+            }, function (error) {
+                shared_1.alert(error);
+            });
+            console.log("login ok point 2 !");
+        }
     };
     //This is for standard login, which lead a navigater to   "/ping"
     Auth0LoginService.prototype.logoff = function () {
