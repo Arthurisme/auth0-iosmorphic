@@ -12,7 +12,10 @@ var AuthGuard = (function () {
             return true;
         }
         else {
+            //Native auth0 login:
             this.router.navigate(["/auth0login"]);
+            //web auth0 login:
+            // this.router.navigate(["/weblogin"]);
             return false;
         }
     };

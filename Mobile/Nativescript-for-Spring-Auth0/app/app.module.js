@@ -2,21 +2,30 @@
 var platform_1 = require("nativescript-angular/platform");
 var core_1 = require("@angular/core");
 var router_1 = require("nativescript-angular/router");
+// import { HttpModule}      from '@angular/http';
+var http_1 = require("nativescript-angular/http");
 var app_component_1 = require("./app.component");
 var app_routing_1 = require("./app.routing");
 var shared_1 = require("./shared");
-var login_module_1 = require("./login/login.module");
-var groceries_module_1 = require("./groceries/groceries.module");
+// import { LoginModule } from "./login/login.module";
+// import { GroceriesModule } from "./groceries/groceries.module";
 var auth0_login_module_1 = require("./auth0-login/auth0-login.module");
+// import { WebLoginModule } from "./web-login/web-login.module";
 var ping_module_1 = require("./ping/ping.module");
 var Auth0_login_service_1 = require("./shared/Auth0-login.service");
+var login_component_1 = require("./pages/login/login.component");
+var list_component_1 = require("./pages/list/list.component");
 shared_1.setStatusBarColors();
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent],
+            declarations: [
+                app_component_1.AppComponent,
+                login_component_1.LoginComponent,
+                list_component_1.ListComponent
+            ],
             providers: [
                 shared_1.BackendService,
                 shared_1.LoginService,
@@ -26,10 +35,13 @@ var AppModule = (function () {
             imports: [
                 platform_1.NativeScriptModule,
                 router_1.NativeScriptRouterModule,
+                // HttpModule,
+                http_1.NativeScriptHttpModule,
                 router_1.NativeScriptRouterModule.forRoot(app_routing_1.appRoutes),
-                login_module_1.LoginModule,
-                groceries_module_1.GroceriesModule,
+                // LoginModule,
+                // GroceriesModule,
                 auth0_login_module_1.Auth0LoginModule,
+                // WebLoginModule,
                 ping_module_1.PingModule
             ],
             bootstrap: [app_component_1.AppComponent]

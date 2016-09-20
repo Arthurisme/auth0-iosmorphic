@@ -125,7 +125,7 @@ export class Auth0LoginComponent   {
     doLogout() {
         appSettings.remove("auth0Token");
         appSettings.remove("auth0UserData");
-        this.router.navigate(["/auth0testpage"]);
+        this.router.navigate(["/ping"]);
     }
 
     gotonextpage() {

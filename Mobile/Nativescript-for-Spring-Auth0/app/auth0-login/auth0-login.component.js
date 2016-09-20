@@ -88,7 +88,7 @@ var Auth0LoginComponent = (function () {
     Auth0LoginComponent.prototype.doLogout = function () {
         appSettings.remove("auth0Token");
         appSettings.remove("auth0UserData");
-        this.router.navigate(["/auth0testpage"]);
+        this.router.navigate(["/ping"]);
     };
     Auth0LoginComponent.prototype.gotonextpage = function () {
         this.router.navigate(["/ping"]);

@@ -47,6 +47,12 @@ https://github.com/Arthurisme/auth0-iosmorphic
    pod install
    pod setup
 
+### For token return roles:
+change  platforms/ios/Pods/Lock/Lock/Core/A0AuthParameters.m line 37:
+NSString * const A0ScopeOpenId = @"openid";
+to
+NSString * const A0ScopeOpenId = @"openid email roles user_metadata app_metadata picture offline_access";
+
 
 ##File sturcture:
 
