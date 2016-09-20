@@ -12,14 +12,14 @@ var PingComponent = (function () {
         this.router = router;
         this.http = http;
         this.API_URL = 'http://localhost:3001';
-        this.message = 'begin text';
-        this.messages = 'begin text';
+        this.messagePing = 'begin text';
+        this.messageSecurityPing = 'begin text';
     }
     PingComponent.prototype.ngOnInit = function () {
     };
     PingComponent.prototype.ping = function () {
         var _this = this;
-        this.message = '';
+        this.messagePing = '';
         console.log("start ping");
         var tokenAtLocal = appSettings.getString('auth0Token');
         var tokenData = JSON.parse(appSettings.getString("auth0Token"));
@@ -32,17 +32,17 @@ var PingComponent = (function () {
             console.log("data origin:");
             console.log(data);
             console.log("data._body origin:");
-            console.log(data);
-            _this.messages = data;
-            _this.messageORs = _this.messages;
+            console.log(data.toString());
+            _this.messagePing = data.toString();
+            _this.messageLast = _this.messagePing;
             // this.messages =  ((JSON.parse(data)));
             // this.messages = JSON.parse(JSON.parse(JSON.stringify(data)));
             // this.messages = JSON.parse(JSON.parse(JSON.stringify(data))._body);
             // this.messages =  (JSON.parse(JSON.stringify(data))._body);
             console.log("messageORs from http.get() :");
-            console.log(_this.messageORs);
+            console.log(_this.messageLast);
             // this.message =  data._body ;
-        }, function (error) { return _this.message = error._body; });
+        }, function (error) { return _this.messagePing = error._body; });
         //End test this.http @angular
         // http.request({
         //     url: `${this.API_URL}/ping`,

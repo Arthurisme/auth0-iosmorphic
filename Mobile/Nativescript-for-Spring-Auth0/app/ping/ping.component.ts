@@ -21,9 +21,9 @@ import * as appSettings from "application-settings";
 export class PingComponent implements OnInit {
 
     API_URL:string = 'http://localhost:3001';
-    message:string = 'begin text';
-    messages:string = 'begin text';
-    messageORs:string;
+    messagePing:string = 'begin text';
+    messageSecurityPing:string = 'begin text';
+    messageLast:string;
 
     constructor(private router:Router
                 ,  private http: Http
@@ -37,7 +37,7 @@ export class PingComponent implements OnInit {
 
 
     public ping() {
-        this.message = '';
+        this.messagePing = '';
         console.log("start ping");
         let tokenAtLocal = appSettings.getString('auth0Token');
         var tokenData = JSON.parse(appSettings.getString("auth0Token"));
@@ -53,21 +53,21 @@ export class PingComponent implements OnInit {
                     console.log( "data origin:");
                     console.log( data);
                     console.log( "data._body origin:");
-                    console.log( data);
+                    console.log(data.toString());
 
-                    this.messages = data;
-                    this.messageORs=this.messages;
+                    this.messagePing = data.toString();
+                    this.messageLast=this.messagePing;
                     // this.messages =  ((JSON.parse(data)));
 
                     // this.messages = JSON.parse(JSON.parse(JSON.stringify(data)));
                     // this.messages = JSON.parse(JSON.parse(JSON.stringify(data))._body);
                     // this.messages =  (JSON.parse(JSON.stringify(data))._body);
                     console.log( "messageORs from http.get() :");
-                    console.log( this.messageORs);
+                    console.log( this.messageLast);
                     // this.message =  data._body ;
                 },
 
-                error => this.message = error._body
+                error => this.messagePing = error._body
             );
         //End test this.http @angular
 
