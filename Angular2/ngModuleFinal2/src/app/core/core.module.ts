@@ -19,7 +19,7 @@ import { HomeComponent } from "./home.component";
     DropdownDirective,
     HomeComponent
   ],
-  exports:      [ TitleComponent ],
+  exports:      [ TitleComponent,DropdownDirective ],
   providers:    [ UserService ]
 })
 export class CoreModule {
