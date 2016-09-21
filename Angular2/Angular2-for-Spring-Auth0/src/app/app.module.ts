@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 // import { NgSemanticModule } from 'ng-semantic';
 
@@ -53,6 +53,9 @@ import {MomentModule} from 'angular2-moment';
 
 
 @NgModule({
+    // schemas: [ CUSTOM_ELEMENTS_SCHEMAM_ELEMENTS_SCHEMA ],
+
+    exports: [        HeaderComponent,],
     declarations: [
         AppComponent,
         HeaderComponent,
@@ -100,15 +103,16 @@ import {MomentModule} from 'angular2-moment';
         }),
 
 
+
+
         // UserService,
         // PhotoService,
         // AddPhotoService,
         // UploadPhotoService,
         // ApiTestService,
         // CommentService
-
-
     ],
+
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
@@ -17,13 +17,18 @@ import {  ProfileEdit} from "./profile_edit.component";
 // import { ShoppingListService } from "./shopping-list/shopping-list.service";
 // import { RecipeService } from "./recipes/recipe.service";
 import { profileAppRouting } from "./profile-app.routing";
+import {HeaderComponent} from "../../components/header/header.component";
 
 
 
 
 
 @NgModule({
+
+  // schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+
   declarations: [
+    // HeaderComponent,
 
     // ShoppingListAddComponent,
     // ShoppingListComponent,
@@ -47,6 +52,7 @@ import { profileAppRouting } from "./profile-app.routing";
     //   ShoppingListService,
     // RecipeService
   ],
+  // exports: [        HeaderComponent,],
   bootstrap: [
       // RecipesComponent
   ]

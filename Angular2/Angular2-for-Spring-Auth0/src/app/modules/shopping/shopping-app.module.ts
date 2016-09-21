@@ -15,11 +15,16 @@ import { RecipeService } from "./recipes/recipe.service";
 import { shoppingAppRouting } from "./shopping-app.routing";
 
 
+import {HeaderComponent} from "../../components/header/header.component";
+
+
 
 
 
 @NgModule({
   declarations: [
+
+    // HeaderComponent,
 
     ShoppingListAddComponent,
     ShoppingListComponent,
@@ -35,6 +40,9 @@ import { shoppingAppRouting } from "./shopping-app.routing";
     shoppingAppRouting,
   ],
   providers: [ShoppingListService, RecipeService],
+  // exports: [        HeaderComponent,],
+
+
   bootstrap: [RecipesComponent]
 })
 export class ShoppingAppModule {}
