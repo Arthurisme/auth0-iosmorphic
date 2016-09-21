@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 // import { getString, setString } from "application-settings";
 
 import { User } from "./user.model";
-import { BackendService } from "./backend.service";
+// import { BackendService } from "./backend.service";
 
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
@@ -66,16 +66,18 @@ export class Auth0LoginService {
     appSettings.setString(tokenKey, theToken);
   }
 
-  constructor(private router: Router, private backend: BackendService) {
-    if (this.token) {
-      this.backend.el.authentication.setAuthorization(this.token, "bearer");
-    }
+  constructor(private router: Router
+              // private backend: BackendService
+  ) {
+    // if (this.token) {
+    //   this.backend.el.authentication.setAuthorization(this.token, "bearer");
+    // }
   }
 
-  register(user: User) {
-    return this.backend.el.Users.register(user.email, user.password)
-      .catch(this.handleErrors);
-  }
+  // register(user: User) {
+  //   return this.backend.el.Users.register(user.email, user.password)
+  //     .catch(this.handleErrors);
+  // }
 
 
   //This is for standard login, which lead a navigater to "/ping"

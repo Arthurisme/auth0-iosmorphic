@@ -2,8 +2,8 @@ import { Routes } from "@angular/router";
 import { AuthGuard } from "./auth-guard.service";
 
 
-import { LoginComponent } from "./pages/login/login.component";
-import { ListComponent } from "./pages/list/list.component";
+import { LoginComponent } from "./modules/groceries/login/login.component";
+import { ListComponent } from "./modules/groceries/list/list.component";
 
 export const authProviders = [
   AuthGuard
@@ -11,7 +11,8 @@ export const authProviders = [
 
 export const appRoutes: Routes = [
   // { path: "", redirectTo: "/groceries", pathMatch: "full" }
-  { path: "", redirectTo: "/auth0login", pathMatch: "full" }
+  // { path: "", redirectTo: "/auth0login" , pathMatch: "full" },
+  { path: "", redirectTo: "/ping" , pathMatch: "full" }
   // { path: "", redirectTo: "/weblogin", pathMatch: "full" }
 
   //

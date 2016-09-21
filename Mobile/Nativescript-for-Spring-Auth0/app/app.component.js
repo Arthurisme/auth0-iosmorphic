@@ -29,7 +29,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: "my-app",
             // directives: [NS_ROUTER_DIRECTIVES],
-            template: "<page-router-outlet></page-router-outlet>"
+            templateUrl: "./app.component.html",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

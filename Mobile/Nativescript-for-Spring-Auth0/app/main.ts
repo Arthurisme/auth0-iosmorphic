@@ -4,6 +4,10 @@ import { platformNativeScriptDynamic, NativeScriptModule } from "nativescript-an
 // import { AppComponent } from "./app.component";
 import { AppModule } from "./app.module";
 
+import { setStatusBarColors } from "./utils/status-bar-util";
+
+setStatusBarColors();
+
 // @NgModule({
 //     declarations: [AppComponent],
 //     bootstrap: [AppComponent],

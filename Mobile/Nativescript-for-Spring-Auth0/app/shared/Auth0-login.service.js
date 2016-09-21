@@ -1,6 +1,5 @@
 "use strict";
 var core_1 = require("@angular/core");
-var backend_service_1 = require("./backend.service");
 var router_1 = require("@angular/router");
 var shared_1 = require("../shared");
 var auth0 = require("nativescript-auth0");
@@ -8,12 +7,11 @@ var application = require("application");
 var appSettings = require("application-settings");
 var tokenKey = "auth0Token";
 var Auth0LoginService = (function () {
-    function Auth0LoginService(router, backend) {
+    function Auth0LoginService(router) {
         this.router = router;
-        this.backend = backend;
-        if (this.token) {
-            this.backend.el.authentication.setAuthorization(this.token, "bearer");
-        }
+        // if (this.token) {
+        //   this.backend.el.authentication.setAuthorization(this.token, "bearer");
+        // }
     }
     Object.defineProperty(Auth0LoginService.prototype, "isLoggedIn", {
         get: function () {
@@ -59,10 +57,10 @@ var Auth0LoginService = (function () {
         enumerable: true,
         configurable: true
     });
-    Auth0LoginService.prototype.register = function (user) {
-        return this.backend.el.Users.register(user.email, user.password)
-            .catch(this.handleErrors);
-    };
+    // register(user: User) {
+    //   return this.backend.el.Users.register(user.email, user.password)
+    //     .catch(this.handleErrors);
+    // }
     //This is for standard login, which lead a navigater to "/ping"
     Auth0LoginService.prototype.login = function () {
         var _this = this;
@@ -142,7 +140,7 @@ var Auth0LoginService = (function () {
     };
     Auth0LoginService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [router_1.Router, backend_service_1.BackendService])
+        __metadata('design:paramtypes', [router_1.Router])
     ], Auth0LoginService);
     return Auth0LoginService;
 }());

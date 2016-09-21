@@ -4,6 +4,8 @@ var platform_1 = require("nativescript-angular/platform");
 // import { NgModule } from "@angular/core";
 // import { AppComponent } from "./app.component";
 var app_module_1 = require("./app.module");
+var status_bar_util_1 = require("./utils/status-bar-util");
+status_bar_util_1.setStatusBarColors();
 // @NgModule({
 //     declarations: [AppComponent],
 //     bootstrap: [AppComponent],

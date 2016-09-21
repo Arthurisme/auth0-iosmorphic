@@ -1,1 +1,0 @@
-{"version":3,"file":"groceries.routing.js","sourceRoot":"","sources":["groceries.routing.ts"],"names":[],"mappings":";AACA,uBAAqC,iBAAiB,CAAC,CAAA;AAEvD,oCAAmC,uBAAuB,CAAC,CAAA;AAC3D,mCAA0B,uBAAuB,CAAC,CAAA;AAElD,IAAM,eAAe,GAAW;IAC9B,EAAE,IAAI,EAAE,WAAW,EAAE,SAAS,EAAE,wCAAkB,EAAE,WAAW,EAAE,CAAC,8BAAS,CAAC,EAAE;CAC/E,CAAC;AACW,wBAAgB,GAAwB,qBAAY,CAAC,QAAQ,CAAC,eAAe,CAAC,CAAC"}
