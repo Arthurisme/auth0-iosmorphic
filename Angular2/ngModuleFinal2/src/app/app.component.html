@@ -1,0 +1,18 @@
+<rb-header></rb-header>
+
+
+<h1>
+  {{title}}
+</h1>
+
+<app-title [subtitle]="subtitle"></app-title>
+<nav>
+  <a routerLink="contact" routerLinkActive="active">Contact</a>
+  <a routerLink="crisis"  routerLinkActive="active">Crisis Center</a>
+  <a routerLink="heroes"  routerLinkActive="active">Heroes</a>
+</nav>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
