@@ -1,10 +1,10 @@
-import { NgModuleFinal2Page } from './app.po';
+import { CliPage } from './app.po';
 
-describe('ng-module-final2 App', function() {
-  let page: NgModuleFinal2Page;
+describe('cli App', function() {
+  let page: CliPage;
 
   beforeEach(() => {
-    page = new NgModuleFinal2Page();
+    page = new CliPage();
   });
 
   it('should display message saying app works', () => {

@@ -19,7 +19,7 @@ import { authProviders, appRoutes } from "./app.routing";
 import { GroceriesModule } from "./modules/groceries/groceries.module";
 import { Auth0LoginModule } from "./auth0-login/auth0-login.module";
 // import { WebLoginModule } from "./web-login/web-login.module";
-import { PingModule } from "./components/ping/ping.module";
+import { PingModule } from "./ping/ping.module";
 import {Auth0LoginService} from "./shared/Auth0-login.service";
 
 

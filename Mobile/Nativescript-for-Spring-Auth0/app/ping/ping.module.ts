@@ -10,7 +10,7 @@ import { PingComponent } from "./ping.component";
 // import {MyComponentbModule} from "../../modules/my-componentb/my-componentb.module";
 
 // import {HeaderComponent} from "../header/header.component";
-import {MyComponentbComponent} from "../../modules/my-componentb/my-componentb.component";
+import {MyComponentbComponent} from "../modules/my-componentb/my-componentb.component";
 
 // import {MyComponentComponent} from "../../components/mycomponent/mycomponent.component";
 

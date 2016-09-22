@@ -9,14 +9,14 @@ import "rxjs/add/operator/map";
 
 // import {HeaderComponent} from "../header/header.component"
 
-import {alert, setHintColor, LoginService, User} from "../../shared";
+import {alert, setHintColor, LoginService, User} from "../shared";
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 import * as appSettings from "application-settings";
 
 
 // import {HeaderComponent} from "../header/header.component";
-// import {MyComponentbComponent} from "../../modules/my-componentb/my-componentb.component";
+// import {MyComponentbComponent} from "../modules/my-componentb/my-componentb.component";
 
 
 

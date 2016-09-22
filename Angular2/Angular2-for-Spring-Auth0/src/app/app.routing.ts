@@ -1,33 +1,28 @@
-import { RouterModule, Routes } from '@angular/router';
+import { ModuleWithProviders }  from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {HomeComponent} from "./core/home.component";
 
+export const routes: Routes = [
+  // { path: '', redirectTo: 'contact', pathMatch: 'full'},
+  { path: '', redirectTo: 'profile', pathMatch: 'full'},
+  { path: 'crisis', loadChildren: 'app/crisis/crisis.module#CrisisModule' },
+  { path: 'heroes', loadChildren: 'app/hero/hero.module#HeroModule' },
 
-import {HomeComponent} from './components/home/home.component'
-import {PingComponent} from './components/ping/ping.component'
-import {ErrorComponent} from "./components/error/error.component";
-
-// import {AddPhoto} from "./modules/photo/add-photo.component";
-// import {ImageDetail} from "./modules/photo/image-detail/image-detail.component";
-// import {MyAlbum} from "./modules/photo/my-album/my-album.component";
-
-const appRootRoutes: Routes = [
-    // homepage set to:
-  {path: '', redirectTo: '/recipes', pathMatch: 'full'},
-  // {path: 'recipes', component: RecipesComponent, children: RECIPE_ROUTES},
-
-  // {path:'my-album' ,component:MyAlbum},
-  // {path:'image-detail/:id' , component: ImageDetail},
-  // {path:'add-photo', component:AddPhoto},
-
-
-    //each module has it's own routes and not from here.(from appMudule automatically)
-    //from component:
-  {path: 'home', component: HomeComponent},
-  {path: 'ping', component: PingComponent},
-  // { path: '/**', component: ErrorComponent },
-
-  // { path: '**', redirectTo: '' }
-
+  {path: 'recipes', loadChildren: 'app/recipes/recipes.module#RecipesModule'},
+  {path: 'shopping-list', loadChildren: 'app/shopping-list/shopping-list.module#ShoppingListModule'},
+  {path: 'home', component: HomeComponent}
 
 ];
 
-export const appRootRouting = RouterModule.forRoot(appRootRoutes);
+export const appRoutingProviders: any[] = [
+
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

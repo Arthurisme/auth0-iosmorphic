@@ -1,119 +1,118 @@
-import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-// import { NgSemanticModule } from 'ng-semantic';
 
-// import { FormsModule } from '@angular/forms';
 
-import {HttpModule} from '@angular/http';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
 
-import {AppComponent} from "./app.component";
+/* App Root */
+import { AppComponent }   from './app.component';
+
+import {SharedModule} from "./shared/shared.module";
+
+
+/* Feature Modules */
+import { ContactModule }  from './contact/contact.module';
+import { CoreModule }     from './core/core.module';
+import {routing, appRoutingProviders}        from './app.routing';
+import {HttpModule} from "@angular/http";
 
 import {Auth}              from './auth.service';
-
-
-import {HomeComponent} from './components/home/home.component';
-import {PingComponent} from './components/ping/ping.component';
-
-
-
-// import {NavBar} from './photo/nav-bar.component';
-// import {MyAlbum} from './photo/my-album.component';
-// import {AddPhoto} from './photo/add-photo.component';
-// import {ImageDetail} from './photo/image-detail.component';
-//
-// import {ImageComments} from "./photo/image-comments.component";
-
-
-// import {UserService} from "./services/user.service";
-// import {PhotoService} from "./services/photo.service";
-// import {AddPhotoService} from "./services/add-photo.service";
-// import {UploadPhotoService} from "./services/upload-photo.service";
-// import {ApiTestService} from "./services/apitest.service";
-// import {CommentService} from "./services/comment.service";
-
-
-
-import {HeaderComponent} from "./components/header/header.component";
-import {ErrorComponent} from "./components/error/error.component";
-
-import {DropdownDirective} from "./util/dropdown.directive";
-
-import {appRootRouting} from "./app.routing";
-
-// import { HeroesAppModule } from "./heroes/heroes-app.module";
-import {ShoppingAppModule} from "./modules/shopping/shopping-app.module";
-import {ProfileAppModule} from "./modules/profile/profile-app.module";
-import {PhotoAppModule} from "./modules/photo/photo-app.module";
-
-
 import {AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
-import 'rxjs/add/operator/map';
 
-import {MomentModule} from 'angular2-moment';
+
+// import {HeaderComponent} from "./shared/header.component";
+
+import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { RecipeService } from "./recipes/recipe.service";
+
+
+
+
+import {PhotoAppModule} from "./photo/photo-app.module";
+import {ProfileAppModule} from "./profile/profile-app.module";
+import {PingModule} from "./ping/ping.module";
+
+
+
 
 
 @NgModule({
-    // schemas: [ CUSTOM_ELEMENTS_SCHEMAM_ELEMENTS_SCHEMA ],
+  imports: [
+    BrowserModule,
+    HttpModule,
 
-    exports: [        HeaderComponent,],
-    declarations: [
-        AppComponent,
-        HeaderComponent,
-        ErrorComponent,
-        DropdownDirective,
+    ContactModule,
 
-        HomeComponent,
-        PingComponent,
+     CoreModule,
 
-
-        // NavBar,
-        // MyAlbum,
-        // // AddPhoto,
-        // ImageDetail,
-        // ImageComments,
-
-    ],
-    imports: [
-        BrowserModule,
-        // NgSemanticModule,
-        HttpModule,
-        MomentModule,
-        appRootRouting,
+    CoreModule.forRoot({userName: 'Miss Marple'}),
+    routing,
 
 
-        // HeroesAppModule,
-        ShoppingAppModule,
-        ProfileAppModule,
-        PhotoAppModule
-
-        // When FromsModule here instead of profile, there are error, why?
-        // FormsModule,
-    ],
-    providers: [
-        Auth,
-        AuthHttp,
-
-        provideAuth({
-            headerName: 'Authorization',
-            headerPrefix: 'bearer',
-            tokenName: 'token',
-            tokenGetter: (() => localStorage.getItem('id_token')),
-            globalHeaders: [{'Content-Type': 'application/json'}],
-            noJwtError: true
-        }),
+    SharedModule,
 
 
+    ProfileAppModule,
+    PingModule,
 
 
-        // UserService,
-        // PhotoService,
-        // AddPhotoService,
-        // UploadPhotoService,
-        // ApiTestService,
-        // CommentService
-    ],
+    PhotoAppModule
 
-    bootstrap: [AppComponent]
+
+  ],
+  declarations: [
+    AppComponent,
+    // HeaderComponent,
+  ],
+  providers: [
+    appRoutingProviders,
+    Auth,
+    AuthHttp,
+
+    provideAuth({
+      headerName: 'Authorization',
+      headerPrefix: 'bearer',
+      tokenName: 'token',
+      tokenGetter: (() => localStorage.getItem('id_token')),
+      globalHeaders: [{'Content-Type': 'application/json'}],
+      noJwtError: true
+    }),
+
+
+    ShoppingListService,
+    RecipeService
+  ],
+  bootstrap:    [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
+
+
+/*
+ Copyright 2016 Google Inc. All Rights Reserved.
+ Use of this source code is governed by an MIT-style license that
+ can be found in the LICENSE file at http://angular.io/license
+ */
+
+
+
+
+//Original download from official site
+// import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { HttpModule } from '@angular/http';
+//
+// import { AppComponent } from './app.component';
+//
+// @NgModule({
+//   declarations: [
+//     AppComponent
+//   ],
+//   imports: [
+//     BrowserModule,
+//     FormsModule,
+//     HttpModule
+//   ],
+//   providers: [],
+//   bootstrap: [AppComponent]
+// })
+// export class AppModule { }

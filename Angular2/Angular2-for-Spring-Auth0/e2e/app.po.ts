@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor/globals';
 
-export class CliPage {
+export class NgModuleFinal2Page {
   navigateTo() {
     return browser.get('/');
   }

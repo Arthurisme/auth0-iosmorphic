@@ -7,7 +7,7 @@ require("rxjs/add/operator/map");
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 // import {HeaderComponent} from "../header/header.component";
-// import {MyComponentbComponent} from "../../modules/my-componentb/my-componentb.component";
+// import {MyComponentbComponent} from "../modules/my-componentb/my-componentb.component";
 var PingComponent = (function () {
     function PingComponent(router, http) {
         this.router = router;

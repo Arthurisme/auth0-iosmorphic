@@ -12,7 +12,7 @@ var app_routing_1 = require("./app.routing");
 var groceries_module_1 = require("./modules/groceries/groceries.module");
 var auth0_login_module_1 = require("./auth0-login/auth0-login.module");
 // import { WebLoginModule } from "./web-login/web-login.module";
-var ping_module_1 = require("./components/ping/ping.module");
+var ping_module_1 = require("./ping/ping.module");
 var Auth0_login_service_1 = require("./shared/Auth0-login.service");
 // import { LoginComponent } from "./modules/pages/login/login.component";
 // import { ListComponent } from "./modules/pages/list/list.component";

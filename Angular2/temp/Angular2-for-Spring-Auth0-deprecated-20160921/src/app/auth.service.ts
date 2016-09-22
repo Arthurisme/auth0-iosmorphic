@@ -34,7 +34,7 @@ export class Auth {
       console.log('id_token storged local by auth.service: \n', localStorage.getItem("id_token"))
 
       //binding user to spring boot:
-      // this.userService.bindingUserToSpring().subscribe();
+      this.userService.bindingUserToSpring().subscribe();
 
 
 
