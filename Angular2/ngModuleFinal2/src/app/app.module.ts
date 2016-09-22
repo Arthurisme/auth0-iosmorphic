@@ -6,23 +6,29 @@ import { BrowserModule }  from '@angular/platform-browser';
 /* App Root */
 import { AppComponent }   from './app.component';
 
+import {SharedModule} from "./shared/shared.module";
+
+
 /* Feature Modules */
 import { ContactModule }  from './contact/contact.module';
 import { CoreModule }     from './core/core.module';
-import { routing }        from './app.routing';
-import {HeaderComponent} from "./header.component";
+import {routing, appRoutingProviders}        from './app.routing';
 import {HttpModule} from "@angular/http";
-
-
-
-import { ShoppingListService } from "./shopping-list/shopping-list.service";
-import { RecipeService } from "./recipes/recipe.service";
 
 import {Auth}              from './auth.service';
 import {AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
 
 
+// import {HeaderComponent} from "./shared/header.component";
+
+import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { RecipeService } from "./recipes/recipe.service";
+
+
+
+
 import {PhotoAppModule} from "./photo/photo-app.module";
+import {ProfileAppModule} from "./profile/profile-app.module";
 
 
 
@@ -40,15 +46,23 @@ import {PhotoAppModule} from "./photo/photo-app.module";
     CoreModule.forRoot({userName: 'Miss Marple'}),
     routing,
 
+
+    SharedModule,
+
+
+    ProfileAppModule,
+
+
     PhotoAppModule
 
 
   ],
   declarations: [
     AppComponent,
-    HeaderComponent,
+    // HeaderComponent,
   ],
   providers: [
+    appRoutingProviders,
     Auth,
     AuthHttp,
 
@@ -60,6 +74,8 @@ import {PhotoAppModule} from "./photo/photo-app.module";
       globalHeaders: [{'Content-Type': 'application/json'}],
       noJwtError: true
     }),
+
+
     ShoppingListService,
     RecipeService
   ],

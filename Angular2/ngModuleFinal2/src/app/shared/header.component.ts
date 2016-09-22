@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
-import { RecipeService } from "./recipes/recipe.service";
+import { RecipeService } from "../recipes/recipe.service";
 
-import {Auth} from "./auth.service";
+import {Auth} from "../auth.service";
 
 
 @Component({

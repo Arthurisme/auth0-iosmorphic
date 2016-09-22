@@ -9,7 +9,11 @@ export const routes: Routes = [
 
   {path: 'recipes', loadChildren: 'app/recipes/recipes.module#RecipesModule'},
   {path: 'shopping-list', loadChildren: 'app/shopping-list/shopping-list.module#ShoppingListModule'},
-  {path: 'Home', component: HomeComponent}
+  {path: 'home', component: HomeComponent}
+
+];
+
+export const appRoutingProviders: any[] = [
 
 ];
 

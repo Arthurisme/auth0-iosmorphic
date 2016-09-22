@@ -1,33 +1,47 @@
 import { NgModule }            from '@angular/core';
 import { CommonModule }        from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 import { FormsModule }         from '@angular/forms';
 
 import { AwesomePipe }         from './awesome.pipe';
 import { HighlightDirective }  from './highlight.directive';
 
 
-import {Header2Component} from "./header2.component";
+import {MyCustomComponent} from "./my-custom.component";
+import {HeaderComponent} from "./header.component";
 
 
 
 
 @NgModule({
-  imports:      [ CommonModule ],
+  imports:      [
+    CommonModule,
+    RouterModule,
+
+  ],
   declarations: [
 
-    Header2Component,
+
 
     AwesomePipe,
-    HighlightDirective
+    HighlightDirective,
+
+    HeaderComponent,
+    MyCustomComponent,
   ],
   exports:      [
 
-    Header2Component,
 
     AwesomePipe,
     HighlightDirective,
     CommonModule,
-    FormsModule ]
+    RouterModule,
+    FormsModule,
+
+    HeaderComponent,
+    MyCustomComponent,
+
+  ]
 })
 export class SharedModule { }
 
