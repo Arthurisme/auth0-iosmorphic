@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./core/home.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'contact', pathMatch: 'full'},
+  // { path: '', redirectTo: 'contact', pathMatch: 'full'},
+  { path: '', redirectTo: 'profile', pathMatch: 'full'},
   { path: 'crisis', loadChildren: 'app/crisis/crisis.module#CrisisModule' },
   { path: 'heroes', loadChildren: 'app/hero/hero.module#HeroModule' },
 

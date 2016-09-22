@@ -29,7 +29,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" rbDropdown>
-          <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Welcome: {{auth.userProfile.email}}<span class="caret"></span></a>
+          <a   class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Welcome: <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#"  (click)="auth.login()" *ngIf="!auth.authenticated()">Login</a></li>
             <li><a href="#">Other...</a></li>
@@ -41,3 +41,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
+<!--{{auth.userProfile.email}}-->

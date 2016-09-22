@@ -9,19 +9,20 @@ import { TitleComponent }    from './title.component';
 import { UserService }       from './user.service';
 import { UserServiceConfig } from './user.service';
 
-import { DropdownDirective } from "./dropdown.directive";
+// import { DropdownDirective } from "./dropdown.directive";
 import { HomeComponent } from "./home.component";
 
 @NgModule({
   imports:      [ CommonModule ],
   declarations: [
     TitleComponent,
-    DropdownDirective,
+    // DropdownDirective,
     HomeComponent
   ],
   exports:      [
     TitleComponent,
-    DropdownDirective ],
+    // DropdownDirective
+  ],
   providers:    [ UserService ]
 })
 export class CoreModule {

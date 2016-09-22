@@ -9,6 +9,8 @@ import { HighlightDirective }  from './highlight.directive';
 
 import {MyCustomComponent} from "./my-custom.component";
 import {HeaderComponent} from "./header.component";
+// import {CoreModule} from "../core/core.module";
+import {DropdownDirective} from "../core/dropdown.directive";
 
 
 
@@ -17,6 +19,7 @@ import {HeaderComponent} from "./header.component";
   imports:      [
     CommonModule,
     RouterModule,
+    // CoreModule
 
   ],
   declarations: [
@@ -25,6 +28,7 @@ import {HeaderComponent} from "./header.component";
 
     AwesomePipe,
     HighlightDirective,
+    DropdownDirective,
 
     HeaderComponent,
     MyCustomComponent,
@@ -36,6 +40,7 @@ import {HeaderComponent} from "./header.component";
     HighlightDirective,
     CommonModule,
     RouterModule,
+    // CoreModule,
     FormsModule,
 
     HeaderComponent,

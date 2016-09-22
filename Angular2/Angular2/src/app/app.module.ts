@@ -29,6 +29,7 @@ import { RecipeService } from "./recipes/recipe.service";
 
 import {PhotoAppModule} from "./photo/photo-app.module";
 import {ProfileAppModule} from "./profile/profile-app.module";
+import {PingModule} from "./ping/ping.module";
 
 
 
@@ -40,9 +41,9 @@ import {ProfileAppModule} from "./profile/profile-app.module";
     HttpModule,
 
     ContactModule,
-    /*
+
      CoreModule,
-     */
+
     CoreModule.forRoot({userName: 'Miss Marple'}),
     routing,
 
@@ -51,6 +52,7 @@ import {ProfileAppModule} from "./profile/profile-app.module";
 
 
     ProfileAppModule,
+    PingModule,
 
 
     PhotoAppModule
