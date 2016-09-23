@@ -1,150 +1,84 @@
-# Groceries [![Build Status](https://travis-ci.org/NativeScript/sample-Groceries.svg?branch=master)](https://travis-ci.org/NativeScript/sample-Groceries) [![dependency status](https://david-dm.org/nativescript/sample-Groceries.svg)](https://david-dm.org/nativescript/sample-Groceries) [![devDependency Status](https://david-dm.org/nativescript/sample-Groceries/dev-status.svg)](https://david-dm.org/nativescript/sample-Groceries#info=devDependencies)
+# NativeScript-Angular2-Auth0 v 1.00
 
-Groceries is a NativeScript-built iOS and Android app for managing grocery lists. You can learn how to build a version of this app from scratch using either our [JavaScript getting started guide](http://docs.nativescript.org/tutorial/chapter-0), or our [TypeScript and Angular 2 getting started guide](http://docs.nativescript.org/angular/tutorial/ng-chapter-0).
 
-<!-- * [Download](#download) -->
+##Currently(2016-09-18), nativescript-auth0 is working well on ios, and android will support in a short time.
 
-* [Branches](#branches)
-* [Screenshots](#screenshots)
-* [Development](#development)
-    * [Linting](#linting)
-    * [Unit testing](#unit-testing)
-    * [Travis CI](#travis)
-    * [Telerik Platform](#telerik-platform)
-* [Contributors](#contributors)
 
-<!--
-Commenting this out for now because until Groceries 3.0 drops (see https://github.com/NativeScript/sample-Groceries/issues/78), the version of the app in the stores and this repo don’t match up. Commenting this out == confusion-- (hopefully).
+##This repo is for nativescript angular 2 project , with login via Auth0.
+##To the repo that sync login and toke to Spring boot back end, please go here:
+https://github.com/Arthurisme/auth0-iosmorphic
 
-<h2 id="download">Download</h2>
 
-The latest version of Groceries is available on the iOS App Store as well as Google Play:
 
-<a href="https://itunes.apple.com/us/app/groceries-simple-grocery-lists/id1041129105?mt=8">
-  <img src="assets/app-store-icons/ios-app-store.png">
-</a>
-<a href="https://play.google.com/store/apps/details?id=org.nativescript.groceries&hl=en">
-  <img src="assets/app-store-icons/google-play.png">
-</a>
--->
 
-<h2 id="branches">Branches</h2>
+##How to use:
+1, Study here: https://github.com/sitefinitysteve/nativescript-auth0/tree/master/plugin
+2, Register a Auth0 account, config call back as yourDomain.auth0.com/mobile.
+3, git clone https://github.com/Arthurisme/NativeScript-Angular2-Auth0
+   cd NativeScript-Angular2-Auth0
+   tns run ios
 
-This repository contains a number of branches:
+##Notice:
 
-* The [**master** branch](https://github.com/NativeScript/sample-Groceries/) shows how to build a robust, real-world app using NativeScript. The branch is built with TypeScript and Angular 2.
-* The [**javascript** branch](https://github.com/NativeScript/sample-Groceries/tree/javascript) contains the same real-world implementation, but is built with JavaScript.
+###About install nativescript-auth0 plugin:
+   After installation, You must check the version of nativescript-auth0 plugin in node_module directory, Make sure it is the latest version (at least v 2.0).
+   If online installation fail to get correct version, you can install it local by : tns add plugin PathNameYourDownloadPlugin.
 
----
+###About pod version:
 
-* The [**angular-start** branch](https://github.com/NativeScript/sample-Groceries/tree/angular-start) contains the starting point for the [NativeScript “TypeScript and Angular” getting started guide](http://docs.nativescript.org/angular/tutorial/ng-chapter-0).
-* The [**angular-end** branch](https://github.com/NativeScript/sample-Groceries/tree/angular-end) contains the finished code for the TypeScript and Angular getting started guide.
+   If there are a error about pod or cocoapods, you may have some problem in pod. Make sure you have correct version installed.Please do something as:
 
----
+   check pod version:
+   pod --version
 
-* The [**start** branch](https://github.com/NativeScript/sample-Groceries/tree/start) contains the starting point for the [NativeScript “JavaScript” getting started guide](http://docs.nativescript.org/tutorial/chapter-0).
-* The [**end** branch](https://github.com/NativeScript/sample-Groceries/tree/end) contains the finished code for the JavaScript getting started guide. Refer to it at any point while you’re completing the guide.
+   install:
+   sudo gem install cocoapods -v 1.0.1   (nativescript 2 use this one is ok! and wait for a very long time to build)
 
----
+   Uninstall:
+   sudo gem uninstall cocoapods -v 1.0.1
 
-* The [**web** branch](https://github.com/NativeScript/sample-Groceries/tree/web) contains a web version of Groceries that shares code with the NativeScript-built native app. The app is built with the Angular 2 CLI.
-* The [**gh-pages** branch](https://github.com/NativeScript/sample-Groceries/tree/gh-pages) contains the GitHub Pages hosted version of the web branch. You can view the web app live at <https://nativescript.github.io/sample-Groceries>.
+   (Currently 2016-09 for no angular version nativescript)
+   sudo gem install cocoapods -v 0.39.0
+   sudo gem uninstall cocoapods -v 0.39.0
 
----
 
-* The [**firebase** branch](https://github.com/NativeScript/sample-Groceries/tree/firebase) contains a version of Groceries that [uses Firebase as its data store](https://www.nativescript.org/blog/ignite-your-app-development-with-nativescript-and-firebase).
 
-<h2 id="screenshots">Screenshots</h2>
 
-![](assets/screenshots/ios-1.png)
-![](assets/screenshots/ios-2.png)
-![](assets/screenshots/ios-3.png)
+   pod install
+   pod setup
 
-![](assets/screenshots/android-1.png)
-![](assets/screenshots/android-2.png)
-![](assets/screenshots/android-3.png)
+### For token return roles:
+change  platforms/ios/Pods/Lock/Lock/Core/A0AuthParameters.m line 37:
+NSString * const A0ScopeOpenId = @"openid";
+to
+NSString * const A0ScopeOpenId = @"openid email roles user_metadata app_metadata picture offline_access";
 
-<h2 id="development">Development</h2>
 
-This app is built with the NativeScript CLI. Once you have the [CLI installed](http://docs.nativescript.org/angular/tutorial/ng-chapter-1#11-install-nativescript-and-configure-your-environment), start by cloning the repo:
+##File sturcture:
 
 ```
-$ git clone https://github.com/NativeScript/sample-Groceries.git
-$ cd sample-Groceries
-```
-
-Next, install the app's iOS and Android runtimes, as well as the app's npm dependencies:
-
-```
-$ tns install
-```
-
-From there you can use the `run` command to run Groceries on iOS:
-
-```
-$ tns run ios --emulator
-```
-
-And the same command to run Groceries on Android:
-
-```
-$ tns run android --emulator
-```
-
-Finally, use the `livesync` command to push out changes to your app without having to go through the full build cycle:
+.
+├── README.md
+├── app
+│   ├── App_Resources
+│   ├── auth0-login--------------------------Auth0 login home page.
+│   ├── groceries----------------------------This one is a copy of official sample, just ignorant it.
+│   ├── login--------------------------------This one is a copy of official sample, just ignorant it.
+│   ├── plugin-------------------------------The copy of auth0-nativescript plugin.
+│   ├── shared
+│   └── tests
+├── hooks
+├── lib
+│   └── iOS
+├── node_modules
+│   └── zone.js
+├── package.json
+├── platforms
+│   ├── android
+│   └── ios
+├── references.d.ts
+└── tsconfig.json
 
 ```
-$ tns livesync ios --emulator --watch
-```
-```
-$ tns livesync android --emulator --watch
-```
 
-<h3 id="linting">Linting</h3>
-
-Groceries uses [tslint](https://www.npmjs.com/package/tslint) + [codelyzer](https://github.com/mgechev/codelyzer) rules to ensure the code follows the [angular style guide](https://angular.io/docs/ts/latest/guide/style-guide.html).
-
-You can run the linter with the `tslint` npm script:
-```
-$ npm run tslint
-```
-
-<h3 id="unit-testing">Unit Testing</h3>
-
-Groceries uses NativeScript’s [integrated unit test runner](http://docs.nativescript.org/core-concepts/testing) with [Jasmine](http://jasmine.github.io/). To run the tests for yourself use the `tns test` command:
-
-```
-$ tns test ios --emulator
-```
-
-```
-$ tns test android --emulator
-```
-
-For more information on unit testing NativeScript apps, refer to the [NativeScript docs on the topic](http://docs.nativescript.org/core-concepts/testing).
-
-<h3 id="travis">Travis CI</h3>
-
-Groceries uses [Travis CI](https://travis-ci.org/) to verify all tests pass on each commit. Refer to the [`.travis.yml` configuration file](https://github.com/NativeScript/sample-Groceries/blob/master/.travis.yml) for details.
-
-<h3 id="telerik-platform">Telerik Platform</h3>
-
-If you’d like to try developing Groceries without going through the full setup, you may be interested in loading the app in the [Telerik Platform](http://www.telerik.com/platform):
-
-* [Run Groceries in the Telerik Platform](https://platform.telerik.com/#appbuilder/clone/https%3A%2F%2Fgithub.com%2FIcenium%2Fnativescript-sample-groceries)
-
-<h2 id="contributors">Contributors</h2>
-
-The following is a list of all the people that have helped build Groceries. Thanks for your contributions!
-
-[<img alt="tjvantoll" src="https://avatars.githubusercontent.com/u/544280?v=3&s=117" width="117">](https://github.com/tjvantoll)[<img alt="hdeshev" src="https://avatars.githubusercontent.com/u/63219?v=3&s=117" width="117">](https://github.com/hdeshev)[<img alt="Mitko-Kerezov" src="https://avatars.githubusercontent.com/u/6683316?v=3&s=117" width="117">](https://github.com/Mitko-Kerezov)[<img alt="jlooper" src="https://avatars.githubusercontent.com/u/1450004?v=3&s=117" width="117">](https://github.com/jlooper)[<img alt="vakrilov" src="https://avatars.githubusercontent.com/u/4092076?v=3&s=117" width="117">](https://github.com/vakrilov)[<img alt="ligaz" src="https://avatars.githubusercontent.com/u/19437?v=3&s=117" width="117">](https://github.com/ligaz)
-
-[<img alt="nadyaA" src="https://avatars.githubusercontent.com/u/6064810?v=3&s=117" width="117">](https://github.com/nadyaA)[<img alt="cmelo" src="https://avatars.githubusercontent.com/u/872461?v=3&s=117" width="117">](https://github.com/cmelo)[<img alt="NathanWalker" src="https://avatars.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker)[<img alt="nsndeck" src="https://avatars.githubusercontent.com/u/5665150?v=3&s=117" width="117">](https://github.com/nsndeck)[<img alt="TsvetanMilanov" src="https://avatars.githubusercontent.com/u/10463529?v=3&s=117" width="117">](https://github.com/TsvetanMilanov)[<img alt="valentinstoychev" src="https://avatars.githubusercontent.com/u/4980822?v=3&s=117" width="117">](https://github.com/valentinstoychev)
-
-[<img alt="bradmartin" src="https://avatars.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin)[<img alt="covex-nn" src="https://avatars.githubusercontent.com/u/110878?v=3&s=117" width="117">](https://github.com/covex-nn)
-
-<!-- Note: The table above get generated with the following commands -->
-<!-- npm install -g githubcontrib -->
-<!-- githubcontrib --owner NativeScript --repo sample-Groceries --cols 6 --sortOrder desc | pbcopy -->
-
-![](https://ga-beacon.appspot.com/UA-111455-24/nativescript/sample-groceries?pixel)
+MIT license
