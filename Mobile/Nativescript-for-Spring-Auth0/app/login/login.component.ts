@@ -9,7 +9,6 @@ import { Page } from "ui/page";
 import { TextField } from "ui/text-field";
 
 import { alert, setHintColor, LoginService, User } from "../shared";
-import {Auth0LoginService} from "../shared/Auth0-login.service";
 
 @Component({
   selector: "gr-login",
@@ -31,11 +30,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router,
     private userService: LoginService,
-    private auth0LoginService:Auth0LoginService,
-    private page: Page
-  ) {
+    private page: Page) {
     this.user = new User();
-    this.user.email = "ngconf@telerik33.com";
+    this.user.email = "user@nativescript.org";
     this.user.password = "password";
   }
 

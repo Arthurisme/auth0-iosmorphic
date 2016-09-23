@@ -1,0 +1,55 @@
+﻿
+
+
+@import url("~/platform.css");
+
+Page {
+    background-color: white;
+    font-size: 15;
+}
+.list-page {
+    background-image: url("res://bg_inner");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+ActionBar {
+    background-color: black;
+    color: white;
+}
+TextField {
+    padding: 10;
+    font-size: 13;
+}
+
+.small-spacing {
+    margin: 5;
+}
+.medium-spacing {
+    margin: 10;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+
+/*button, label, stack-layout {*/
+    /*horizontal-align: center;    */
+/*}*/
+
+/*button {*/
+    /*font-size: 36;*/
+/*}*/
+
+/*.title {*/
+    /*font-size: 30;*/
+    /*margin: 20;*/
+/*}*/
+
+/*.message {*/
+    /*font-size: 20;*/
+    /*color: #284848;*/
+    /*text-align: center;*/
+    /*margin: 0 20;*/
+/*} */

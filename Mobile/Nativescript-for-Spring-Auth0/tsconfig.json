@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
+        "outDir": "app",
+        "rootDir": "app",
         "module": "commonjs",
         "target": "es5",
-        "sourceMap": true,
+        "inlineSourceMap": true,
         "experimentalDecorators": true,
+        "removeComments": false,
         "emitDecoratorMetadata": true,
-        "noEmitHelpers": true,
         "noEmitOnError": true
     },
     "exclude": [
