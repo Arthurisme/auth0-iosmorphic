@@ -189,5 +189,9 @@ export class PingComponent implements OnInit {
 
     }
 
+    goToPing() {
+        this.router.navigate(["/modulea"]);
+    }
+
 
 }

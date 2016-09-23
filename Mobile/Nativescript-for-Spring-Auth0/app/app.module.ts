@@ -9,6 +9,7 @@ import { setStatusBarColors, BackendService, LoginService } from "./shared";
 import { LoginModule } from "./login/login.module";
 import { GroceriesModule } from "./groceries/groceries.module";
 import {PingModule} from "./ping/ping.module";
+import {ModuleAModule} from "./module-a/module-a.module";
 
 setStatusBarColors();
 
@@ -25,7 +26,9 @@ setStatusBarColors();
     LoginModule,
     GroceriesModule,
 
-    PingModule
+    PingModule,
+
+    ModuleAModule
   ],
   declarations: [
       AppComponent,

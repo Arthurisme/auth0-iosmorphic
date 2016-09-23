@@ -16,11 +16,19 @@
       text="GROCERIES"
       class="initial-label"></Label>
     <StackLayout
-      (tap)="showMainContent()"
-      class="initial-button">
+       class="initial-button">
       <Label
+        (tap)="showMainContent()"
         text="Login"
         class="initial-button-label"></Label>
+    </StackLayout>
+
+    <StackLayout
+            (tap)="goToPing()"
+            class="initial-button">
+      <Label
+              text="Go to Ping"
+              class="initial-button-label"></Label>
     </StackLayout>
   </StackLayout>
 

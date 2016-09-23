@@ -39,6 +39,19 @@
 
 
 
+
+
+<StackLayout>
+
+
+    <StackLayout
+            (tap)="goToPing()"
+            class="initial-button">
+        <Label
+                text="Go to Ping"
+                class="initial-button-label"></Label>
+    </StackLayout>
+
 <GridLayout columns="*" rows="*,*2,*,*,*,*,*,*,*" width="300" height="400" backgroundColor="lightgray" >
 
     <TextView  col="0" row="0"   text=" You are success login via Auth0 if you see this page.  " ></TextView>
@@ -56,3 +69,6 @@
     <!--<actionbar-header></actionbar-header>-->
 
 </GridLayout>
+
+
+</StackLayout>

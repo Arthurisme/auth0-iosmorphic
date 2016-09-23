@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.page.actionBarHidden = true;
+    // this.page.actionBarHidden = true;
   }
 
   focusPassword() {
@@ -180,10 +180,11 @@ export class LoginComponent implements OnInit {
     setHintColor({ view: passwordTextField, color: hintColor });
   }
 
-  gotToPing() {
-
-          this.router.navigate(["/ping"]);
-
+  goToPing() {
+    this.router.navigate(["/ping"]);
+  }
+  goToModuleA() {
+    this.router.navigate(["/ping"]);
   }
 
 }
