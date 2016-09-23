@@ -8,6 +8,7 @@ import { setStatusBarColors, BackendService, LoginService } from "./shared";
 
 import { LoginModule } from "./login/login.module";
 import { GroceriesModule } from "./groceries/groceries.module";
+import {PingModule} from "./ping/ping.module";
 
 setStatusBarColors();
 
@@ -23,6 +24,8 @@ setStatusBarColors();
     NativeScriptRouterModule.forRoot(appRoutes),
     LoginModule,
     GroceriesModule,
+
+    PingModule
   ],
   declarations: [
       AppComponent,

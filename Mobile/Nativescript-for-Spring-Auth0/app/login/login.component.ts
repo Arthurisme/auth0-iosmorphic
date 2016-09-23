@@ -179,4 +179,11 @@ export class LoginComponent implements OnInit {
     setHintColor({ view: emailTextField, color: hintColor });
     setHintColor({ view: passwordTextField, color: hintColor });
   }
+
+  gotToPing() {
+
+          this.router.navigate(["/ping"]);
+
+  }
+
 }
