@@ -9,6 +9,7 @@ import * as SocialShare from "nativescript-social-share";
 import { GroceryListComponent } from "./grocery-list/grocery-list.component";
 import { GroceryService } from "./shared";
 import { LoginService, alert, setHintColor } from "../shared";
+import {NavigateService} from "../shared/service/navigate.service";
 
 @Component({
   selector: "gr-groceries",
@@ -27,11 +28,13 @@ export class GroceriesComponent implements OnInit {
   constructor(private router: Router,
     private store: GroceryService,
     private loginService: LoginService,
-    private page: Page) {}
+    private page: Page,
+    private navigateService:NavigateService
+  ) {}
 
   ngOnInit() {
     this.isAndroid = !!this.page.android;
-    this.page.actionBarHidden = true;
+    // this.page.actionBarHidden = true;
     this.page.className = "list-page";
   }
 

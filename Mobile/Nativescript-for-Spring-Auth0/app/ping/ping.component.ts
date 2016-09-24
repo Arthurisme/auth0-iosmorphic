@@ -13,6 +13,7 @@ import {alert, setHintColor, LoginService, User} from "../shared";
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 import * as appSettings from "application-settings";
+import {NavigateService} from "../shared/service/navigate.service";
 
 
 // import {HeaderComponent} from "../header/header.component";
@@ -33,8 +34,10 @@ export class PingComponent implements OnInit {
     messageLast:string;
 
     constructor(private router:Router
-                ,  private http: Http
-    // _backend: ConnectionBackend
+                ,  private http: Http,
+                private navigateService:NavigateService
+
+                // _backend: ConnectionBackend
     ) {
 
     }
@@ -184,14 +187,7 @@ export class PingComponent implements OnInit {
     // }
 
 
-    goToGroceries(){
-        this.router.navigate(["/groceries"]);
 
-    }
-
-    goToPing() {
-        this.router.navigate(["/modulea"]);
-    }
 
 
 }

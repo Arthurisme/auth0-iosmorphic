@@ -11,6 +11,7 @@ import { PingComponent } from "./ping.component";
 
 // import {HeaderComponent} from "../header/header.component";
 import {MyComponentbComponent} from "../my-componentb/my-componentb.component";
+import {SharedModule} from "../shared/shared.module";
 
 // import {MyComponentComponent} from "../../components/mycomponent/mycomponent.component";
 
@@ -25,6 +26,8 @@ import {MyComponentbComponent} from "../my-componentb/my-componentb.component";
   ],
 
   imports: [
+    SharedModule,
+
     NativeScriptModule,
     NativeScriptFormsModule,
 

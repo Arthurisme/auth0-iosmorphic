@@ -9,6 +9,7 @@ import { Page } from "ui/page";
 import { TextField } from "ui/text-field";
 
 import { alert, setHintColor, LoginService, User } from "../shared";
+import {NavigateService} from "../shared/service/navigate.service";
 
 @Component({
   selector: "gr-login",
@@ -23,8 +24,8 @@ export class ModuleAComponent  {
 
 
   constructor(private router: Router,
-
-    private page: Page) {
+              private navigateService:NavigateService,
+              private page: Page) {
 
 
   }
@@ -38,10 +39,6 @@ export class ModuleAComponent  {
 
 
 
-  goToPing() {
 
-          this.router.navigate(["/ping"]);
-
-  }
 
 }

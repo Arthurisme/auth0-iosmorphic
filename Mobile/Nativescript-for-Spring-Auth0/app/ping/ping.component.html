@@ -1,3 +1,24 @@
+
+
+
+<ActionBar title="Groceries">
+
+
+
+        <!--<Button text="&#xf1e0; Test" tap="{{ tapAction }}" class="font-awesome" />-->
+    <!--<ActionItem class="fa" text="{{'fa-bluetooth' | fonticon}}" (tap)="navigateService.goToPing()"   ios.position="right"></ActionItem>-->
+    <!--<ActionItem text="&#xf1e0; Test"   class="font-awesome" (tap)="navigateService.goToModuleA()"   ios.position="right"></ActionItem>-->
+    <!--<ActionItem text="Groceres" (tap)="navigateService.goToGroceries()" android.systemIcon="ic_menu_share_holo_dark" ios.systemIcon="7" ios.position="right"></ActionItem>-->
+
+
+    <ActionItem text="ping" (tap)="navigateService.goToPing()"   ios.position="right"></ActionItem>
+    <ActionItem text="ModuleA" (tap)="navigateService.goToModuleA()"  ios.position="right"></ActionItem>
+    <ActionItem text="Groceres" (tap)="navigateService.goToGroceries()"   ios.position="right"></ActionItem>
+    <ActionItem text="Action" (tap)="navigateService.showMenu()" icon="res://menu" stretch="none"  ios.position="right"></ActionItem>
+
+</ActionBar>
+
+
 <!--<ActionBar title="Groceries">-->
     <!--<ActionItem text="Share" (tap)="goToGroceries()" android.systemIcon="ic_menu_share_holo_dark" ios.systemIcon="9" ios.position="right"></ActionItem>-->
 <!--</ActionBar>-->
@@ -41,16 +62,19 @@
 
 
 
-<StackLayout>
+<GridLayout>
 
 
-    <StackLayout
-            (tap)="goToPing()"
-            class="initial-button">
-        <Label
-                text="Go to Ping"
-                class="initial-button-label"></Label>
-    </StackLayout>
+    <!--<arthur-my-custom></arthur-my-custom>-->
+
+
+    <!--<StackLayout-->
+            <!--(tap)="goToPing()"-->
+            <!--class="initial-button">-->
+        <!--<Label-->
+                <!--text="Go to Ping"-->
+                <!--class="initial-button-label"></Label>-->
+    <!--</StackLayout>-->
 
 <GridLayout columns="*" rows="*,*2,*,*,*,*,*,*,*" width="300" height="400" backgroundColor="lightgray" >
 
@@ -64,11 +88,11 @@
     <Label col="0" row="5"  text="Security ping" backgroundColor="green" (tap)="securedPing()"></Label>
     <Label col="0" row="6"  [text]="messageSecurityPing"    ></Label>
     <Label col="0" row="7"  [text]="messageLast"    ></Label>
-    <Label col="0" row="8"  text="goToGroceries"  (tap)="goToGroceries()"  ></Label>
+    <Label col="0" row="8"  text="goToGroceries"  (tap)="navigateService.goToGroceries()"  ></Label>
 
     <!--<actionbar-header></actionbar-header>-->
 
 </GridLayout>
 
 
-</StackLayout>
+</GridLayout>

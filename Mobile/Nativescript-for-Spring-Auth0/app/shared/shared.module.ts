@@ -7,15 +7,21 @@ import { AwesomePipe }         from './awesome.pipe';
 import { HighlightDirective }  from './highlight.directive';
 
 
-import {MyCustomComponent} from "./my-custom.component";
+import {MyCustomComponent} from "./components/my-custom/my-custom.component";
 // import {HeaderComponent} from "./header.component";
 // import {CoreModule} from "../core/core.module";
 import {DropdownDirective} from "../core/dropdown.directive";
+import {NavigateService} from "./service/navigate.service";
 
 
 
 
 @NgModule({
+
+  providers: [
+    NavigateService
+  ],
+
   imports:      [
     CommonModule,
     RouterModule,
@@ -32,6 +38,9 @@ import {DropdownDirective} from "../core/dropdown.directive";
 
     // HeaderComponent,
     MyCustomComponent,
+
+
+
   ],
   exports:      [
 
@@ -45,6 +54,10 @@ import {DropdownDirective} from "../core/dropdown.directive";
 
     // HeaderComponent,
     MyCustomComponent,
+
+
+
+
 
   ]
 })

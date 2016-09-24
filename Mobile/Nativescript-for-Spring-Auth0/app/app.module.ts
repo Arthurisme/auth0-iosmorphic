@@ -10,6 +10,7 @@ import { LoginModule } from "./login/login.module";
 import { GroceriesModule } from "./groceries/groceries.module";
 import {PingModule} from "./ping/ping.module";
 import {ModuleAModule} from "./module-a/module-a.module";
+import {SharedModule} from "./shared/shared.module";
 
 setStatusBarColors();
 
@@ -20,6 +21,10 @@ setStatusBarColors();
     authProviders
   ],
   imports: [
+    SharedModule,
+
+
+
     NativeScriptModule,
     NativeScriptRouterModule,
     NativeScriptRouterModule.forRoot(appRoutes),

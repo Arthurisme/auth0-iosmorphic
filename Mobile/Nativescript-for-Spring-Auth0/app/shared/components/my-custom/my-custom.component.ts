@@ -4,7 +4,9 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'arthur-my-custom',
-  templateUrl: 'my-custom.component.html'
+  templateUrl: 'shared/components/my-custom/my-custom.component.html',
+  styleUrls: ["shared/components/my-custom/my-custom-common.css", "shared/components/my-custom/my-custom.component.css"],
+
 })
 export class MyCustomComponent {
 
@@ -24,6 +26,21 @@ export class MyCustomComponent {
     // //Test for router rc7 function:
     // this.router.navigate(['image-detail/1']);
 
+  }
+
+
+
+  goToGroceries(){
+    this.router.navigate(["/groceries"]);
+
+  }
+
+  goToPing() {
+    this.router.navigate(["/ping"]);
+  }
+
+  goToModuleA() {
+    this.router.navigate(["/modulea"]);
   }
 
 }

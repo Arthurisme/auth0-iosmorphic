@@ -5,9 +5,13 @@ import { groceriesRouting } from "./groceries.routing";
 import { GroceriesComponent } from "./groceries.component";
 import { GroceryListComponent } from "./grocery-list/grocery-list.component";
 import { ItemStatusPipe } from "./grocery-list/item-status.pipe";
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   imports: [
+    SharedModule,
+
+
     NativeScriptModule,
     NativeScriptFormsModule,
     groceriesRouting

@@ -1,4 +1,16 @@
-@import url("~/platform.css");
+﻿@import url("~/platform.css");
+
+/*Fonts:*/
+.font-awesome {
+  font-family: "FontAwesome";
+}
+
+.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
+
+
+
 
 Page {
   background-color: white;

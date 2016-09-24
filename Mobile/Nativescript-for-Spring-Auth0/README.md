@@ -4,8 +4,10 @@
 ##Currently(2016-09-18), nativescript-auth0 is working well on ios, and android will support in a short time.
 
 
-##This repo is for nativescript angular 2 project , with login via Auth0.
-##To the repo that sync login and toke to Spring boot back end, please go here:
+##The nativescript project with login via Auth0:
+https://github.com/Arthurisme/NativeScript-Angular2-Auth0
+
+##The nativescript project with login via Auth0 and sync login and token to Spring boot back end:
 https://github.com/Arthurisme/auth0-iosmorphic
 
 
