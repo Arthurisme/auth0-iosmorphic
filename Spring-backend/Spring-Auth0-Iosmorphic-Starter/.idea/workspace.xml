@@ -31,6 +31,8 @@
             <state relative-caret-position="150">
               <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding>
+                <element signature="e#0#3105#0" expanded="false" />
+                <element signature="imports" expanded="false" />
                 <element signature="e#1548#1549#0" expanded="false" />
                 <element signature="e#1577#1578#0" expanded="false" />
                 <element signature="e#1619#1620#0" expanded="false" />
@@ -159,7 +161,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="10" column="42" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,6 +215,7 @@
             <state relative-caret-position="690">
               <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="e#3510#3511#0" expanded="false" />
                 <element signature="e#3556#3557#0" expanded="false" />
                 <element signature="e#4286#4287#0" expanded="false" />
@@ -325,8 +330,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2235" />
-    <option name="y" value="985" />
+    <option name="x" value="145" />
+    <option name="y" value="143" />
     <option name="width" value="1559" />
     <option name="height" value="964" />
   </component>
@@ -355,6 +360,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -549,9 +557,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1046,15 +1051,16 @@
       <workItem from="1473772908308" duration="7611000" />
       <workItem from="1473788673347" duration="13486000" />
       <workItem from="1473899047244" duration="11746000" />
-      <workItem from="1474583864438" duration="718000" />
+      <workItem from="1474583864438" duration="724000" />
+      <workItem from="1474770547126" duration="546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180086000" />
+    <option name="totallyTimeSpent" value="180638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2235" y="985" width="1559" height="964" extended-state="0" />
+    <frame x="145" y="143" width="1559" height="964" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1065,7 +1071,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.502439" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49273744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49273744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.49756098" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1231,9 +1237,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -1241,6 +1244,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/application.properties">
@@ -1435,6 +1441,8 @@
         <state relative-caret-position="150">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding>
+            <element signature="e#0#3105#0" expanded="false" />
+            <element signature="imports" expanded="false" />
             <element signature="e#1548#1549#0" expanded="false" />
             <element signature="e#1577#1578#0" expanded="false" />
             <element signature="e#1619#1620#0" expanded="false" />
@@ -1497,7 +1505,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="10" column="42" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1543,6 +1553,7 @@
         <state relative-caret-position="690">
           <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#3510#3511#0" expanded="false" />
             <element signature="e#3556#3557#0" expanded="false" />
             <element signature="e#4286#4287#0" expanded="false" />
