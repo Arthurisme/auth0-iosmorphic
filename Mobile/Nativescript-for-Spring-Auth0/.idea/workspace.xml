@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3319f1d6-5a33-49c8-bfdf-91c3b09375e9" name="Default" comment="" />
+    <list default="true" id="3319f1d6-5a33-49c8-bfdf-91c3b09375e9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <ignored path="sample-Groceries.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -52,8 +54,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+            <state relative-caret-position="1290">
+              <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -169,7 +171,6 @@
         <option value="$PROJECT_DIR$/app/ping/ping.module.ts" />
         <option value="$PROJECT_DIR$/app/shared/my-custom.component.ts" />
         <option value="$PROJECT_DIR$/app/shared/my-custom.component.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/module-a/module-a.module.ts" />
         <option value="$PROJECT_DIR$/app/login/login.module.ts" />
@@ -201,6 +202,7 @@
         <option value="$PROJECT_DIR$/app/auth0-login/auth0-login.component.ts" />
         <option value="$PROJECT_DIR$/app/shared/config.ts" />
         <option value="$PROJECT_DIR$/app/ping/ping.component.ts" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -477,12 +479,12 @@
       <updated>1474586423266</updated>
       <workItem from="1474586425024" duration="1876000" />
       <workItem from="1474589758919" duration="32057000" />
-      <workItem from="1474770770096" duration="10555000" />
+      <workItem from="1474770770096" duration="10828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44488000" />
+    <option name="totallyTimeSpent" value="44761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="576" y="86" width="1293" height="1008" extended-state="0" />
@@ -926,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        <state relative-caret-position="1290">
+          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
           <folding />
         </state>
       </provider>

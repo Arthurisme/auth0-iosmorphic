@@ -84,4 +84,4 @@ NSString * const A0ScopeOpenId = @"openid email roles user_metadata app_metadata
 
 ```
 
-MIT license
+MIT licensew

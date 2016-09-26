@@ -12,7 +12,10 @@ Backend using Spring boot(In the directory: Spring-backend/Spring-Auth0-Iosmorph
 
 
 
-The Starter based official angular 2 multi-module architecture.
+The Starter based   angular 2 multi-module architecture style.
+
+Note:
+The spring serve part must be start before this part. 
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
 

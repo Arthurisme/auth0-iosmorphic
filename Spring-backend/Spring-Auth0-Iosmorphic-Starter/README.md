@@ -1,3 +1,9 @@
+
+#Spring-Auth0-Iosmorphic(over Java spring, Angular 2, mobile)
+
+##Spring backend which serve both Angular 2 frontend and nativescript mobile app.
+##Auth0 sync login and logoff over backend, frontend, and Mobile.
+
 # Starter Seed
 
 The project based on official auth0 spring api sample:
