@@ -143,8 +143,8 @@ var PingComponent = (function () {
     PingComponent = __decorate([
         core_1.Component({
             selector: "gr-ping",
-            templateUrl: "components/ping/ping.component.html",
-            styleUrls: ["components/ping/ping-common.css", "components/ping/ping.component.css"],
+            templateUrl: "ping/ping.component.html",
+            styleUrls: ["ping/ping-common.css", "ping/ping.component.css"],
         }), 
         __metadata('design:paramtypes', [router_1.Router, http_1.Http])
     ], PingComponent);

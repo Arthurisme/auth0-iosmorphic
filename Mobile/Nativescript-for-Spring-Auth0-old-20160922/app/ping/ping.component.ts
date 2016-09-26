@@ -22,8 +22,8 @@ import * as appSettings from "application-settings";
 
 @Component({
     selector: "gr-ping",
-    templateUrl: "components/ping/ping.component.html",
-    styleUrls: ["components/ping/ping-common.css", "components/ping/ping.component.css"],
+    templateUrl: "ping/ping.component.html",
+    styleUrls: ["ping/ping-common.css", "ping/ping.component.css"],
 })
 export class PingComponent implements OnInit {
 

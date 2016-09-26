@@ -1,4 +1,18 @@
-# NgModuleFinal2
+# Angular2-Spring
+
+This is web front end part of auth0-iosmorphic
+
+ 
+
+Auth0 sync this angular 2 front end for login and registration:
+
+Angular 2 is used here, and share code over  and mobile(Nativescript).
+
+Backend using Spring boot(In the directory: Spring-backend/Spring-Auth0-Iosmorphic-Starter). Plan to using Jhipster when Jhipster release Angular 2 version.
+
+
+
+The Starter based official angular 2 multi-module architecture.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
 

@@ -37,5 +37,27 @@
 			</intent-filter>
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
+
+
+
+		<!--Auth0 Lock-->
+		<activity
+				android:name="com.auth0.lock.LockActivity"
+				android:theme="@style/Lock.Theme"
+				android:screenOrientation="portrait"
+				android:launchMode="singleTask">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+				<!-- CLIENTID SCHEME MUST BE LOWERCASE!!! -->
+				<data android:scheme="a0WIcfe2CWGUmcmJwYEfCk763nXyGLOFM6" android:host="arthurisme.auth0.com"/>
+			</intent-filter>
+		</activity>
+		<meta-data android:name="com.auth0.lock.client-id" android:value="WIcfe2CWGUmcmJwYEfCk763nXyGLOFM6"/>
+		<meta-data android:name="com.auth0.lock.domain-url" android:value="arthurisme.auth0.com"/>
+		<!--Auth0 Lock End-->
+
+
 	</application>
 </manifest>

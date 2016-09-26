@@ -12,6 +12,7 @@ import {MyCustomComponent} from "./components/my-custom/my-custom.component";
 // import {CoreModule} from "../core/core.module";
 import {DropdownDirective} from "../core/dropdown.directive";
 import {NavigateService} from "./service/navigate.service";
+import {Auth0LoginService} from "./Auth0-login.service";
 
 
 
@@ -19,7 +20,8 @@ import {NavigateService} from "./service/navigate.service";
 @NgModule({
 
   providers: [
-    NavigateService
+    NavigateService,
+    Auth0LoginService,
   ],
 
   imports:      [
