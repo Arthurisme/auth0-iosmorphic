@@ -10,11 +10,15 @@ var application = require("application");
 import * as appSettings from "application-settings";
 import {NavigateService} from "../shared/service/navigate.service";
 
-// var http = require("http");
+var nshttp = require("http");
 // import {NS_HTTP_PROVIDERS} from 'nativescript-angular/http';
 // import {HeaderComponent} from "../header/header.component"
 
 // import {alert, setHintColor, LoginService, User} from "../shared";
+
+
+import {Config} from "../shared/config";
+
 
 
 @Component({
@@ -24,7 +28,10 @@ import {NavigateService} from "../shared/service/navigate.service";
 })
 export class PingComponent implements OnInit {
 
-    API_URL:string = 'http://localhost:3001';
+    config: Config = new Config();
+
+
+    // API_URL:string = 'http://localhost:3001';
     messagePing:string = 'begin text';
     messageSecurityPing:string = 'begin text';
     messageLast:string;
@@ -51,7 +58,7 @@ export class PingComponent implements OnInit {
         // console.log(tokenAtLocal);
 
         //Using  http @angular
-        this.http.get(`${this.API_URL}/ping`)
+        this.http.get(`${this.config.apiUrl}/ping`)
             .map(res => res.json())
             .subscribe(
                 data => {
@@ -110,18 +117,21 @@ export class PingComponent implements OnInit {
         this.messageSecurityPing = '';
         console.log("start ping");
 
-        let tokenAtLocal = appSettings.getString('auth0Token');
-        var tokenData = JSON.parse(appSettings.getString("auth0Token"));
+        //Debug:
+        //Get idToken from auth0Token:
+        let tokenAtLocal = this.config.auth0TokenFromLocalStorage;
         console.log("tokenAtLocal");
-        // console.log(tokenAtLocal);
+        console.log(tokenAtLocal);
 
-        let headers = new Headers();
-        // headers.append("Authorization", "Bearer " + Config.token);
-        headers.append("Authorization", "Bearer " + tokenAtLocal);
-        headers.append("Content-Type", "application/json");
+        var idTokenJson = this.config.idTokenJsonLocalStorage;
+        console.log("idTokenJson");
+        console.log(idTokenJson);
+
+
+
 
         //Using  http @angular
-        this.http.get(`${this.API_URL}/secured/ping`, { headers: headers })
+         this.http.get(`${this.config.apiUrl}/secured/ping`, {headers: this.config.authHeaderGet})
             .map(res => res.json())
             .subscribe(
                 data => {
@@ -170,7 +180,7 @@ export class PingComponent implements OnInit {
         // //or in some http:  headers: { "Content-Type": "application/json" },
         //
         //
-        // http.request({
+        // nshttp.request({
         //     url: `${this.API_URL}/secured/ping`,
         //     method: "GET",
         //     headers: header

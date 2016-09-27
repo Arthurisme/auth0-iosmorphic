@@ -57,6 +57,8 @@ import {Auth0LoginService} from "./Auth0-login.service";
     // HeaderComponent,
     MyCustomComponent,
 
+    // Config,
+
 
 
 

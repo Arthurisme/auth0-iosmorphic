@@ -1,18 +1,32 @@
 import { Headers } from '@angular/http';
+import * as appSettings from "application-settings";
+
 
 
 export class Config {
     static apiUrl = "https://api.everlive.com/v1/GWfRtXi1Lwt4jcqK/";
     static token = "";
 
-    // retrieves currently logged in user from HTML5 local storage
-    public userNameFromLocalStorage: string = localStorage.getItem("currentUserName");
-    // retrieves generated token for logged in user from HTML5 local storage
-    public getTokenFromLocalStorage: string = localStorage.getItem("id_token");
+
     // back-end url to authenticate the user
     public serverUrl: string = "http://localhost:3001/";
+    // Api url, can sometimes same with serverUrl
+    public apiUrl: string = "http://localhost:3001/";
     // back-end url to authenticate the user
     public loginUrl: string = "http://localhost:8011/user/login";
+    // retrieves currently logged in user from HTML5 local storage
+    public userNameFromLocalStorage: string = appSettings.getString("currentUserName");
+
+    // retrieves currently auth0Token from HTML5 local storage
+    public auth0TokenFromLocalStorage: string = appSettings.getString("auth0Token");
+    // retrieves currently logged in user from HTML5 local storage
+    public idTokenJsonLocalStorage: string = JSON.parse(appSettings.getString("auth0Token")).idToken;
+
+
+
+    // retrieves generated token for logged in user from HTML5 local storage
+    // public getTokenFromLocalStorage: string = appSettings.getItem("id_token");
+
     // sets the request headers as JSON type
     public jsonHeader: Headers = new Headers({ 'Content-Type': 'application/json' });
     // back-end url to return all users
@@ -37,6 +51,9 @@ export class Config {
     public userNameUrl: string = "http://localhost:8011/rest/user/userName";
     // backend rest API to update a single user
     public userUpdateUrl: string = "http://localhost:8011/rest/user/update";
+
     // sets authentication headers
-    public authHeader: Headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
+    public authHeaderGet: Headers = new Headers({ 'Authorization': 'Bearer ' + JSON.parse(appSettings.getString("auth0Token")).idToken });
+    // sets authentication headers
+    public authHeader: Headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + JSON.parse(appSettings.getString("auth0Token")).idToken });
 }
