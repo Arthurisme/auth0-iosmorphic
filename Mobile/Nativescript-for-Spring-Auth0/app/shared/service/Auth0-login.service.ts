@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 // import { getString, setString } from "application-settings";
 
-import { User } from "./user.model";
+import { User } from "../model/user.model";
 // import { BackendService } from "./backend.service";
 
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 import { Page } from "ui/page";
 
 
-import { alert, setHintColor, LoginService } from "../shared";
+import { alert, setHintColor, LoginService } from "../";
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 import * as appSettings from "application-settings";
@@ -132,7 +132,13 @@ export class Auth0LoginService {
         //     scope: 'openid email roles user_metadata app_metadata picture offline_access',
         //   }
         // },
+        closable: true,
+        autoclose: true,
         rememberLastLogin: true,//!prompt, rememberLastLogin function still not support.
+        languageDictionary: {
+          emailInputPlaceholder: "something@youremail.com",
+          title: "Log me in"
+        },
       })
           .then((args) => {
         console.log(args.profile);

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { getString, setString } from "application-settings";
 
-import { User } from "./user.model";
+import { User } from "../model/user.model";
 import { BackendService } from "./backend.service";
 
 const tokenKey = "token";

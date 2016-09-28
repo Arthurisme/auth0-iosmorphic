@@ -253,6 +253,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nativescript-for-Spring-Auth0-old-20160922" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nativescript-for-Spring-Auth0-old-20160922" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -355,12 +365,12 @@
       <workItem from="1474074071299" duration="108945000" />
       <workItem from="1474584540062" duration="3693000" />
       <workItem from="1474589783477" duration="5970000" />
-      <workItem from="1474770791398" duration="7051000" />
+      <workItem from="1474770791398" duration="7649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125659000" />
+    <option name="totallyTimeSpent" value="126257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1878" y="82" width="1806" height="1008" extended-state="0" />

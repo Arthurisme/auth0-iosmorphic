@@ -17,7 +17,7 @@ var nshttp = require("http");
 // import {alert, setHintColor, LoginService, User} from "../shared";
 
 
-import {Config} from "../shared/config";
+import {Config} from "../config/config";
 
 
 

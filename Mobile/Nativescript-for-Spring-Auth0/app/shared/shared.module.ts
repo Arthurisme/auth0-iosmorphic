@@ -1,18 +1,23 @@
+
+
+//Not all the file in the shared directory are in shared.module!
+
 import { NgModule }            from '@angular/core';
 import { CommonModule }        from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule }         from '@angular/forms';
 
-import { AwesomePipe }         from './awesome.pipe';
-import { HighlightDirective }  from './highlight.directive';
+import { AwesomePipe }         from './pipe/awesome.pipe';
+import { HighlightDirective }  from './directive/highlight.directive';
 
 
 import {MyCustomComponent} from "./components/my-custom/my-custom.component";
 // import {HeaderComponent} from "./header.component";
 // import {CoreModule} from "../core/core.module";
+
 import {DropdownDirective} from "../core/dropdown.directive";
 import {NavigateService} from "./service/navigate.service";
-import {Auth0LoginService} from "./Auth0-login.service";
+import {Auth0LoginService} from "./service/Auth0-login.service";
 
 
 

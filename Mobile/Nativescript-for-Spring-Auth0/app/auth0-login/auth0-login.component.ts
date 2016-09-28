@@ -8,7 +8,7 @@ import {alert, setHintColor, LoginService, User} from "../shared";
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 import * as appSettings from "application-settings";
-import {Auth0LoginService} from "../shared/Auth0-login.service";
+import {Auth0LoginService} from "../shared/service/Auth0-login.service";
 
 
 @Component({
