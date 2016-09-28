@@ -55,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ios.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ios.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/nativescript-auth0/index.ios.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="-1437">
               <caret line="169" column="42" selection-start-line="169" selection-start-column="37" selection-end-line="169" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node_modules/nativescript-auth0/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,7 +127,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -511,12 +521,12 @@
       <updated>1474586423266</updated>
       <workItem from="1474586425024" duration="1876000" />
       <workItem from="1474589758919" duration="32057000" />
-      <workItem from="1474770770096" duration="26094000" />
+      <workItem from="1474770770096" duration="26295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60027000" />
+    <option name="totallyTimeSpent" value="60228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="499" y="263" width="1293" height="1008" extended-state="0" />
@@ -655,14 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/nativescript-auth0/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -996,8 +998,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/nativescript-auth0/index.ios.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="-1437">
           <caret line="169" column="42" selection-start-line="169" selection-start-column="37" selection-end-line="169" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/nativescript-auth0/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
