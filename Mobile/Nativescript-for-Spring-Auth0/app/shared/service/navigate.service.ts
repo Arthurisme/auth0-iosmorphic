@@ -56,18 +56,25 @@ export class NavigateService {
     goToPing() {
         this.router.navigate(["/ping"]);
     }
+
     goToModuleA() {
         this.router.navigate(["/modulea"]);
     }
+
     goToGroceries(){
         this.router.navigate(["/groceries"]);
+
+    }
+
+    goToProfile(){
+        this.router.navigate(["/profile"]);
 
     }
 
     showMenu() {
         action({
             message: "What would you like to do?",
-            actions: ["Go to Ping", "Go to Module A", "Go to Groceries"],
+            actions: ["Go to Ping", "Go to Module A", "Go to Groceries","Go to Profile"],
             cancelButtonText: "Cancel"
         }).then((result) => {
             if (result === "Go to Ping") {
@@ -76,6 +83,8 @@ export class NavigateService {
                 this.goToModuleA();
             }else if (result === "Go to Groceries") {
                 this.goToGroceries();
+            }else if (result === "Go to Profile") {
+                this.goToProfile();
             }
         });
     }

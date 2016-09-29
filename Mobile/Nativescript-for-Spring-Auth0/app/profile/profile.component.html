@@ -1,0 +1,45 @@
+<!--<Label text="This is profile show view" ></Label>-->
+
+
+<ActionBar title="Groceries">
+
+
+    <!--<Button text="&#xf1e0; Test" tap="{{ tapAction }}" class="font-awesome" />-->
+    <!--<ActionItem class="fa" text="{{'fa-bluetooth' | fonticon}}" (tap)="navigateService.goToPing()"   ios.position="right"></ActionItem>-->
+    <!--<ActionItem text="&#xf1e0; Test"   class="font-awesome" (tap)="navigateService.goToModuleA()"   ios.position="right"></ActionItem>-->
+    <!--<ActionItem text="Groceres" (tap)="navigateService.goToGroceries()" android.systemIcon="ic_menu_share_holo_dark" ios.systemIcon="7" ios.position="right"></ActionItem>-->
+
+
+    <ActionItem text="ping" (tap)="navigateService.goToPing()" ios.position="right"></ActionItem>
+    <ActionItem text="ModuleA" (tap)="navigateService.goToModuleA()" ios.position="right"></ActionItem>
+    <ActionItem text="Groceres" (tap)="navigateService.goToGroceries()" ios.position="right"></ActionItem>
+    <ActionItem text="Action" (tap)="navigateService.showMenu()" icon="res://menu" stretch="none"
+                ios.position="right"></ActionItem>
+
+</ActionBar>
+
+
+<StackLayout orientation="vertical">
+    <Label text="This is profile   view"></Label>
+    <Label text="This is profile   view"></Label>
+    <Label text="This is profile   view"></Label>
+    <Label text="This is profile   view"></Label>
+    <Label text="This is profile   view"></Label>
+    <Label text="This is profile   view"></Label>
+    <Label text="This is profile   view"></Label>
+
+
+    <!--<h2>Profile Components</h2>-->
+    <router-outlet></router-outlet>
+
+
+</StackLayout>
+
+
+<!--<page-router-outlet></page-router-outlet>-->
+
+
+
+
+
+

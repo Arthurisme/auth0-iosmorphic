@@ -12,6 +12,7 @@ import {PingModule} from "./ping/ping.module";
 import {ModuleAModule} from "./module-a/module-a.module";
 import {SharedModule} from "./shared/shared.module";
 import {Auth0LoginModule} from "./auth0-login/auth0-login.module";
+import {ProfileModule} from "./profile/profile.module";
 // import {Auth0LoginService} from "./shared/Auth0-login.service";
 
 setStatusBarColors();
@@ -29,11 +30,11 @@ setStatusBarColors();
   imports: [
     SharedModule,
 
-
-
     NativeScriptModule,
     NativeScriptRouterModule,
     NativeScriptRouterModule.forRoot(appRoutes),
+
+    ProfileModule,
 
     Auth0LoginModule,
 

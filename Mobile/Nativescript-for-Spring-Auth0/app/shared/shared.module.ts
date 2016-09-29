@@ -5,6 +5,7 @@
 import { NgModule }            from '@angular/core';
 import { CommonModule }        from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+
 import { FormsModule }         from '@angular/forms';
 
 import { AwesomePipe }         from './pipe/awesome.pipe';
@@ -33,6 +34,8 @@ import {Auth0LoginService} from "./service/Auth0-login.service";
     CommonModule,
     RouterModule,
     // CoreModule
+
+    // NativeScriptRouterModule
 
   ],
   declarations: [
