@@ -9,7 +9,7 @@ import { Injectable, Optional } from '@angular/core';
 
 let nextId = 1;
 
-export class UserServiceConfig {
+export class GroceriesUserServiceConfig {
   userName = 'Philip Marlowe';
 }
 
@@ -18,7 +18,7 @@ export class UserService {
   id = nextId++;
   private _userName = 'Sherlock Holmes';
 
-  constructor(@Optional() config: UserServiceConfig) {
+  constructor(@Optional() config: GroceriesUserServiceConfig) {
     if (config) { this._userName = config.userName; }
   }
 

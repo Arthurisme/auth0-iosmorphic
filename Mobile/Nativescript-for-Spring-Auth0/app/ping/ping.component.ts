@@ -119,11 +119,11 @@ export class PingComponent implements OnInit {
 
         //Debug:
         //Get idToken from auth0Token:
-        let tokenAtLocal = this.config.auth0TokenFromLocalStorage;
+        let tokenAtLocal = appSettings.getString("auth0Token");
         console.log("tokenAtLocal");
         console.log(tokenAtLocal);
 
-        var idTokenJson = this.config.idTokenJsonLocalStorage;
+        var idTokenJson = JSON.parse(appSettings.getString("auth0Token")).idToken;
         console.log("idTokenJson");
         console.log(idTokenJson);
 
@@ -131,7 +131,7 @@ export class PingComponent implements OnInit {
 
 
         //Using  http @angular
-         this.http.get(`${this.config.apiUrl}/secured/ping`, {headers: this.config.authHeaderGet})
+         this.http.get(`${this.config.apiUrl}/secured/ping`, {headers:  new Headers({ 'Authorization': 'Bearer ' + JSON.parse(appSettings.getString("auth0Token")).idToken })})
             .map(res => res.json())
             .subscribe(
                 data => {

@@ -1,5 +1,5 @@
 export * from "./service/backend.service";
-export * from "./model/user.model";
+export * from "./model/groceries-user.model";
 export * from "./service/login.service";
 export * from "./util/dialog-util";
 export * from "./util/hint-util";

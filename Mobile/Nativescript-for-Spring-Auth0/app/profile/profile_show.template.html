@@ -4,23 +4,38 @@
 
 
 <StackLayout orientation="vertical">
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
-  <Label text="This is profile show view" ></Label>
+  <Label text="Profile show:" ></Label>
+
+
+  <StackLayout orientation="vertical" *ngIf="this.auth0LoginService.isLoggedIn">
+    <!--<Image src="{{config.profileFromLocalStorage.avatarUrl}}" stretch="none"></Image>-->
+
+    <!--<Label text="Name: {{config.profileFromLocalStorage.name}}" ></Label>-->
+    <!--<Label text="Email: {{config.profileFromLocalStorage.email}}" ></Label>-->
+    <!--<Label text="Nickname: {{config.profileFromLocalStorage.nickname}}" ></Label>-->
+    <!--<Label text="Created At: {{config.profileFromLocalStorage.createdAt}}" ></Label>-->
+
+
+    <Image src="{{auth0LoginService.profileJson.avatarUrl}}" stretch="none"></Image>
+
+    <Label text="Name: {{auth0LoginService.profileJson.name}}" ></Label>
+    <Label text="Email: {{auth0LoginService.profileJson.email}}" ></Label>
+    <Label text="Nickname: {{auth0LoginService.profileJson.nickname}}" ></Label>
+    <Label text="Created At: {{auth0LoginService.profileJson.createdAt}}" ></Label>
+
+
+
+
+  </StackLayout>
+
+
 </StackLayout>
 
 
-<!--<StackLayout orientation="vertical">-->
-  <!--<Label text="This is profile show view" ></Label>-->
-<!--</StackLayout>-->
 
 
+
+<!--Don't delete!:-->
 
 <!--<div *ngIf="auth.authenticated() && auth.userProfile">-->
   <!--<div class="row">-->

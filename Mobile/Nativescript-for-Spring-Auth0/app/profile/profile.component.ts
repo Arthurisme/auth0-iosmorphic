@@ -5,7 +5,9 @@ import {NavigateService} from "../shared/service/navigate.service";
 
 @Component({
   selector: "profile",
-  templateUrl: "profile/profile.component.html"
+  templateUrl: "profile/profile.component.html",
+  styleUrls: ["profile/profile-common.css", "profile/profile.component.css"],
+
   // template: "<router-outlet></router-outlet>"
 
 })

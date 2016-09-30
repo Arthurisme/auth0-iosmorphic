@@ -1,6 +1,6 @@
 // Exact copy of app/title.component.ts except import UserService from shared
 import { Component, Input } from '@angular/core';
-import { UserService }      from '../shared/service/user.service';
+import { UserService }      from '../shared/service/groceries-user.service';
 
 @Component({
   // moduleId: module.id,

@@ -1,14 +1,15 @@
 import {Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import {Router} from "@angular/router";
 
-import {Page} from "ui/page";
 
-
-import {alert, setHintColor, LoginService, User} from "../shared";
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 import * as appSettings from "application-settings";
 import {Auth0LoginService} from "../shared/service/Auth0-login.service";
+
+
+// import {Page} from "ui/page";
+// import {alert, setHintColor, LoginService, User} from "../shared";
 
 
 @Component({
@@ -114,9 +115,13 @@ export class Auth0LoginComponent {
     }
 
     doLogout() {
+        console.log("Test doLogout function begin");
+
         appSettings.remove("auth0Token");
         appSettings.remove("auth0UserData");
         this.router.navigate(["/ping"]);
+        console.log("Test doLogout function fini");
+
     }
 
     gotonextpage() {
