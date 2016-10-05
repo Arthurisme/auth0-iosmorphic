@@ -38,7 +38,7 @@ export class GroceryListComponent {
   makeBackgroundTransparent(args) {
     let cell = args.ios;
     if (cell) {
-      cell.backgroundColor = UIColor.clearColor();
+      cell.backgroundColor = UIColor.clearColor;
     }
   }
 

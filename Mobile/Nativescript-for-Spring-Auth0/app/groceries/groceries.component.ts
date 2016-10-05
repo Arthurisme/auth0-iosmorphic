@@ -36,6 +36,9 @@ export class GroceriesComponent implements OnInit {
     this.isAndroid = !!this.page.android;
     // this.page.actionBarHidden = true;
     this.page.className = "list-page";
+
+
+
   }
 
   setTextFieldHintColor(textField) {
