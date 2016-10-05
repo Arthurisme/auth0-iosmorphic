@@ -30,8 +30,8 @@ export class Auth0LoginService {
     ) {
 
         if (this.isLoggedIn) {
-            this.profileJson = JSON.parse(this.profileFromLocalStorage);
-            this.idToken = this.idTokenFromLocalStorage;
+            //Read storages to memory variables, both in isLogin, constructor,login:
+            this.readStorageToVariables();
         }
 
 
@@ -75,6 +75,10 @@ export class Auth0LoginService {
                 //All good, navigate to your start page
                 console.log("has token stored, go to next page");
 
+
+                //Read storages to memory variables, both in isLogin, constructor,login:
+                this.readStorageToVariables();
+
                 // this.gotonextpage();
                 return true;
             }
@@ -84,6 +88,11 @@ export class Auth0LoginService {
         // return !!getString(tokenKey);
     }
 
+    readStorageToVariables(){
+        //Read storages to memory variables
+        this.profileJson = JSON.parse(this.profileFromLocalStorage);
+        this.idToken = this.idTokenFromLocalStorage;
+    }
 
     private get token():string {
         return appSettings.getString(this.config.auth0TokenName);
@@ -124,6 +133,10 @@ export class Auth0LoginService {
                 console.log(args.profile);
                 console.log(args.token);
                 // appSettings.setString("auth0Token", JSON.stringify(args));
+
+
+                //Read storages to memory variables, both in isLogin, constructor,login:
+                this.readStorageToVariables();
 
                 let afterLoginPageUri = "/ping";
                 this.router.navigate([afterLoginPageUri]);

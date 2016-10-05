@@ -71,10 +71,15 @@ export class NavigateService {
 
     }
 
+    goToAuth0login(){
+        this.router.navigate(["/auth0login"]);
+
+    }
+
     showMenu() {
         action({
             message: "What would you like to do?",
-            actions: ["Go to Ping", "Go to Module A", "Go to Groceries","Go to Profile"],
+            actions: ["Go to Ping", "Go to Module A", "Go to Groceries","Go to Profile","Go to auth0login"],
             cancelButtonText: "Cancel"
         }).then((result) => {
             if (result === "Go to Ping") {
@@ -85,6 +90,8 @@ export class NavigateService {
                 this.goToGroceries();
             }else if (result === "Go to Profile") {
                 this.goToProfile();
+            }else if (result === "Go to auth0login") {
+                this.goToAuth0login();
             }
         });
     }

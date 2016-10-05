@@ -1,12 +1,18 @@
-<!--<ActionBar title="Groceries">-->
-    <!--<ActionItem text="Share" (tap)="goToGroceries()" android.systemIcon="ic_menu_share_holo_dark" ios.systemIcon="9" ios.position="right"></ActionItem>-->
-<!--</ActionBar>-->
-
-<!--<actionbar-header></actionbar-header>-->
 
 
 
-<Button text="test Mycomponent bbbbbb"  ></Button>
+<ActionBar title="Auth0Demo">
+
+    <ActionItem text="ping" (tap)="navigateService.goToPing()"   ios.position="right"></ActionItem>
+    <ActionItem text="ModuleA" (tap)="navigateService.goToModuleA()"  ios.position="right"></ActionItem>
+    <ActionItem text="Groceres" (tap)="navigateService.goToGroceries()"   ios.position="right"></ActionItem>
+    <ActionItem text="Action" (tap)="navigateService.showMenu()" icon="res://menu" stretch="none"  ios.position="right"></ActionItem>
+
+</ActionBar>
+
+
+
+<!--<Button text="test Mycomponent bbbbbb"  ></Button>-->
 
 
 

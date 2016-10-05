@@ -20,5 +20,8 @@ export class ProfileShow {
   config: Config = new Config();
 
 
-  constructor(private auth0LoginService: Auth0LoginService) {}
+  constructor(private auth0LoginService: Auth0LoginService) {
+
+    console.log(this.auth0LoginService.isLoggedIn);
+  }
 };

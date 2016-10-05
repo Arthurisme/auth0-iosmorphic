@@ -6,6 +6,7 @@ var auth0 = require("nativescript-auth0");
 var application = require("application");
 import * as appSettings from "application-settings";
 import {Auth0LoginService} from "../shared/service/Auth0-login.service";
+import {NavigateService} from "../shared/service/navigate.service";
 
 
 // import {Page} from "ui/page";
@@ -23,7 +24,8 @@ export class Auth0LoginComponent {
 
 
     constructor(private router:Router,
-                private auth0LoginService:Auth0LoginService) {
+                private navigateService:NavigateService,
+    private auth0LoginService:Auth0LoginService) {
 
 
         if (!this.auth0LoginService.isLoggedIn) {
@@ -34,37 +36,6 @@ export class Auth0LoginComponent {
         }
 
 
-        // // Check to see if the user is logged in
-        // if(!appSettings.hasKey("auth0Token")){
-        //     console.log("no token stored.");
-        //     // this.router.navigate(["/ping"]);
-        //
-        //     this.doLogin();
-        //
-        // }else{
-        //     console.log("has token stored");
-        //     // this.gotonextpage();
-        //
-        //
-        //     //Deserialzise the saved user
-        //     var tokenData = JSON.parse(appSettings.getString("auth0Token"));
-        //     console.log("token begain: "+ appSettings.getString("auth0Token")+ " token end.");
-        //
-        //
-        //     //Check if it's expired
-        //     // if(auth0.isTokenExpired(tokenData.token.idToken)){
-        //         if(auth0.isTokenExpired(tokenData.idToken)){
-        //         //Make them log in again
-        //         console.log("token expired, login again.");
-        //
-        //         this.doLogin();
-        //     }else{
-        //         //All good, navigate to your start page
-        //         console.log("has token stored, go to next page");
-        //
-        //         this.gotonextpage();
-        //     }
-        // }
 
     }
 
@@ -75,60 +46,28 @@ export class Auth0LoginComponent {
         this.auth0LoginService.loginAndTo("/ping");
         //or: this.auth0LoginService.login ();
 
-
-        //login by using plugin directly.
-        // console.log("doLoging start...");
-        //
-        // if(this.auth0LoginService.isLoggedIn){
-        //     this.router.navigate(["/ping"]);
-        // }
-        // else {
-        //
-        //     auth0.show().then( (args) =>{
-        //         console.log(args.profile);
-        //         console.log(args.token);
-        //         // appSettings.setString("auth0Token", JSON.stringify(args));
-        //
-        //         this.router.navigate(["/ping"]);
-        //
-        //         console.log("login ok 1 !");
-        //
-        //
-        //         // this.loginService.logoff();
-        //         // this.router.navigate(["/groceries"]);
-        //         // this.router.navigate(["/"]);
-        //
-        //
-        //         // this.gotonextpage();
-        //     }, (error) => {
-        //         alert(error);
-        //     });
-        //
-        // }
-        //
-        //
-        //
-        // console.log("login ok 2!");
-        // // this.gotonextpage();
-
-
     }
 
     doLogout() {
+
         console.log("Test doLogout function begin");
 
-        appSettings.remove("auth0Token");
-        appSettings.remove("auth0UserData");
+
+        if (this.auth0LoginService.isLoggedIn) {
+            appSettings.remove("auth0Token");
+            appSettings.remove("auth0UserData");        }
+
+
         this.router.navigate(["/ping"]);
+
         console.log("Test doLogout function fini");
 
     }
 
     gotonextpage() {
-        this.router.navigate(["/ping"]);
-        // this.router.navigate(["/groceries"]);
-        // this.router.navigate(["/"]);
 
+        //To do: Move the nexpage string to config
+        this.router.navigate(["/ping"]);
     }
 
     goToHome() {
@@ -137,6 +76,7 @@ export class Auth0LoginComponent {
     }
 
     public showToken() {
+        //To do: Move the nexpage string to config
         this.currentToken = appSettings.getString("auth0Token");
         console.log(this.currentToken);
         console.log("Test console function");

@@ -8,13 +8,6 @@
 
 
   <StackLayout orientation="vertical" *ngIf="this.auth0LoginService.isLoggedIn">
-    <!--<Image src="{{config.profileFromLocalStorage.avatarUrl}}" stretch="none"></Image>-->
-
-    <!--<Label text="Name: {{config.profileFromLocalStorage.name}}" ></Label>-->
-    <!--<Label text="Email: {{config.profileFromLocalStorage.email}}" ></Label>-->
-    <!--<Label text="Nickname: {{config.profileFromLocalStorage.nickname}}" ></Label>-->
-    <!--<Label text="Created At: {{config.profileFromLocalStorage.createdAt}}" ></Label>-->
-
 
     <Image src="{{auth0LoginService.profileJson.avatarUrl}}" stretch="none"></Image>
 
@@ -28,6 +21,12 @@
 
   </StackLayout>
 
+  <StackLayout orientation="vertical" *ngIf="!this.auth0LoginService.isLoggedIn">
+
+    <Label text="You're not login yet, please click to login " (tap)="auth0LoginService.login()" ></Label>
+
+  </StackLayout>
+
 
 </StackLayout>
 
@@ -35,7 +34,7 @@
 
 
 
-<!--Don't delete!:-->
+<!--Don't delete! For future edit function:-->
 
 <!--<div *ngIf="auth.authenticated() && auth.userProfile">-->
   <!--<div class="row">-->
