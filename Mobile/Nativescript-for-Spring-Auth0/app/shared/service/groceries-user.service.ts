@@ -14,7 +14,7 @@ export class GroceriesUserServiceConfig {
 }
 
 @Injectable()
-export class UserService {
+export class GroceriesUserService {
   id = nextId++;
   private _userName = 'Sherlock Holmes';
 

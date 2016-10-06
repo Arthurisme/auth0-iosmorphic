@@ -8,7 +8,7 @@ import { prompt } from "ui/dialogs";
 import { Page } from "ui/page";
 import { TextField } from "ui/text-field";
 
-import { alert, setHintColor, LoginService, User } from "../shared";
+import { alert, setHintColor, LoginService, GroceriesUser } from "../shared";
 import {NavigateService} from "../shared/service/navigate.service";
 
 @Component({

@@ -10,7 +10,7 @@ import * as appSettings from "application-settings";
 
 var application = require("application");
 import {Page} from "ui/page";
-import {User} from "../model/groceries-user.model";
+import {GroceriesUser} from "../model/groceries-user.model";
 import {Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import {Config} from "../../config/config";
 

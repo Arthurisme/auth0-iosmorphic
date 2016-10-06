@@ -1,6 +1,6 @@
 // Exact copy of app/title.component.ts except import UserService from shared
 import { Component, Input } from '@angular/core';
-import { UserService }      from '../shared/service/groceries-user.service';
+import { GroceriesUserService }      from '../shared/service/groceries-user.service';
 
 @Component({
   // moduleId: module.id,
@@ -12,8 +12,8 @@ export class TitleComponent {
   title = 'Angular Modules';
   user = '';
 
-  constructor(userService: UserService) {
-    this.user = userService.userName;
+  constructor(groceriesUserService: GroceriesUserService) {
+    this.user = groceriesUserService.userName;
   }
 }
 

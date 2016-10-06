@@ -76,7 +76,7 @@
         keyboardType="email"
         returnKeyType="next"
         (returnPress)="focusPassword()"
-        [(ngModel)]="user.email"
+        [(ngModel)]="groceriesUser.email"
         [isEnabled]="!isAuthenticating"
         autocorrect="false"
         autocapitalizationType="none"
@@ -86,7 +86,7 @@
         secure="true"
         returnKeyType="done"
         (returnPress)="submit()"
-        [(ngModel)]="user.password"
+        [(ngModel)]="groceriesUser.password"
         [isEnabled]="!isAuthenticating"
         row="1"></TextField>
 

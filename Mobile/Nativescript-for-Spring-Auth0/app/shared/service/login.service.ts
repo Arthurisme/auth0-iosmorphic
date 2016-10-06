@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { getString, setString } from "application-settings";
 
-import { User } from "../model/groceries-user.model";
+import { GroceriesUser } from "../model/groceries-user.model";
 import { BackendService } from "./backend.service";
 
 const tokenKey = "token";
@@ -25,12 +25,12 @@ export class LoginService {
     }
   }
 
-  register(user: User) {
+  register(user: GroceriesUser) {
     return this.backend.el.Users.register(user.email, user.password)
       .catch(this.handleErrors);
   }
 
-  login(user: User) {
+  login(user: GroceriesUser) {
     return this.backend.el.authentication.login(user.email, user.password).then((data) => {
       this.token = data.result.access_token;
       this.backend.el.authentication.setAuthorization(this.token, "bearer");

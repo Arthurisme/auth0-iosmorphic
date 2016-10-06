@@ -63,7 +63,7 @@ export class NavigateService {
 
     goToGroceries(){
         // this.router.navigate(["/groceries"]);
-        this.router.navigate(["/login"]);
+        this.router.navigate(["/grocerieslogin"]);
 
     }
 

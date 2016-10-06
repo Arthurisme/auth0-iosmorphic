@@ -1,6 +1,6 @@
 const validator = require("email-validator");
 
-export class User {
+export class GroceriesUser {
   email: string;
   password: string;
   isValidEmail() {

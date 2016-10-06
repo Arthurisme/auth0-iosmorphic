@@ -8,16 +8,16 @@ import { prompt } from "ui/dialogs";
 import { Page } from "ui/page";
 import { TextField } from "ui/text-field";
 
-import { alert, setHintColor, LoginService, User } from "../shared";
+import { alert, setHintColor, LoginService, GroceriesUser } from "../shared";
 import {NavigateService} from "../shared/service/navigate.service";
 
 @Component({
   selector: "gr-login",
-  templateUrl: "login/login.component.html",
-  styleUrls: ["login/login-common.css", "login/login.component.css"],
+  templateUrl: "groceries-login/groceries-login.component.html",
+  styleUrls: ["groceries-login/groceries-login-common.css", "groceries-login/groceries-login.component.css"],
 })
-export class LoginComponent implements OnInit {
-  user: User;
+export class GroceriesLoginComponent implements OnInit {
+  groceriesUser: GroceriesUser;
   isLoggingIn = true;
   isAuthenticating = false;
 
@@ -33,9 +33,9 @@ export class LoginComponent implements OnInit {
     private userService: LoginService,
     private navigateService:NavigateService,
     private page: Page) {
-    this.user = new User();
-    this.user.email = "user@nativescript.org";
-    this.user.password = "password";
+    this.groceriesUser = new GroceriesUser();
+    this.groceriesUser.email = "user@nativescript.org";
+    this.groceriesUser.password = "password";
   }
 
   ngOnInit() {
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    if (!this.user.isValidEmail()) {
+    if (!this.groceriesUser.isValidEmail()) {
       alert("Enter a valid email address.");
       return;
     }
@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.userService.login(this.user)
+    this.userService.login(this.groceriesUser)
       .then(() => {
         this.isAuthenticating = false;
         this.router.navigate(["/groceries"]);
@@ -83,7 +83,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.userService.register(this.user)
+    this.userService.register(this.groceriesUser)
       .then(() => {
         alert("Your account was successfully created.");
         this.isAuthenticating = false;

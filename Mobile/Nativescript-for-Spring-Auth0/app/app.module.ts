@@ -6,7 +6,7 @@ import { authProviders, appRoutes } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { setStatusBarColors, BackendService, LoginService } from "./shared";
 
-import { LoginModule } from "./login/login.module";
+import { GroceriesLoginModule } from "./groceries-login/groceries-login.module";
 import { GroceriesModule } from "./groceries/groceries.module";
 import {PingModule} from "./ping/ping.module";
 import {ModuleAModule} from "./module-a/module-a.module";
@@ -38,7 +38,7 @@ setStatusBarColors();
 
     Auth0LoginModule,
 
-    LoginModule,
+    GroceriesLoginModule,
     GroceriesModule,
 
     PingModule,

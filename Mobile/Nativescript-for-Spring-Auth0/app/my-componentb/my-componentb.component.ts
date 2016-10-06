@@ -9,7 +9,7 @@ import "rxjs/add/operator/map";
 
 // import {HeaderComponent} from "../header/header.component"
 
-import {alert, setHintColor, LoginService, User} from "../shared";
+import {alert, setHintColor, LoginService, GroceriesUser} from "../shared";
 var auth0 = require("nativescript-auth0");
 var application = require("application");
 import * as appSettings from "application-settings";

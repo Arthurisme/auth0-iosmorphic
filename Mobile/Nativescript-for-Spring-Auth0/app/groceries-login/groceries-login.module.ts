@@ -2,8 +2,8 @@ import { NativeScriptModule } from "nativescript-angular/platform";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NgModule } from "@angular/core";
 
-import { loginRouting } from "./login.routing";
-import { LoginComponent } from "./login.component";
+import { groceriesLoginRouting } from "./groceries-login.routing";
+import { GroceriesLoginComponent } from "./groceries-login.component";
 import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
@@ -13,10 +13,10 @@ import {SharedModule} from "../shared/shared.module";
 
     NativeScriptModule,
     NativeScriptFormsModule,
-    loginRouting
+    groceriesLoginRouting
   ],
   declarations: [
-    LoginComponent
+    GroceriesLoginComponent
   ]
 })
-export class LoginModule { }
+export class GroceriesLoginModule { }
