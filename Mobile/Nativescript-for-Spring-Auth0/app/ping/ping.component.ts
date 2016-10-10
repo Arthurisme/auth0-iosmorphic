@@ -19,6 +19,9 @@ var nshttp = require("http");
 
 import {Config} from "../config/config";
 
+require( "nativescript-orientation" );
+
+
 
 
 @Component({

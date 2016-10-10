@@ -1,0 +1,50 @@
+{
+  "name": "mongo-query",
+  "version": "0.5.7",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cloudup/mongo-query.git"
+  },
+  "dependencies": {
+    "component-type": "1.1.0",
+    "debug": "*",
+    "dot-component": "0.1.1",
+    "mongo-eql": "1.0.0",
+    "object-component": "0.0.3"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  },
+  "gitHead": "14fc566b5a15ced117c1d579d176633e6316a54f",
+  "description": "Component that implements the complete MongoDB query JSON API to operate on individual documents.",
+  "bugs": {
+    "url": "https://github.com/cloudup/mongo-query/issues"
+  },
+  "homepage": "https://github.com/cloudup/mongo-query",
+  "_id": "mongo-query@0.5.7",
+  "scripts": {},
+  "_shasum": "accf6d2a4cda959adc7bfb47f9297760f7275997",
+  "_from": "mongo-query@0.5.7",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "tootallnate",
+    "email": "nathan@tootallnate.net"
+  },
+  "maintainers": [
+    {
+      "name": "rauchg",
+      "email": "rauchg@gmail.com"
+    },
+    {
+      "name": "tootallnate",
+      "email": "nathan@tootallnate.net"
+    }
+  ],
+  "dist": {
+    "shasum": "accf6d2a4cda959adc7bfb47f9297760f7275997",
+    "tarball": "https://registry.npmjs.org/mongo-query/-/mongo-query-0.5.7.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/mongo-query/-/mongo-query-0.5.7.tgz"
+}

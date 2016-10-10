@@ -1,0 +1,13 @@
+use_frameworks!
+
+target "NativescriptforSpringAuth0" do
+# Begin Podfile - /Users/Arthur/Dropbox/App/Isomorphic/auth0-iosmorphic/Mobile/Nativescript-for-Spring-Auth0/node_modules/nativescript-auth0/platforms/ios/Podfile 
+ pod 'Lock'
+pod 'JWTDecode' 
+ # End Podfile 
+# Begin Podfile - /Users/Arthur/Dropbox/App/Isomorphic/auth0-iosmorphic/Mobile/Nativescript-for-Spring-Auth0/node_modules/nativescript-iqkeyboardmanager/platforms/ios/Podfile 
+ pod 'IQKeyboardManager', '~> 4.0.0'
+ 
+ # End Podfile 
+
+end

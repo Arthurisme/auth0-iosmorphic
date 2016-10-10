@@ -1,0 +1,8 @@
+"use strict";
+var module_a_component_1 = require("./module-a.component");
+var router_1 = require("nativescript-angular/router");
+var moduleARoutes = [
+    { path: "modulea", component: module_a_component_1.ModuleAComponent },
+];
+exports.moduleARouting = router_1.NativeScriptRouterModule.forChild(moduleARoutes);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kdWxlLWEucm91dGluZy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm1vZHVsZS1hLnJvdXRpbmcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUdBLG1DQUFpQyxzQkFBc0IsQ0FBQyxDQUFBO0FBQ3hELHVCQUF1Qyw2QkFBNkIsQ0FBQyxDQUFBO0FBRXJFLElBQU0sYUFBYSxHQUFXO0lBQzVCLEVBQUUsSUFBSSxFQUFFLFNBQVMsRUFBRSxTQUFTLEVBQUUscUNBQWdCLEVBQUU7Q0FDakQsQ0FBQztBQUNXLHNCQUFjLEdBQXdCLGlDQUF3QixDQUFDLFFBQVEsQ0FBQyxhQUFhLENBQUMsQ0FBQyJ9

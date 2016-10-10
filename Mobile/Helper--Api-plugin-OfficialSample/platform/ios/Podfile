@@ -1,0 +1,22 @@
+use_frameworks!
+
+target "NativescriptforSpringAuth0" do
+# Begin Podfile - /Users/Arthur/Dropbox/App/Isomorphic/auth0-iosmorphic/Mobile/Nativescript-for-Spring-Auth0/node_modules/nativescript-auth0/platforms/ios/Podfile 
+ pod 'Lock'
+pod 'JWTDecode' 
+ # End Podfile 
+# Begin Podfile - /Users/Arthur/Dropbox/App/Isomorphic/auth0-iosmorphic/Mobile/Nativescript-for-Spring-Auth0/node_modules/nativescript-iqkeyboardmanager/platforms/ios/Podfile 
+ pod 'IQKeyboardManager', '~> 4.0.0'
+ 
+ # End Podfile 
+
+end
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end

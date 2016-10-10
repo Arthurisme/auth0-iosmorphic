@@ -1,0 +1,15 @@
+lib
+test
+readme
+everlive.js
+everlive.map
+EverliveSDK.JS.zip
+EverliveCordova
+EverliveNativeScript
+browserify-cache.json
+test/suites/externalconfig.js
+test/*.tap
+el_store/*
+.idea
+npm-debug.log
+core

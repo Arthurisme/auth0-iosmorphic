@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0579ECE2E61440E3B9E0E1F6 /* unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA45D67E684B1F88E2B14D /* unchecked@2x.png */; };
+		0BC1A85F60404A1CA970F8EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD3D1AAC5724297B9B972EB /* LaunchScreen.storyboard */; };
+		0CAE802AAA65456D819A74E4 /* nonselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7869A70AD8F54958ABC4FFA3 /* nonselected@3x.png */; };
+		0D6297FB94A94E11B93F8BC4 /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4D9616FF149455A953EB68E /* add@3x.png */; };
+		113F46AB0DFD4145AFF9A197 /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B70541F8693045908E6D86FF /* selected@2x.png */; };
+		16055D14EB3F48D2977F1B33 /* bg_inner@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C048F21DA28B44D594EFD2F4 /* bg_inner@2x.jpg */; };
+		1953C4F9E55E40F48B040FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433AD9AB71084EEF88B739F2 /* Assets.xcassets */; };
+		29CECF25254C42ADA9930C15 /* checked_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D69B1C170C44F0796FFC4C0 /* checked_white@2x.png */; };
+		35BA0A5938384C548F58F3D2 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = C8FE8436B41646EF8ABC5EC7 /* add.png */; };
+		4C87229121A04D89A4ED7616 /* apple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B086BF024A8C4101997AF512 /* apple@3x.png */; };
+		4E42710EEB88419A9A93B50F /* unchecked_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D571DD05DDA644BF98464CBF /* unchecked_white@2x.png */; };
+		567949AFB9354D7192CB639B /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F69CE7E995B45FA869FCA7C /* apple.png */; };
+		57438FC1CC1D4551999443D5 /* checked_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 850D1E3E3BAD467DB9E4164E /* checked_white.png */; };
+		575F5DD4EC0E4A8DA8E6B74A /* bg_inner@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD9429F4EEB4F7F8D48426A /* bg_inner@3x.jpg */; };
+		58DBD53CDED64D8199139365 /* bg_login@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C813D0A30A5491A8112520F /* bg_login@2x.jpg */; };
+		5A7D2998DB204AD8AE1FD2BF /* delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62553498A2814A85A9FD2EE5 /* delete@3x.png */; };
+		5CDF1946A71C45DBA7F55B3B /* recent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719DF7BA705341D3B564932B /* recent@3x.png */; };
+		5E1DAE32A6EF44E693A4EF9F /* unchecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7D06A6A18F84C8A86771CA0 /* unchecked@3x.png */; };
+		6170D0B738544BE38F1551EE /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CEF104BDDB4408FB0856FE6 /* checked.png */; };
+		6641DAD3188B4CF78537288F /* bg_login@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3757821ACF84AF7B15938E5 /* bg_login@3x.jpg */; };
+		6A17CF28703445EFB17E3D32 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA3B6E78E6B4068A5048D14 /* menu.png */; };
+		6AE001FE22B94AE58BF7A53F /* unchecked_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E41E560FE94089B159F134 /* unchecked_white@3x.png */; };
+		6B69FAC4817B4CDABDE2C9DE /* nonselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AA7C7A6C6A44189BA81A95 /* nonselected.png */; };
+		71E912D276DC4ADD91B42237 /* pear@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 993F46534CF7489AAD3D94C7 /* pear@3x.png */; };
+		7402478663684CA493C67BB7 /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C691F78670A24A7B8C1110A4 /* build.xcconfig */; };
+		7432A59CB1A243F3ABD6171B /* logo_login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40E5D9826994394BC8CB1E0 /* logo_login@3x.png */; };
+		858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858B833A18CA111C00AB12DE /* InfoPlist.strings */; };
+		8915FDA1AD784E0585BC413B /* logo_signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 95722EB4A2C646CDA1B70E38 /* logo_signup.png */; };
+		91F4F4A1F9424DE88A6E2F8E /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F814A8C80C2341D1B1623B9D /* add@2x.png */; };
+		92FEBBE6CE2C486C8F8D1226 /* unchecked_white.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6724FF755C4362842391E9 /* unchecked_white.png */; };
+		97ED918FC118460DA57B0D70 /* logo_signup@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B4D14E80744CE1B0371BA1 /* logo_signup@3x.png */; };
+		9861CAB04E294116A7B66DB7 /* logo_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 10F24CA53F3547EA9A517F46 /* logo_login.png */; };
+		9DD22BE785784C71AD3984F3 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 020BD64E6E914D8E8E1DB73C /* delete.png */; };
+		9F1CBC176DD9431694D57C10 /* logo_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7B5EDB528C44F5F87B75AAA /* logo_login@2x.png */; };
+		9F2B063190B043A08479433E /* pear.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A15C1B816264C0A874A92D2 /* pear.png */; };
+		A05EEFF0329E417E8085BC78 /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 46D1F9D678384F11B978FCED /* banana.png */; };
+		A2DDD10C147146B487D61082 /* recent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A465A64BF24EA8BCD50E39 /* recent@2x.png */; };
+		A80AB1B5E7C34602996C5486 /* bg_inner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00E0F23C56384F03BF7310C8 /* bg_inner.jpg */; };
+		A962AEC621FE4F26BC981D03 /* bg_login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84143C0B66C243ACACA53A16 /* bg_login.jpg */; };
+		ACEDA4D3FDAE4F6293000995 /* checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B055CD7604E4502875AAA84 /* checked@2x.png */; };
+		AFAD74C0B8618053F185C790 /* Pods_NativescriptforSpringAuth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E3F30098DEDC50731053F6 /* Pods_NativescriptforSpringAuth0.framework */; };
+		B3EEDDC538504AD9B16AB777 /* nonselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB034EE05340AE909328F0 /* nonselected@2x.png */; };
+		B3FCD5605C0C426ABE6E3CC8 /* logo_signup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B10E6D53370411EB1BD3475 /* logo_signup@2x.png */; };
+		B50B4125104646818E785918 /* TNSWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8DAD9A14664AA1B20DBB04 /* TNSWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B78BEF68A2AC418591FD848D /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA8AD24F9D04470B00668D1 /* delete@2x.png */; };
+		B8E5CEC5BEFF44268164E217 /* recent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2137B4DE57C940188B606434 /* recent.png */; };
+		BCEF609FFCA84F72A32663B1 /* selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2946FA79BE43C5B58A25A4 /* selected@3x.png */; };
+		C0AA0F8590C24FDBA7DA829F /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = B847ED0B038C461A91764049 /* unchecked.png */; };
+		C6E40B2309C4487D8C54340A /* banana@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 250AA2F22C844EAEA9CEF46E /* banana@3x.png */; };
+		C7A8D0C002A94F1E9858C306 /* apple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2409928DE6B2463E9D8AC113 /* apple@2x.png */; };
+		C9FB0D4E0357467EB9D5726D /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D691F7299143FEBE6E99C6 /* selected.png */; };
+		CCDFF0F7251F4C7E81ED5265 /* pear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AE71E5B8BB43D38FCA7D24 /* pear@2x.png */; };
+		CD45EE7C18DC2D5800FB50C0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = CD45EE7A18DC2D5800FB50C0 /* app */; };
+		CD62955D1BB2678900AE3A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62955C1BB2678900AE3A93 /* main.m */; };
+		CFAEB89B46E344908F35EEE7 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 017A393832C541A3A2A66CF6 /* menu@3x.png */; };
+		E52D766F307A4D609C6D83FB /* banana@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D534EBB9354C29A8192B5D /* banana@2x.png */; };
+		E5FA9FD5559343B3910287EE /* TNSWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8DAD9A14664AA1B20DBB04 /* TNSWidgets.framework */; };
+		EACAC6D32B3B4EA4B09C6767 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4695CAEB80E548FEA162C610 /* menu@2x.png */; };
+		ECD8264FAF904B0FAC01C118 /* checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306914877B04E91A44FC1A8 /* checked@3x.png */; };
+		F1D7D83CD5804314B5BA442B /* checked_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 588BFE77029B4DA38CCF1F7C /* checked_white@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85F5BDFC1A9363BE006B9701 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B50B4125104646818E785918 /* TNSWidgets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E0F23C56384F03BF7310C8 /* bg_inner.jpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = bg_inner.jpg; path = NativescriptforSpringAuth0/Resources/bg_inner.jpg; sourceTree = "<group>"; };
+		017A393832C541A3A2A66CF6 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu@3x.png"; path = "NativescriptforSpringAuth0/Resources/menu@3x.png"; sourceTree = "<group>"; };
+		01AA7C7A6C6A44189BA81A95 /* nonselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nonselected.png; path = NativescriptforSpringAuth0/Resources/nonselected.png; sourceTree = "<group>"; };
+		020BD64E6E914D8E8E1DB73C /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = NativescriptforSpringAuth0/Resources/delete.png; sourceTree = "<group>"; };
+		02AE71E5B8BB43D38FCA7D24 /* pear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pear@2x.png"; path = "NativescriptforSpringAuth0/Resources/pear@2x.png"; sourceTree = "<group>"; };
+		0CEF104BDDB4408FB0856FE6 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = NativescriptforSpringAuth0/Resources/checked.png; sourceTree = "<group>"; };
+		10F24CA53F3547EA9A517F46 /* logo_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_login.png; path = NativescriptforSpringAuth0/Resources/logo_login.png; sourceTree = "<group>"; };
+		14E41E560FE94089B159F134 /* unchecked_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unchecked_white@3x.png"; path = "NativescriptforSpringAuth0/Resources/unchecked_white@3x.png"; sourceTree = "<group>"; };
+		1B055CD7604E4502875AAA84 /* checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checked@2x.png"; path = "NativescriptforSpringAuth0/Resources/checked@2x.png"; sourceTree = "<group>"; };
+		2137B4DE57C940188B606434 /* recent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recent.png; path = NativescriptforSpringAuth0/Resources/recent.png; sourceTree = "<group>"; };
+		2409928DE6B2463E9D8AC113 /* apple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple@2x.png"; path = "NativescriptforSpringAuth0/Resources/apple@2x.png"; sourceTree = "<group>"; };
+		250AA2F22C844EAEA9CEF46E /* banana@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "banana@3x.png"; path = "NativescriptforSpringAuth0/Resources/banana@3x.png"; sourceTree = "<group>"; };
+		2A15C1B816264C0A874A92D2 /* pear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pear.png; path = NativescriptforSpringAuth0/Resources/pear.png; sourceTree = "<group>"; };
+		2B10E6D53370411EB1BD3475 /* logo_signup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_signup@2x.png"; path = "NativescriptforSpringAuth0/Resources/logo_signup@2x.png"; sourceTree = "<group>"; };
+		2D69B1C170C44F0796FFC4C0 /* checked_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checked_white@2x.png"; path = "NativescriptforSpringAuth0/Resources/checked_white@2x.png"; sourceTree = "<group>"; };
+		34D691F7299143FEBE6E99C6 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selected.png; path = NativescriptforSpringAuth0/Resources/selected.png; sourceTree = "<group>"; };
+		3F69CE7E995B45FA869FCA7C /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = NativescriptforSpringAuth0/Resources/apple.png; sourceTree = "<group>"; };
+		433AD9AB71084EEF88B739F2 /* Assets.xcassets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = Assets.xcassets; path = NativescriptforSpringAuth0/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		4695CAEB80E548FEA162C610 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu@2x.png"; path = "NativescriptforSpringAuth0/Resources/menu@2x.png"; sourceTree = "<group>"; };
+		46D1F9D678384F11B978FCED /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banana.png; path = NativescriptforSpringAuth0/Resources/banana.png; sourceTree = "<group>"; };
+		5306914877B04E91A44FC1A8 /* checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checked@3x.png"; path = "NativescriptforSpringAuth0/Resources/checked@3x.png"; sourceTree = "<group>"; };
+		588BFE77029B4DA38CCF1F7C /* checked_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checked_white@3x.png"; path = "NativescriptforSpringAuth0/Resources/checked_white@3x.png"; sourceTree = "<group>"; };
+		5D2946FA79BE43C5B58A25A4 /* selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selected@3x.png"; path = "NativescriptforSpringAuth0/Resources/selected@3x.png"; sourceTree = "<group>"; };
+		62553498A2814A85A9FD2EE5 /* delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "delete@3x.png"; path = "NativescriptforSpringAuth0/Resources/delete@3x.png"; sourceTree = "<group>"; };
+		66B4D14E80744CE1B0371BA1 /* logo_signup@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_signup@3x.png"; path = "NativescriptforSpringAuth0/Resources/logo_signup@3x.png"; sourceTree = "<group>"; };
+		719DF7BA705341D3B564932B /* recent@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recent@3x.png"; path = "NativescriptforSpringAuth0/Resources/recent@3x.png"; sourceTree = "<group>"; };
+		7869A70AD8F54958ABC4FFA3 /* nonselected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nonselected@3x.png"; path = "NativescriptforSpringAuth0/Resources/nonselected@3x.png"; sourceTree = "<group>"; };
+		7BA3B6E78E6B4068A5048D14 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = NativescriptforSpringAuth0/Resources/menu.png; sourceTree = "<group>"; };
+		7C813D0A30A5491A8112520F /* bg_login@2x.jpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = "bg_login@2x.jpg"; path = "NativescriptforSpringAuth0/Resources/bg_login@2x.jpg"; sourceTree = "<group>"; };
+		84143C0B66C243ACACA53A16 /* bg_login.jpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = bg_login.jpg; path = NativescriptforSpringAuth0/Resources/bg_login.jpg; sourceTree = "<group>"; };
+		850D1E3E3BAD467DB9E4164E /* checked_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked_white.png; path = NativescriptforSpringAuth0/Resources/checked_white.png; sourceTree = "<group>"; };
+		858B832E18CA111C00AB12DE /* NativescriptforSpringAuth0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativescriptforSpringAuth0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B833918CA111C00AB12DE /* NativescriptforSpringAuth0-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NativescriptforSpringAuth0-Info.plist"; sourceTree = "<group>"; };
+		858B833B18CA111C00AB12DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		858B833F18CA111C00AB12DE /* NativescriptforSpringAuth0-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativescriptforSpringAuth0-Prefix.pch"; sourceTree = "<group>"; };
+		858B843318CA22B800AB12DE /* NativescriptforSpringAuth0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativescriptforSpringAuth0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BEA45D67E684B1F88E2B14D /* unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unchecked@2x.png"; path = "NativescriptforSpringAuth0/Resources/unchecked@2x.png"; sourceTree = "<group>"; };
+		92E3F30098DEDC50731053F6 /* Pods_NativescriptforSpringAuth0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativescriptforSpringAuth0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D534EBB9354C29A8192B5D /* banana@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "banana@2x.png"; path = "NativescriptforSpringAuth0/Resources/banana@2x.png"; sourceTree = "<group>"; };
+		95722EB4A2C646CDA1B70E38 /* logo_signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_signup.png; path = NativescriptforSpringAuth0/Resources/logo_signup.png; sourceTree = "<group>"; };
+		993F46534CF7489AAD3D94C7 /* pear@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pear@3x.png"; path = "NativescriptforSpringAuth0/Resources/pear@3x.png"; sourceTree = "<group>"; };
+		9B8DAD9A14664AA1B20DBB04 /* TNSWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TNSWidgets.framework; path = ../../lib/iOS/TNSWidgets.framework; sourceTree = "<group>"; };
+		A4D9616FF149455A953EB68E /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add@3x.png"; path = "NativescriptforSpringAuth0/Resources/add@3x.png"; sourceTree = "<group>"; };
+		ADD3D1AAC5724297B9B972EB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = NativescriptforSpringAuth0/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B086BF024A8C4101997AF512 /* apple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple@3x.png"; path = "NativescriptforSpringAuth0/Resources/apple@3x.png"; sourceTree = "<group>"; };
+		B0A465A64BF24EA8BCD50E39 /* recent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recent@2x.png"; path = "NativescriptforSpringAuth0/Resources/recent@2x.png"; sourceTree = "<group>"; };
+		B40E5D9826994394BC8CB1E0 /* logo_login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_login@3x.png"; path = "NativescriptforSpringAuth0/Resources/logo_login@3x.png"; sourceTree = "<group>"; };
+		B5CB034EE05340AE909328F0 /* nonselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nonselected@2x.png"; path = "NativescriptforSpringAuth0/Resources/nonselected@2x.png"; sourceTree = "<group>"; };
+		B70541F8693045908E6D86FF /* selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selected@2x.png"; path = "NativescriptforSpringAuth0/Resources/selected@2x.png"; sourceTree = "<group>"; };
+		B847ED0B038C461A91764049 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = NativescriptforSpringAuth0/Resources/unchecked.png; sourceTree = "<group>"; };
+		BDD9429F4EEB4F7F8D48426A /* bg_inner@3x.jpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = "bg_inner@3x.jpg"; path = "NativescriptforSpringAuth0/Resources/bg_inner@3x.jpg"; sourceTree = "<group>"; };
+		C048F21DA28B44D594EFD2F4 /* bg_inner@2x.jpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = "bg_inner@2x.jpg"; path = "NativescriptforSpringAuth0/Resources/bg_inner@2x.jpg"; sourceTree = "<group>"; };
+		C3757821ACF84AF7B15938E5 /* bg_login@3x.jpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = "bg_login@3x.jpg"; path = "NativescriptforSpringAuth0/Resources/bg_login@3x.jpg"; sourceTree = "<group>"; };
+		C691F78670A24A7B8C1110A4 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = build.xcconfig; path = NativescriptforSpringAuth0/Resources/build.xcconfig; sourceTree = "<group>"; };
+		C7B5EDB528C44F5F87B75AAA /* logo_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_login@2x.png"; path = "NativescriptforSpringAuth0/Resources/logo_login@2x.png"; sourceTree = "<group>"; };
+		C7D06A6A18F84C8A86771CA0 /* unchecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unchecked@3x.png"; path = "NativescriptforSpringAuth0/Resources/unchecked@3x.png"; sourceTree = "<group>"; };
+		C8FE8436B41646EF8ABC5EC7 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = NativescriptforSpringAuth0/Resources/add.png; sourceTree = "<group>"; };
+		CD45EE7A18DC2D5800FB50C0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
+		CD62955C1BB2678900AE3A93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = internal/main.m; sourceTree = SOURCE_ROOT; };
+		CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-debug.xcconfig"; sourceTree = "<group>"; };
+		CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-release.xcconfig"; sourceTree = "<group>"; };
+		CDF4743E1BA4855C0087EA85 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		D571DD05DDA644BF98464CBF /* unchecked_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unchecked_white@2x.png"; path = "NativescriptforSpringAuth0/Resources/unchecked_white@2x.png"; sourceTree = "<group>"; };
+		DA6724FF755C4362842391E9 /* unchecked_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked_white.png; path = NativescriptforSpringAuth0/Resources/unchecked_white.png; sourceTree = "<group>"; };
+		DEA8AD24F9D04470B00668D1 /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "delete@2x.png"; path = "NativescriptforSpringAuth0/Resources/delete@2x.png"; sourceTree = "<group>"; };
+		F814A8C80C2341D1B1623B9D /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add@2x.png"; path = "NativescriptforSpringAuth0/Resources/add@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		858B83F418CA22B800AB12DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5FA9FD5559343B3910287EE /* TNSWidgets.framework in Frameworks */,
+				AFAD74C0B8618053F185C790 /* Pods_NativescriptforSpringAuth0.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		474FD255D6C84B21D025A731 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		858B832518CA111C00AB12DE = {
+			isa = PBXGroup;
+			children = (
+				E070579D1B39A9D000214BF1 /* Resources */,
+				858B833718CA111C00AB12DE /* NativescriptforSpringAuth0 */,
+				858B833018CA111C00AB12DE /* Frameworks */,
+				858B832F18CA111C00AB12DE /* Products */,
+				474FD255D6C84B21D025A731 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		858B832F18CA111C00AB12DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				858B832E18CA111C00AB12DE /* NativescriptforSpringAuth0.app */,
+				858B843318CA22B800AB12DE /* NativescriptforSpringAuth0.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		858B833018CA111C00AB12DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B8DAD9A14664AA1B20DBB04 /* TNSWidgets.framework */,
+				92E3F30098DEDC50731053F6 /* Pods_NativescriptforSpringAuth0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		858B833718CA111C00AB12DE /* NativescriptforSpringAuth0 */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EE7A18DC2D5800FB50C0 /* app */,
+				858B833818CA111C00AB12DE /* Supporting Files */,
+			);
+			path = NativescriptforSpringAuth0;
+			sourceTree = "<group>";
+		};
+		858B833818CA111C00AB12DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDF4743E1BA4855C0087EA85 /* build.xcconfig */,
+				CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */,
+				CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */,
+				858B833918CA111C00AB12DE /* NativescriptforSpringAuth0-Info.plist */,
+				858B833A18CA111C00AB12DE /* InfoPlist.strings */,
+				CD62955C1BB2678900AE3A93 /* main.m */,
+				858B833F18CA111C00AB12DE /* NativescriptforSpringAuth0-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E070579D1B39A9D000214BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				433AD9AB71084EEF88B739F2 /* Assets.xcassets */,
+				ADD3D1AAC5724297B9B972EB /* LaunchScreen.storyboard */,
+				C8FE8436B41646EF8ABC5EC7 /* add.png */,
+				F814A8C80C2341D1B1623B9D /* add@2x.png */,
+				A4D9616FF149455A953EB68E /* add@3x.png */,
+				3F69CE7E995B45FA869FCA7C /* apple.png */,
+				2409928DE6B2463E9D8AC113 /* apple@2x.png */,
+				B086BF024A8C4101997AF512 /* apple@3x.png */,
+				46D1F9D678384F11B978FCED /* banana.png */,
+				93D534EBB9354C29A8192B5D /* banana@2x.png */,
+				250AA2F22C844EAEA9CEF46E /* banana@3x.png */,
+				00E0F23C56384F03BF7310C8 /* bg_inner.jpg */,
+				C048F21DA28B44D594EFD2F4 /* bg_inner@2x.jpg */,
+				BDD9429F4EEB4F7F8D48426A /* bg_inner@3x.jpg */,
+				84143C0B66C243ACACA53A16 /* bg_login.jpg */,
+				7C813D0A30A5491A8112520F /* bg_login@2x.jpg */,
+				C3757821ACF84AF7B15938E5 /* bg_login@3x.jpg */,
+				C691F78670A24A7B8C1110A4 /* build.xcconfig */,
+				0CEF104BDDB4408FB0856FE6 /* checked.png */,
+				1B055CD7604E4502875AAA84 /* checked@2x.png */,
+				5306914877B04E91A44FC1A8 /* checked@3x.png */,
+				850D1E3E3BAD467DB9E4164E /* checked_white.png */,
+				2D69B1C170C44F0796FFC4C0 /* checked_white@2x.png */,
+				588BFE77029B4DA38CCF1F7C /* checked_white@3x.png */,
+				020BD64E6E914D8E8E1DB73C /* delete.png */,
+				DEA8AD24F9D04470B00668D1 /* delete@2x.png */,
+				62553498A2814A85A9FD2EE5 /* delete@3x.png */,
+				10F24CA53F3547EA9A517F46 /* logo_login.png */,
+				C7B5EDB528C44F5F87B75AAA /* logo_login@2x.png */,
+				B40E5D9826994394BC8CB1E0 /* logo_login@3x.png */,
+				95722EB4A2C646CDA1B70E38 /* logo_signup.png */,
+				2B10E6D53370411EB1BD3475 /* logo_signup@2x.png */,
+				66B4D14E80744CE1B0371BA1 /* logo_signup@3x.png */,
+				7BA3B6E78E6B4068A5048D14 /* menu.png */,
+				4695CAEB80E548FEA162C610 /* menu@2x.png */,
+				017A393832C541A3A2A66CF6 /* menu@3x.png */,
+				01AA7C7A6C6A44189BA81A95 /* nonselected.png */,
+				B5CB034EE05340AE909328F0 /* nonselected@2x.png */,
+				7869A70AD8F54958ABC4FFA3 /* nonselected@3x.png */,
+				2A15C1B816264C0A874A92D2 /* pear.png */,
+				02AE71E5B8BB43D38FCA7D24 /* pear@2x.png */,
+				993F46534CF7489AAD3D94C7 /* pear@3x.png */,
+				2137B4DE57C940188B606434 /* recent.png */,
+				B0A465A64BF24EA8BCD50E39 /* recent@2x.png */,
+				719DF7BA705341D3B564932B /* recent@3x.png */,
+				34D691F7299143FEBE6E99C6 /* selected.png */,
+				B70541F8693045908E6D86FF /* selected@2x.png */,
+				5D2946FA79BE43C5B58A25A4 /* selected@3x.png */,
+				B847ED0B038C461A91764049 /* unchecked.png */,
+				8BEA45D67E684B1F88E2B14D /* unchecked@2x.png */,
+				C7D06A6A18F84C8A86771CA0 /* unchecked@3x.png */,
+				DA6724FF755C4362842391E9 /* unchecked_white.png */,
+				D571DD05DDA644BF98464CBF /* unchecked_white@2x.png */,
+				14E41E560FE94089B159F134 /* unchecked_white@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		858B83EF18CA22B800AB12DE /* NativescriptforSpringAuth0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "NativescriptforSpringAuth0" */;
+			buildPhases = (
+				3099E0982D7F16FDE4DE6323 /* [CP] Check Pods Manifest.lock */,
+				C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */,
+				858B83F218CA22B800AB12DE /* Sources */,
+				CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */,
+				858B83F418CA22B800AB12DE /* Frameworks */,
+				858B842C18CA22B800AB12DE /* Resources */,
+				85F5BDFC1A9363BE006B9701 /* Embed Frameworks */,
+				CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */,
+				75376A553964A3CE099BA345 /* [CP] Embed Pods Frameworks */,
+				C62AD1E42E8348E26A2BBAD4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NativescriptforSpringAuth0;
+			productName = JDBridgeApp;
+			productReference = 858B843318CA22B800AB12DE /* NativescriptforSpringAuth0.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		858B832618CA111C00AB12DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TNS;
+				LastUpgradeCheck = 500;
+				ORGANIZATIONNAME = Telerik;
+				TargetAttributes = {
+					858B83EF18CA22B800AB12DE = {
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 858B832918CA111C00AB12DE /* Build configuration list for PBXProject "NativescriptforSpringAuth0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 858B832518CA111C00AB12DE;
+			productRefGroup = 858B832F18CA111C00AB12DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				858B83EF18CA22B800AB12DE /* NativescriptforSpringAuth0 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		858B842C18CA22B800AB12DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD45EE7C18DC2D5800FB50C0 /* app in Resources */,
+				858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */,
+				1953C4F9E55E40F48B040FE4 /* Assets.xcassets in Resources */,
+				0BC1A85F60404A1CA970F8EC /* LaunchScreen.storyboard in Resources */,
+				35BA0A5938384C548F58F3D2 /* add.png in Resources */,
+				91F4F4A1F9424DE88A6E2F8E /* add@2x.png in Resources */,
+				0D6297FB94A94E11B93F8BC4 /* add@3x.png in Resources */,
+				567949AFB9354D7192CB639B /* apple.png in Resources */,
+				C7A8D0C002A94F1E9858C306 /* apple@2x.png in Resources */,
+				4C87229121A04D89A4ED7616 /* apple@3x.png in Resources */,
+				A05EEFF0329E417E8085BC78 /* banana.png in Resources */,
+				E52D766F307A4D609C6D83FB /* banana@2x.png in Resources */,
+				C6E40B2309C4487D8C54340A /* banana@3x.png in Resources */,
+				A80AB1B5E7C34602996C5486 /* bg_inner.jpg in Resources */,
+				16055D14EB3F48D2977F1B33 /* bg_inner@2x.jpg in Resources */,
+				575F5DD4EC0E4A8DA8E6B74A /* bg_inner@3x.jpg in Resources */,
+				A962AEC621FE4F26BC981D03 /* bg_login.jpg in Resources */,
+				58DBD53CDED64D8199139365 /* bg_login@2x.jpg in Resources */,
+				6641DAD3188B4CF78537288F /* bg_login@3x.jpg in Resources */,
+				7402478663684CA493C67BB7 /* build.xcconfig in Resources */,
+				6170D0B738544BE38F1551EE /* checked.png in Resources */,
+				ACEDA4D3FDAE4F6293000995 /* checked@2x.png in Resources */,
+				ECD8264FAF904B0FAC01C118 /* checked@3x.png in Resources */,
+				57438FC1CC1D4551999443D5 /* checked_white.png in Resources */,
+				29CECF25254C42ADA9930C15 /* checked_white@2x.png in Resources */,
+				F1D7D83CD5804314B5BA442B /* checked_white@3x.png in Resources */,
+				9DD22BE785784C71AD3984F3 /* delete.png in Resources */,
+				B78BEF68A2AC418591FD848D /* delete@2x.png in Resources */,
+				5A7D2998DB204AD8AE1FD2BF /* delete@3x.png in Resources */,
+				9861CAB04E294116A7B66DB7 /* logo_login.png in Resources */,
+				9F1CBC176DD9431694D57C10 /* logo_login@2x.png in Resources */,
+				7432A59CB1A243F3ABD6171B /* logo_login@3x.png in Resources */,
+				8915FDA1AD784E0585BC413B /* logo_signup.png in Resources */,
+				B3FCD5605C0C426ABE6E3CC8 /* logo_signup@2x.png in Resources */,
+				97ED918FC118460DA57B0D70 /* logo_signup@3x.png in Resources */,
+				6A17CF28703445EFB17E3D32 /* menu.png in Resources */,
+				EACAC6D32B3B4EA4B09C6767 /* menu@2x.png in Resources */,
+				CFAEB89B46E344908F35EEE7 /* menu@3x.png in Resources */,
+				6B69FAC4817B4CDABDE2C9DE /* nonselected.png in Resources */,
+				B3EEDDC538504AD9B16AB777 /* nonselected@2x.png in Resources */,
+				0CAE802AAA65456D819A74E4 /* nonselected@3x.png in Resources */,
+				9F2B063190B043A08479433E /* pear.png in Resources */,
+				CCDFF0F7251F4C7E81ED5265 /* pear@2x.png in Resources */,
+				71E912D276DC4ADD91B42237 /* pear@3x.png in Resources */,
+				B8E5CEC5BEFF44268164E217 /* recent.png in Resources */,
+				A2DDD10C147146B487D61082 /* recent@2x.png in Resources */,
+				5CDF1946A71C45DBA7F55B3B /* recent@3x.png in Resources */,
+				C9FB0D4E0357467EB9D5726D /* selected.png in Resources */,
+				113F46AB0DFD4145AFF9A197 /* selected@2x.png in Resources */,
+				BCEF609FFCA84F72A32663B1 /* selected@3x.png in Resources */,
+				C0AA0F8590C24FDBA7DA829F /* unchecked.png in Resources */,
+				0579ECE2E61440E3B9E0E1F6 /* unchecked@2x.png in Resources */,
+				5E1DAE32A6EF44E693A4EF9F /* unchecked@3x.png in Resources */,
+				92FEBBE6CE2C486C8F8D1226 /* unchecked_white.png in Resources */,
+				4E42710EEB88419A9A93B50F /* unchecked_white@2x.png in Resources */,
+				6AE001FE22B94AE58BF7A53F /* unchecked_white@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3099E0982D7F16FDE4DE6323 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75376A553964A3CE099BA345 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativescriptforSpringAuth0/Pods-NativescriptforSpringAuth0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C62AD1E42E8348E26A2BBAD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativescriptforSpringAuth0/Pods-NativescriptforSpringAuth0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PostBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-post-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreLink";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-link\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		858B83F218CA22B800AB12DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD62955D1BB2678900AE3A93 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		858B833A18CA111C00AB12DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				858B833B18CA111C00AB12DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		858B835818CA111C00AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Debug;
+		};
+		858B835918CA111C00AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Release;
+		};
+		858B843118CA22B800AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../../lib/iOS\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativescriptforSpringAuth0/NativescriptforSpringAuth0-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/NativescriptforSpringAuth0/NativescriptforSpringAuth0-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = NativescriptforSpringAuth0;
+				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		858B843218CA22B800AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../../lib/iOS\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativescriptforSpringAuth0/NativescriptforSpringAuth0-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/NativescriptforSpringAuth0/NativescriptforSpringAuth0-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = NativescriptforSpringAuth0;
+				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		858B832918CA111C00AB12DE /* Build configuration list for PBXProject "NativescriptforSpringAuth0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B835818CA111C00AB12DE /* Debug */,
+				858B835918CA111C00AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "NativescriptforSpringAuth0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B843118CA22B800AB12DE /* Debug */,
+				858B843218CA22B800AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 858B832618CA111C00AB12DE /* Project object */;
+}

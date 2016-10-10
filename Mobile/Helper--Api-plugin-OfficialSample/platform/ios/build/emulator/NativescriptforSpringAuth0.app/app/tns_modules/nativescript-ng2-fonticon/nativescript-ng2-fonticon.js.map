@@ -1,0 +1,1 @@
+{"version":3,"file":"nativescript-ng2-fonticon.js","sourceRoot":"","sources":["nativescript-ng2-fonticon.ts"],"names":[],"mappings":";;;;AAAA,gCAAgC;AAChC,8BAAmD,+BAA+B,CAAC,CAAA;AACnF,iCAAiC,qCAAqC,CAAC,CAAA;AAEvE,qBAAqB;AACrB,iBAAc,+BAA+B,CAAC,EAAA;AAC9C,iBAAc,qCAAqC,CAAC,EAAA;AAGpD;kBAAe;IACb,KAAK,EAAE,CAAC,+BAAe,EAAE,mCAAmB,CAAC;IAC7C,SAAS,EAAE,CAAC,qCAAkB,CAAC;CAChC,CAAA"}

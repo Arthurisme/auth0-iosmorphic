@@ -1,0 +1,40 @@
+{
+  "name": "dot-component",
+  "version": "0.1.1",
+  "keywords": [
+    "dot"
+  ],
+  "dependencies": {
+    "type-component": "*"
+  },
+  "component": {
+    "scripts": {
+      "dot/index.js": "index.js"
+    }
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  },
+  "description": "MongoDB-style \"dot notation\" querying for JavaScript.",
+  "_id": "dot-component@0.1.1",
+  "dist": {
+    "shasum": "d8208ce6b3a132f2a27f0dc9435597ee6fa7b7aa",
+    "tarball": "https://registry.npmjs.org/dot-component/-/dot-component-0.1.1.tgz"
+  },
+  "_from": "dot-component@0.1.1",
+  "_npmVersion": "1.3.22",
+  "_npmUser": {
+    "name": "rauchg",
+    "email": "rauchg@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "rauchg",
+      "email": "rauchg@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "d8208ce6b3a132f2a27f0dc9435597ee6fa7b7aa",
+  "_resolved": "https://registry.npmjs.org/dot-component/-/dot-component-0.1.1.tgz"
+}

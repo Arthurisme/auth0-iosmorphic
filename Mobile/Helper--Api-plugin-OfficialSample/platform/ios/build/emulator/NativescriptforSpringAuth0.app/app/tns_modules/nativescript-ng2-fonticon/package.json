@@ -1,0 +1,69 @@
+{
+  "name": "nativescript-ng2-fonticon",
+  "version": "1.2.6",
+  "description": "Use custom font icon collections seamlessly with NativeScript + Angular2.",
+  "main": "nativescript-ng2-fonticon.js",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "2.2.0",
+      "ios": "2.2.1"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanWalker/nativescript-ng2-fonticon.git"
+  },
+  "keywords": [
+    "angular2",
+    "ng2",
+    "nativescript",
+    "icon",
+    "font icon",
+    "font"
+  ],
+  "author": {
+    "name": "Nathan Walker",
+    "email": "walkerrunpdx@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Nathanael Anderson",
+      "email": "nathan@master-technology",
+      "url": "https://github.com/nathanaela"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NathanWalker/nativescript-ng2-fonticon/issues"
+  },
+  "homepage": "https://github.com/NathanWalker/nativescript-ng2-fonticon#readme",
+  "gitHead": "dfd3228bd26dbcbe5e91a19051b8958095682203",
+  "_id": "nativescript-ng2-fonticon@1.2.6",
+  "scripts": {},
+  "_shasum": "e7fb0eed9c1db16282ec709352301c7b284ce443",
+  "_from": "nativescript-ng2-fonticon@>=1.2.6 <2.0.0",
+  "_npmVersion": "3.5.3",
+  "_nodeVersion": "5.5.0",
+  "_npmUser": {
+    "name": "walkerrunpdx",
+    "email": "walkerrunpdx@gmail.com"
+  },
+  "dist": {
+    "shasum": "e7fb0eed9c1db16282ec709352301c7b284ce443",
+    "tarball": "https://registry.npmjs.org/nativescript-ng2-fonticon/-/nativescript-ng2-fonticon-1.2.6.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "walkerrunpdx",
+      "email": "walkerrunpdx@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/nativescript-ng2-fonticon-1.2.6.tgz_1473472091155_0.7584991250187159"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/nativescript-ng2-fonticon/-/nativescript-ng2-fonticon-1.2.6.tgz",
+  "readme": "ERROR: No README data found!"
+}

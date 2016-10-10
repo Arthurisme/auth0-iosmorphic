@@ -1,0 +1,60 @@
+
+
+
+
+<!--<ActionBar title="Groceries">-->
+    <!--<ActionItem text="Share" (tap)="share()" android.systemIcon="ic_menu_share_holo_dark" ios.systemIcon="9" ios.position="right"></ActionItem>-->
+<!--</ActionBar>-->
+
+
+
+
+
+
+<!-- Row 1: The custom action bar -->
+<!--<GridLayout-->
+        <!--row="0"-->
+        <!--columns="44, *, auto"-->
+        <!--class="action-bar-custom">-->
+    <!--<Label-->
+            <!--col="1"-->
+            <!--text="Groceries"></Label>-->
+
+    <!--&lt;!&ndash; Wrap the image in a StackLayout to give it a bigger tap target &ndash;&gt;-->
+    <!--<StackLayout-->
+            <!--col="2"-->
+            <!--(tap)="goToModuleA()">-->
+        <!--<Image-->
+                <!--src="res://menu"-->
+                <!--stretch="none"></Image>-->
+    <!--</StackLayout>-->
+<!--</GridLayout>-->
+
+
+<StackLayout
+(tap)="goToModuleA()"
+class="initial-button">
+<Label
+text="Go To Module A"
+class="initial-button-label"></Label>
+</StackLayout>
+
+
+
+ <!--<Label-->
+         <!--(tap)="goToPing()"-->
+         <!--text="Module A"-->
+         <!--class="initial-button-label"></Label>-->
+
+
+
+
+
+<!--<StackLayout-->
+        <!--(tap)="goToPing()"-->
+        <!--class="initial-button">-->
+ <!--<Label-->
+         <!--text="Go to Ping"-->
+         <!--class="initial-button-label"></Label>-->
+<!--</StackLayout>-->
+

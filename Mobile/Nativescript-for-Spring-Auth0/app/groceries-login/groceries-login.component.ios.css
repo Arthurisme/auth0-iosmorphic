@@ -2,12 +2,19 @@
   height: 425;
   width: 300;
 }
-.initial-label {
+  .initial-label {
   font-size: 40;
   letter-spacing: 0.2;
   margin-bottom: 10;
-
 }
+
+/*.ios .landscape .initial-label {*/
+  /*font-size: 40;*/
+  /*letter-spacing: 0.2;*/
+  /*margin-bottom: 100;*/
+/*}*/
+
+
 .main-label {
   color: #311217;
   font-size: 32;

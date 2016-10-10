@@ -1,0 +1,32 @@
+
+
+
+<ActionBar title="Auth0Demo">
+
+    <ActionItem text="ping" (tap)="navigateService.goToPing()"   ios.position="right"></ActionItem>
+    <ActionItem text="ModuleA" (tap)="navigateService.goToModuleA()"  ios.position="right"></ActionItem>
+    <ActionItem text="Groceres" (tap)="navigateService.goToGroceries()"   ios.position="right"></ActionItem>
+    <ActionItem text="Action" (tap)="navigateService.showMenu()" icon="res://menu" stretch="none"  ios.position="right"></ActionItem>
+
+</ActionBar>
+
+
+<StackLayout orientation="vertical">
+    <Label text="Profile:" class="action-bar-custom"></Label>
+
+
+
+    <!--<h2>Profile Components</h2>-->
+    <router-outlet></router-outlet>
+
+
+</StackLayout>
+
+
+<!--<page-router-outlet></page-router-outlet>-->
+
+
+
+
+
+

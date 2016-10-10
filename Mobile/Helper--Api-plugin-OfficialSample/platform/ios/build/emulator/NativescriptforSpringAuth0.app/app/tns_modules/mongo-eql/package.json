@@ -1,0 +1,43 @@
+{
+  "name": "mongo-eql",
+  "version": "1.0.0",
+  "description": "Applies the MongoDB equality semantics for a comparison between two datastructures",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cloudup/mongo-eql.git"
+  },
+  "dependencies": {
+    "debug": "*",
+    "component-type": "1.1.0"
+  },
+  "gitHead": "54dd9afff607d0b52c2d699413227fcae0365a0d",
+  "bugs": {
+    "url": "https://github.com/cloudup/mongo-eql/issues"
+  },
+  "homepage": "https://github.com/cloudup/mongo-eql",
+  "_id": "mongo-eql@1.0.0",
+  "scripts": {},
+  "_shasum": "faa162444f22b5064c6398f73676b7edd5c43824",
+  "_from": "mongo-eql@1.0.0",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "tootallnate",
+    "email": "nathan@tootallnate.net"
+  },
+  "maintainers": [
+    {
+      "name": "rauchg",
+      "email": "rauchg@gmail.com"
+    },
+    {
+      "name": "tootallnate",
+      "email": "nathan@tootallnate.net"
+    }
+  ],
+  "dist": {
+    "shasum": "faa162444f22b5064c6398f73676b7edd5c43824",
+    "tarball": "https://registry.npmjs.org/mongo-eql/-/mongo-eql-1.0.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/mongo-eql/-/mongo-eql-1.0.0.tgz"
+}

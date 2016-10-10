@@ -1,0 +1,63 @@
+
+
+
+<ActionBar title="Auth0Demo">
+
+  <ActionItem text="ping" (tap)="navigateService.goToPing()"   ios.position="right"></ActionItem>
+  <ActionItem text="ModuleA" (tap)="navigateService.goToModuleA()"  ios.position="right"></ActionItem>
+  <ActionItem text="Groceres" (tap)="navigateService.goToGroceries()"   ios.position="right"></ActionItem>
+  <ActionItem text="Action" (tap)="navigateService.showMenu()" icon="res://menu" stretch="none"  ios.position="right"></ActionItem>
+
+</ActionBar>
+
+
+
+
+<GridLayout>
+
+  <GridLayout #background
+    scaleX="1.4"
+    scaleY="1.4"
+    class="background"
+     ></GridLayout>
+
+  <StackLayout #initialContainer
+    class="initial-container">
+    <Image
+      src="res://logo_login"
+      stretch="none"
+      class="initial-logo"></Image>
+    <Label
+      text="Module A"
+      class="initial-label"></Label>
+
+    <arthur-my-custom></arthur-my-custom>
+
+    <StackLayout
+       class="initial-button">
+      <Label
+
+        text="Login"
+        class="initial-button-label"></Label>
+    </StackLayout>
+
+    <StackLayout
+            (tap)="navigateService.goToPing()"
+            class="initial-button">
+      <Label
+              text="Go to Ping"
+              class="initial-button-label"></Label>
+    </StackLayout>
+  </StackLayout>
+
+
+
+  <!-- The fruit logo that appears within the container -->
+  <AbsoluteLayout #logoContainer
+    class="logo-container">
+    <Image
+      src="res://logo_login"
+      stretch="none"></Image>
+  </AbsoluteLayout>
+
+</GridLayout>

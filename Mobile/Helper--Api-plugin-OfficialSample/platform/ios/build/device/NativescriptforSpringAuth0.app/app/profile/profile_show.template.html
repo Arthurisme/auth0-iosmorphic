@@ -1,0 +1,54 @@
+
+
+
+
+
+<StackLayout orientation="vertical">
+  <Label text="Profile show:" ></Label>
+
+
+  <StackLayout orientation="vertical" *ngIf="this.auth0LoginService.isLoggedIn">
+
+    <Image src="{{auth0LoginService.profileJson.avatarUrl}}" stretch="none"></Image>
+
+    <Label text="Name: {{auth0LoginService.profileJson.name}}" ></Label>
+    <Label text="Email: {{auth0LoginService.profileJson.email}}" ></Label>
+    <Label text="Nickname: {{auth0LoginService.profileJson.nickname}}" ></Label>
+    <Label text="Created At: {{auth0LoginService.profileJson.createdAt}}" ></Label>
+
+
+
+
+  </StackLayout>
+
+  <StackLayout orientation="vertical" *ngIf="!this.auth0LoginService.isLoggedIn">
+
+    <Label text="You're not login yet, please click to login " (tap)="auth0LoginService.login()" ></Label>
+
+  </StackLayout>
+
+
+</StackLayout>
+
+
+
+
+
+<!--Don't delete! For future edit function:-->
+
+<!--<div *ngIf="auth.authenticated() && auth.userProfile">-->
+  <!--<div class="row">-->
+    <!--<div class="col-md-6">-->
+      <!--<h3>Profile</h3>-->
+      <!--<img [src]="auth.userProfile.picture" alt="" class="profile-img">-->
+      <!--<p><strong>Name: </strong> {{auth.userProfile.name}}</p>-->
+      <!--<p><strong>Email: </strong> {{auth.userProfile.email}}</p>-->
+      <!--<p><strong>Nickname: </strong> {{auth.userProfile.nickname}}</p>-->
+      <!--<p><strong>Created At: </strong> {{auth.userProfile.created_at}}</p>-->
+      <!--<p><strong>Updated At: </strong> {{auth.userProfile.updated_at}}</p>-->
+      <!--<p><strong>Address: </strong> {{auth.userProfile.user_metadata.address}}</p>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<button class="btn btn-primary btn-margin" [routerLink]="['/profile/edit']">Edit address</button>-->
+<!--</div>-->
+<!--<h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>-->

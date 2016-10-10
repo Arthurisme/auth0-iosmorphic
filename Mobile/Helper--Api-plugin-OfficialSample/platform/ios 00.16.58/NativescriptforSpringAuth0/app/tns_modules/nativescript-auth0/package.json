@@ -1,0 +1,42 @@
+{
+  "name": "nativescript-auth0",
+  "version": "0.2.0",
+  "description": "Auth0 social login",
+  "main": "index.js",
+  "nativescript": {
+    "platforms": {
+      "android": "2.2.0",
+      "ios": "2.2.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitefinitysteve/nativescript-auth0.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "Auth0",
+    "oAuth",
+    "Social Login",
+    "Social",
+    "iOS",
+    "Android",
+    "Javascript"
+  ],
+  "author": {
+    "name": "Steve McNiven-Scott",
+    "email": "steve@sitefinitysteve.com",
+    "url": "https://github.com/sitefinitysteve"
+  },
+  "readmeFilename": "README.md",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sitefinitysteve/nativescript-auth0/issues"
+  },
+  "homepage": "https://github.com/sitefinitysteve/nativescript-auth0",
+  "readme": "# Auth0 Social Authentication Plugin for NativeScript\n\n[Auth0: Identity made simple for developers](https://auth0.com)\n\n## Setup\n``` terminal\ntns plugin add nativescript-auth0\n```\n\n- Login to your auth0 account, get your domain\\clientid info\n- Setup the allowed providers, what you pick here is what AUTOMATICALLY shows up on the login box (so cool and easy)\n- Make sure you have an allowed callback url per the [docs](https://auth0.com/docs/quickstart/native-mobile/ios-objc/aspnet-webapi#before-starting)\n\n#### Android: App_Resources/Android/AndroidManifest.xml\n``` xml\n\t<!--Auth0 Lock-->\n\t<activity\n\tandroid:name=\"com.auth0.lock.LockActivity\"\n\tandroid:theme=\"@style/Lock.Theme\"\n\tandroid:screenOrientation=\"portrait\"\n\tandroid:launchMode=\"singleTask\">\n\t<intent-filter>\n\t\t<action android:name=\"android.intent.action.VIEW\"/>\n\t\t<category android:name=\"android.intent.category.DEFAULT\"/>\n\t\t<category android:name=\"android.intent.category.BROWSABLE\"/>\n\t\t<!-- 1) Keep the a0 at the start-->\n        <!-- 2) CLIENTID SCHEME MUST BE LOWERCASE, JUST HERE !!! -->\n\t\t<data android:scheme=\"a0CLIENTID-GOES-HERE\" android:host=\"DOMAIN-GOES-HERE\"/>\n\t</intent-filter>\n\t</activity>\n\t<meta-data android:name=\"com.auth0.lock.client-id\" android:value=\"CLIENTID-GOES-HERE\"/> <!-- ClientID here should be as you see it in your auth0 dash -->\n\t<meta-data android:name=\"com.auth0.lock.domain-url\" android:value=\"DOMAIN-GOES-HERE\"/>\n\t<!--Auth0 Lock End-->\n```\n\n#### iOS: App_Resources/iOS/Info.plist \n``` xml\n<key>Auth0Domain</key>\n    <string>DOMAIN-GOES-HERE</string>\n    <key>Auth0ClientId</key>\n    <string>CLIENTID-GOES-HERE</string>\n    <key>CFBundleURLTypes</key>\n    <array>\n        <dict>\n            <key>CFBundleTypeRole</key>\n            <string>None</string>\n            <key>CFBundleURLName</key>\n            <string>auth0</string>\n            <key>CFBundleURLSchemes</key>\n            <array>\n                <string>a0CLIENTID-GOES-HERE</string>\n            </array>\n        </dict>\n    </array>\n```\n\n## Configuration/Initalization \n\n## app.js \n``` js\nif (application.ios) {\n    var __extends = this.__extends || function (d, b) {\n        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];\n        function __() { this.constructor = d; }\n        __.prototype = b.prototype;\n        d.prototype = new __();\n    };\n    \n    var appDelegate = (function (_super) {\n        __extends(appDelegate, _super);\n        function appDelegate() {\n            _super.apply(this, arguments);\n        }\n        \n        appDelegate.prototype.applicationDidFinishLaunchingWithOptions = function (application, launchOptions) {\n            auth0.initalize();\n        };\n        \n        appDelegate.ObjCProtocols = [UIApplicationDelegate];\n        return appDelegate;\n    })(UIResponder);\n    application.ios.delegate = appDelegate;\n}else{\n    //Android\n    auth0.initalize();\n}\n\n//Application.start goes somewhere below here\n```\n\n## Android: Just overwrite files \n* Open node_modules/platforms/android\n* Copy the NativeScriptApplication.java file\n* Overwrite the exisiting file\n* ![alt text](android-setup.png)\n* **NOTE:** platforms is a volitle folder, you'll need to re-copy these files on every platform remove/add android command.  {N} is working on a way to improve this process.\n\n## How to use \n``` js\nvar auth0 = require(\"nativescript-auth0\");\n```\n\n#### Login Option 1: Open native auth0 login UI (Called \"Lock\") \n``` js\n//Doesn't seem to work on navigatedTo event, call on the loadedEvent\nauth0.show().then(function(args){\n\t\tconsole.log(args.profile);\n\t\tconsole.log(args.token);\n        appSettings.setString(\"UserData\", JSON.stringify(args));\n\t});\n```\n\n\n#### Login Option 2: Open identity providers UI directly \n##### Sends you right to googles auth screen, returning the result \n\n``` js\nvar connectionName = \"my-auth0-connection\"; //Connection name from the auth0 backend\nauth0.showIdp(connectionName).then(function(args){\n\t\tconsole.log(args.profile);\n\t\tconsole.log(args.token);\n        appSettings.setString(\"UserData\", JSON.stringify(args));\n\t});\n```\n\n[Complete Login Sample](https://github.com/sitefinitysteve/nativescript-auth0/blob/master/demo/app/login.js)\n\n## Methods ##\n* isTokenExpired(tokenid) * (Decodes and validates the exp date) *\n* decodeToken(tokenid) * (Does not validate the token) *\n* addParameter(key, value) [Doc](https://auth0.com/docs/libraries/lock-ios/sending-authentication-parameters)\n* addScopeParameter(scope) [Doc](https://auth0.com/docs/libraries/lock-ios/sending-authentication-parameters)\n\n\n## Android\n\nThis won't work yet until {N} can support impliments on the application\n\n[Auth0 Sample](https://auth0.com/docs/quickstart/native-mobile/android/aspnet-webapi#3-initialize-lock)\n\n[Git Issue #283](https://github.com/NativeScript/android-runtime/issues/283)\n\n## Styling\n\nAuth0 lets you customize a lot about the widget, I've wrapped them into some helpers.  \n* Pass the colors as Hex codes, convert to UIColor on iOS\n* Image the name of the image which exists in your resources\n```\n// Examples\nvar imageName = \"Icon\";\nvar imageName = \"Default\";\n```\n* Fonts require a NativeScript font object\n```\n// Example\nvar fontModule = require(\"ui/styling/font\");\nvar font = new fontModule.Font(\"Open Sans\", 20, \"normal\", \"normal\");\nauth0.themeTitle(\"#666666\", font);\n```\n* Must call your theme BEFORE calling the .show method\n\n```\nauth0.themePrimaryButton(normalColor, highlightColor, textColor, font);\nauth0.themeSecondaryButton(backgroundColor, textColor, font, normalImage, highlightedImage);\nauth0.themeTextField(textColor, placeholderTextColor, iconColor, font);\nauth0.themeTitle(textColor, font);\nauth0.themeIcon(backgroundColor, imageName);\nauth0.themeBackground(backgroundColor, imageName);\nauth0.themeDescription(textColor, font);\nauth0.themeSeperator(textColor, font);\nauth0.themeCredentialBox(borderColor, separatorColor, backgroundColor);\nauth0.themeCloseButton(tintColor);\n```\n\n## TODO\n* Custom Login\n* Token Helpers, store in Keychain\n\n## Thanks to\n* [jwt-decode](https://www.npmjs.com/package/jwt-decode) from Auth0",
+  "_id": "nativescript-auth0@0.2.0",
+  "_shasum": "d94dfb9a03a3a25d87d7a99590ff0f606ef07c82",
+  "_resolved": "file:app/plugin/nativescript-auth0.tar.gz",
+  "_from": "app/plugin/nativescript-auth0.tar.gz"
+}

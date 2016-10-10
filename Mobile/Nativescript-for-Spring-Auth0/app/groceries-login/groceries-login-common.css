@@ -16,8 +16,19 @@
 }
 .initial-logo {
   horizontal-align: center;
-  margin-bottom: 10;
+  margin-bottom: 1;
 }
+
+
+/*@media (orientation: landscape) {*/
+  /*.initial-logo {*/
+    /*horizontal-align: center;*/
+    /*margin-bottom: 30;*/
+  /*}}*/
+
+/*.ios .landscape .initial-logo {*/
+  /*margin-bottom: 30;*/
+/*}*/
 .initial-label {
   color: white;
   horizontal-align: center;

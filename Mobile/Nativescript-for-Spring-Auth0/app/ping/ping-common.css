@@ -1,3 +1,17 @@
+
+
+.landscape Label {
+  color:red;
+}
+
+.landscape .redtest {
+  color:blue;
+}
+
+.portrait .redtest {
+  color:red;
+}
+
 /* Hide a bunch of things to setup the initial animations */
 .form-controls, .sign-up-stack {
   opacity: 0;

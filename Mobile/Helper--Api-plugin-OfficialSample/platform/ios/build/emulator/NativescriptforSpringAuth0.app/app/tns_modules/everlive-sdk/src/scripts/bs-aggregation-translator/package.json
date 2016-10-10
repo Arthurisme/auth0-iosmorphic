@@ -1,0 +1,10 @@
+{
+    "name": "bs-aggregation-translator",
+    "description": "This module is used to provide an expand expression functionality.",
+    "version": "0.1.2",
+    "dependencies": {
+        "async": "*",
+        "underscore": "*"
+    },
+    "main": "index.js"
+}

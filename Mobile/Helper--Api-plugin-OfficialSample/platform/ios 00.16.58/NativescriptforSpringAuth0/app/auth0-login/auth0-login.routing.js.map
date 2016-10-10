@@ -1,0 +1,1 @@
+{"version":3,"file":"auth0-login.routing.js","sourceRoot":"","sources":["auth0-login.routing.ts"],"names":[],"mappings":";AACA,uBAAqC,iBAAiB,CAAC,CAAA;AAEvD,sCAAoC,yBAAyB,CAAC,CAAA;AAG9D,IAAM,gBAAgB,GAAW;IAC/B,2FAA2F;IAC3F,EAAE,IAAI,EAAE,YAAY,EAAE,SAAS,EAAE,2CAAmB,EAAE;CACvD,CAAC;AACW,yBAAiB,GAAwB,qBAAY,CAAC,QAAQ,CAAC,gBAAgB,CAAC,CAAC"}

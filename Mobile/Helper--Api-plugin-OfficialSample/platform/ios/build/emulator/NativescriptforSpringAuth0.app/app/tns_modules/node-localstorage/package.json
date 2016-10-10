@@ -1,0 +1,65 @@
+{
+  "name": "node-localstorage",
+  "version": "0.5.1",
+  "main": "./LocalStorage",
+  "description": "A drop-in substitute for the browser native localStorage API that runs on node.js.",
+  "keywords": [
+    "localStorage",
+    "Web Storage",
+    "node.js"
+  ],
+  "author": {
+    "name": "Larry Maccherone",
+    "url": "http://maccherone.com"
+  },
+  "homepage": "https://github.com/lmaccherone/node-localstorage",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lmaccherone/node-localstorage.git"
+  },
+  "preferGlobal": false,
+  "devDependencies": {
+    "coffee-script": "^1.9.0",
+    "gulp-run": "^1.6.8",
+    "nodeunit": "~0.9.0",
+    "runsync": "~0.1.6"
+  },
+  "scripts": {
+    "test": "cake test",
+    "docompile": "cake compile"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "gitHead": "860b954327506823530502966c3dd12496941b5b",
+  "bugs": {
+    "url": "https://github.com/lmaccherone/node-localstorage/issues"
+  },
+  "_id": "node-localstorage@0.5.1",
+  "_shasum": "5ceb41ade8e4ac512ae6ad7a3d9caf62bd58051a",
+  "_from": "node-localstorage@0.5.1",
+  "_npmVersion": "2.7.4",
+  "_nodeVersion": "0.12.2",
+  "_npmUser": {
+    "name": "lmaccherone",
+    "email": "Larry@Maccherone.com"
+  },
+  "maintainers": [
+    {
+      "name": "lmaccherone",
+      "email": "Larry@Maccherone.com"
+    }
+  ],
+  "dist": {
+    "shasum": "5ceb41ade8e4ac512ae6ad7a3d9caf62bd58051a",
+    "tarball": "https://registry.npmjs.org/node-localstorage/-/node-localstorage-0.5.1.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/node-localstorage/-/node-localstorage-0.5.1.tgz"
+}
