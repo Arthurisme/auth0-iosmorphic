@@ -7,6 +7,7 @@ export const authProviders = [
 export const appRoutes = [
   // { path: "", redirectTo: "/groceries", pathMatch: "full" }
   // { path: "", redirectTo: "/auth0login" , pathMatch: "full" },
+
   { path: "", redirectTo: "/ping" , pathMatch: "full" },
 
   // { path: "", redirectTo: "/ping", pathMatch: "full" }

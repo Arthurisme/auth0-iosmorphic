@@ -1,38 +1,56 @@
-
-
-
 <ActionBar title="Auth0Demo">
 
-    <ActionItem text="ping" (tap)="navigateService.goToPing()"   ios.position="right"></ActionItem>
-    <ActionItem text="ModuleA" (tap)="navigateService.goToModuleA()"  ios.position="right"></ActionItem>
-    <ActionItem text="Groceres" (tap)="navigateService.goToGroceries()"   ios.position="right"></ActionItem>
-    <ActionItem text="Action" (tap)="navigateService.showMenu()" icon="res://menu" stretch="none"  ios.position="right"></ActionItem>
+    <ActionItem text="ping" (tap)="navigateService.goToPing()" ios.position="right"></ActionItem>
+    <ActionItem text="ModuleA" (tap)="navigateService.goToModuleA()" ios.position="right"></ActionItem>
+    <ActionItem text="Groceres" (tap)="navigateService.goToGroceries()" ios.position="right"></ActionItem>
+    <ActionItem text="Action" (tap)="navigateService.showMenu()" icon="res://menu" stretch="none"
+                ios.position="right"></ActionItem>
 
 </ActionBar>
 
 
+<GridLayout >
+    <GridLayout *ngIf="orientationIsPort" columns="*" rows="*,*2,*,*,*,*,*,*,*" width="300" height="400" backgroundColor="lightgray">
 
-<GridLayout>
-
-
-
-<GridLayout columns="*" rows="*,*2,*,*,*,*,*,*,*" width="300" height="400" backgroundColor="lightgray" >
-
-    <TextView  col="0" row="0"   text=" You are success login via Auth0 if you see this page.  "    class="redtest" ></TextView>
-    <TextView  col="0" row="1"   text=" The flowing ping test only work if you started backend server.   If you don't need backend server, just ignorant ping test below." ></TextView>
+        <TextView col="0" row="0" text=" You are success login via Auth0 if you see this page.  "
+                  class="redtest"></TextView>
+        <TextView col="0" row="1"
+                  text=" The flowing ping test only work if you started backend server.   If you don't need backend server, just ignorant ping test below."></TextView>
 
 
-    <Label col="0" row="2"  text="Ping page"     backgroundColor="red"></Label>
-    <Label col="0" row="3"  text="ping"          backgroundColor="blue"  (tap)="ping()"></Label>
-    <Label col="0" row="4"  [text]="messagePing"     ></Label>
-    <Label col="0" row="5"  text="Security ping" backgroundColor="green" (tap)="securedPing()"></Label>
-    <Label col="0" row="6"  [text]="messageSecurityPing"    ></Label>
-    <Label col="0" row="7"  [text]="messageLast"    ></Label>
-    <Label col="0" row="8"  text="goToGroceries"  (tap)="navigateService.goToGroceries()"  ></Label>
+        <Label col="0" row="2" text="Ping page" backgroundColor="red"></Label>
+        <Label col="0" row="3" text="ping" backgroundColor="blue" (tap)="ping()"></Label>
+        <Label col="0" row="4" [text]="messagePing"></Label>
+        <Label col="0" row="5" text="Security ping" backgroundColor="green" (tap)="securedPing()"></Label>
+        <Label col="0" row="6" [text]="messageSecurityPing"></Label>
+        <Label col="0" row="7" [text]="messageLast"></Label>
+        <Label col="0" row="8" text="goToGroceries" (tap)="navigateService.goToGroceries()"></Label>
 
-    <!--<actionbar-header></actionbar-header>-->
+        <!--<actionbar-header></actionbar-header>-->
+
+    </GridLayout>
+
+
+    <GridLayout *ngIf="!orientationIsPort" columns="*" rows="*,*2,*,*,*,*,*,*,*" width="300" height="400" backgroundColor="lightgray">
+
+        <TextView col="0" row="0" text="Land view test: You are success login via Auth0 if you see this page.  "
+                  class="redtest"></TextView>
+        <TextView col="0" row="1"
+                  text="Land view test:  The flowing ping test only work if you started backend server.   If you don't need backend server, just ignorant ping test below."></TextView>
+
+
+        <Label col="0" row="2" text="Ping page" backgroundColor="red"></Label>
+        <Label col="0" row="3" text="ping" backgroundColor="blue" (tap)="ping()"></Label>
+        <Label col="0" row="4" [text]="messagePing"></Label>
+        <Label col="0" row="5" text="Security ping" backgroundColor="green" (tap)="securedPing()"></Label>
+        <Label col="0" row="6" [text]="messageSecurityPing"></Label>
+        <Label col="0" row="7" [text]="messageLast"></Label>
+        <Label col="0" row="8" text="goToGroceries" (tap)="navigateService.goToGroceries()"></Label>
+
+        <!--<actionbar-header></actionbar-header>-->
+
+    </GridLayout>
+
 
 </GridLayout>
 
-
-</GridLayout>
